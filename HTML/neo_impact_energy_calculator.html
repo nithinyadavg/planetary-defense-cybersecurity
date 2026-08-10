@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO Impact Energy Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #e2e8f0; /* Slate 200 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .calculator-card {
+            background-color: #1e293b; /* Slate 800 */
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 800px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.025em;
+        }
+
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .content-area {
+                flex-direction: row;
+            }
+        }
+
+        .controls-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .control-group {
+            background-color: #334155; /* Slate 700 */
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 1px solid #475569;
+        }
+
+        .control-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .control-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .control-value {
+            font-family: monospace;
+            font-size: 1rem;
+            color: #60a5fa; /* Blue 400 */
+            background-color: #0f172a;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+            border: 1px solid #1e293b;
+        }
+
+        /* Custom Range Slider */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #3b82f6;
+            cursor: pointer;
+            margin-top: -8px;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+            transition: transform 0.1s;
+        }
+
+        input[type=range]::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #475569;
+            border-radius: 2px;
+        }
+        
+        input[type=range]:focus {
+            outline: none;
+        }
+
+        select {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            border: 1px solid #475569;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            outline: none;
+            cursor: pointer;
+            appearance: none; /* Remove default arrow */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/200.svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1em;
+        }
+        
+        select:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+
+        .results-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .result-card {
+            background-color: #0f172a; /* Slate 900 */
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle glowing effect for the primary result */
+        .result-card.primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(239, 68, 68, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .result-card.primary {
+            border-color: rgba(239, 68, 68, 0.3); /* Red tint */
+        }
+
+        .result-title {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .result-value-primary {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ef4444; /* Red 500 */
+            line-height: 1.2;
+            text-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+        }
+
+        .result-value-secondary {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #f8fafc;
+        }
+        
+        .result-unit {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #94a3b8;
+        }
+
+        .comparison-text {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #cbd5e1;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            width: 100%;
+            box-sizing: border-box;
+            border-left: 4px solid #ef4444;
+        }
+
+        /* Tooltip styling */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted #94a3b8;
+            cursor: help;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #1e293b;
+            color: #cbd5e1;
+            text-align: center;
+            border-radius: 0.375rem;
+            padding: 0.5rem;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-size: 0.75rem;
+            font-weight: normal;
+            border: 1px solid #475569;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            text-transform: none;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* Visualizer Box */
+        .visualizer-container {
+             background-color: #0f172a;
+             border-radius: 1rem;
+             border: 1px solid #334155;
+             padding: 1rem;
+             display: flex;
+             justify-content: center;
+             align-items: flex-end;
+             height: 150px;
+             position: relative;
+             overflow: hidden;
+        }
+        
+        .asteroid-viz {
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #94a3b8, #334155);
+            position: absolute;
+            transition: all 0.3s ease-out;
+            box-shadow: inset -10px -10px 20px rgba(0,0,0,0.5), 0 10px 20px rgba(0,0,0,0.3);
+        }
+        
+        .ground-viz {
+            width: 100%;
+            height: 20px;
+            background: #1e293b;
+            border-top: 2px solid #475569;
+            position: absolute;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="calculator-card">
+        <div class="header">
+            <h1>NEO Impact Energy Calculator</h1>
+        </div>
+
+        <div class="content-area">
+            
+            <!-- Controls Panel (Left side) -->
+            <div class="controls-panel">
+                
+                <!-- Size Control -->
+                <div class="control-group">
+                    <div class="control-header">
+                        <span class="control-label tooltip">Diameter (Size)
+                            <span class="tooltiptext">The width of the asteroid. Volume (and thus mass) increases with the cube of the radius.</span>
+                        </span>
+                        <span class="control-value" id="val-diameter">50 m</span>
+                    </div>
+                    <input type="range" id="in-diameter" min="10" max="1000" step="10" value="50">
+                </div>
+
+                <!-- Density/Material Control -->
+                <div class="control-group">
+                    <div class="control-header">
+                        <span class="control-label tooltip">Composition (Density)
+                            <span class="tooltiptext">Determines the mass for a given size. Iron is much heavier than porous rock or ice.</span>
+                        </span>
+                        <span class="control-value" id="val-density">3000 kg/m³</span>
+                    </div>
+                    <select id="in-density">
+                        <option value="1000">Ice / Porous Comet (~1,000 kg/m³)</option>
+                        <option value="2000">Carbonaceous Chondrite (~2,000 kg/m³)</option>
+                        <option value="3000" selected>Stony Silicate (~3,000 kg/m³)</option>
+                        <option value="8000">Metallic / Iron (~8,000 kg/m³)</option>
+                    </select>
+                </div>
+
+                <!-- Velocity Control -->
+                <div class="control-group">
+                    <div class="control-header">
+                        <span class="control-label tooltip">Impact Velocity
+                            <span class="tooltiptext">Speed relative to Earth. Kinetic energy scales with the square of velocity. Minimum is ~11.2 km/s (Earth's escape velocity).</span>
+                        </span>
+                        <span class="control-value" id="val-velocity">17 km/s</span>
+                    </div>
+                    <input type="range" id="in-velocity" min="11" max="72" step="1" value="17">
+                </div>
+                
+                 <!-- Angle Control -->
+                <div class="control-group" style="display:none;">
+                    <!-- Kept in logic for potential future expansion, but hidden to keep UI clean as requested by generic guidelines -->
+                    <input type="range" id="in-angle" min="10" max="90" step="5" value="45">
+                </div>
+
+            </div>
+
+            <!-- Results Panel (Right side) -->
+            <div class="results-panel">
+                
+                <!-- Primary Result: Kinetic Energy -->
+                <div class="result-card primary">
+                    <div class="result-title">Kinetic Energy Release</div>
+                    <div class="result-value-primary">
+                        <span id="out-energy-mt">0.00</span>
+                    </div>
+                    <div class="result-unit">Megatons of TNT</div>
+                    
+                    <div class="comparison-text" id="out-comparison">
+                        Equivalent to...
+                    </div>
+                </div>
+
+                <!-- Secondary Results: Mass -->
+                <div class="result-card" style="flex-grow: 0; padding: 1rem;">
+                    <div class="result-title">Estimated Mass</div>
+                    <div class="result-value-secondary">
+                        <span id="out-mass">0</span> <span class="result-unit">kg</span>
+                    </div>
+                </div>
+                
+                <!-- Visualizer -->
+                <div class="visualizer-container">
+                    <div class="ground-viz"></div>
+                    <div class="asteroid-viz" id="viz-asteroid"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DOM Elements - Inputs
+        const inDiameter = document.getElementById('in-diameter');
+        const inDensity = document.getElementById('in-density');
+        const inVelocity = document.getElementById('in-velocity');
+        
+        // DOM Elements - Value Displays
+        const valDiameter = document.getElementById('val-diameter');
+        const valDensity = document.getElementById('val-density');
+        const valVelocity = document.getElementById('val-velocity');
+        
+        // DOM Elements - Outputs
+        const outEnergyMt = document.getElementById('out-energy-mt');
+        const outMass = document.getElementById('out-mass');
+        const outComparison = document.getElementById('out-comparison');
+        
+        // DOM Elements - Visualizer
+        const vizAsteroid = document.getElementById('viz-asteroid');
+
+        // Constants
+        const JOULES_PER_MEGATON = 4.184e15;
+        const HIROSHIMA_YIELD_MT = 0.015; // 15 kilotons
+        const TSAR_BOMBA_YIELD_MT = 50;
+
+        // Formatting Helper
+        function formatScientific(num) {
+            if (num < 10000) return Math.round(num).toLocaleString();
+            return num.toExponential(2).replace('e+', ' × 10^');
+        }
+
+        // Main Calculation Function
+        function calculateImpact() {
+            // Get input values
+            const diameter_m = parseFloat(inDiameter.value);
+            const density_kg_m3 = parseFloat(inDensity.value);
+            // Convert km/s to m/s
+            const velocity_m_s = parseFloat(inVelocity.value) * 1000;
+
+            // 1. Calculate Volume (Sphere: V = 4/3 * pi * r^3)
+            const radius_m = diameter_m / 2;
+            const volume_m3 = (4/3) * Math.PI * Math.pow(radius_m, 3);
+
+            // 2. Calculate Mass (m = density * volume)
+            const mass_kg = density_kg_m3 * volume_m3;
+
+            // 3. Calculate Kinetic Energy (KE = 1/2 * m * v^2)
+            const energy_joules = 0.5 * mass_kg * Math.pow(velocity_m_s, 2);
+
+            // 4. Convert Joules to Megatons of TNT
+            const energy_mt = energy_joules / JOULES_PER_MEGATON;
+
+            // Update UI
+            updateUI(diameter_m, density_kg_m3, velocity_m_s/1000, mass_kg, energy_mt);
+        }
+
+        // Update the UI with calculated values
+        function updateUI(diameter, density, velocity, mass, energyMt) {
+            // Update label displays
+            valDiameter.textContent = `${diameter} m`;
+            
+            // Format density text nicely based on select option
+            const densityText = inDensity.options[inDensity.selectedIndex].text.split('(')[0].trim();
+            valDensity.textContent = `${density} kg/m³`;
+            
+            valVelocity.textContent = `${velocity} km/s`;
+
+            // Update output displays
+            // Format energy smartly
+            if (energyMt < 0.1) {
+                // For very small impacts, show in Kilotons instead
+                outEnergyMt.innerHTML = `${(energyMt * 1000).toFixed(1)} <span style="font-size: 1.5rem; color: #94a3b8;">Kilotons</span>`;
+            } else if (energyMt > 10000) {
+                 // For huge impacts, use exponential notation
+                outEnergyMt.textContent = energyMt.toExponential(2);
+            } else {
+                 // Standard Megaton display
+                outEnergyMt.textContent = energyMt.toLocaleString(undefined, { maximumFractionDigits: 1 });
+            }
+            
+            outMass.textContent = formatScientific(mass);
+
+            // Generate contextual comparison text
+            generateContext(energyMt);
+            
+            // Update Visualizer
+            updateVisualizer(diameter, velocity);
+        }
+
+        // Provide real-world context for the energy
+        function generateContext(energyMt) {
+            let text = "";
+            
+            if (energyMt < HIROSHIMA_YIELD_MT) {
+                text = "Relatively minor event. Likely to explode high in the atmosphere causing a bright flash (bolide) and a loud sonic boom, but little to no ground damage.";
+            } else if (energyMt < 0.5) {
+                text = `Equivalent to roughly ${(energyMt / HIROSHIMA_YIELD_MT).toFixed(0)} Hiroshima bombs. Similar to the 2013 Chelyabinsk meteor. Causes window shattering and structural damage over a wide area, but no cratering.`;
+            } else if (energyMt < 15) {
+                text = `Similar to the 1908 Tunguska event. Capable of flattening a modern city or completely destroying thousands of square miles of forest.`;
+            } else if (energyMt < 100) {
+                text = `More powerful than the Tsar Bomba (largest nuclear weapon ever tested, ~50 MT). Would cause devastating regional destruction and a massive crater if it hits land.`;
+            } else if (energyMt < 100000) {
+                text = `Continental-scale devastation. Would cause massive earthquakes, global climate effects from ejected dust, and tsunamis hundreds of meters high if it hits an ocean.`;
+            } else {
+                text = `Extinction-level event territory. Approaches or exceeds the energy of the Chicxulub impact (dinosaur extinction, ~100 million MT). Severe global catastrophe.`;
+            }
+            
+            outComparison.textContent = text;
+        }
+        
+        // Update the simple CSS visualizer
+        function updateVisualizer(diameter, velocity) {
+            // Map diameter (10-1000) to pixel size (10-100)
+            const minVizSize = 10;
+            const maxVizSize = 100;
+            // Logarithmic scaling for better visualization of huge ranges
+            const logMin = Math.log(10);
+            const logMax = Math.log(1000);
+            const logD = Math.log(diameter);
+            
+            const scale = (logD - logMin) / (logMax - logMin);
+            const vizSize = minVizSize + (scale * (maxVizSize - minVizSize));
+            
+            vizAsteroid.style.width = `${vizSize}px`;
+            vizAsteroid.style.height = `${vizSize}px`;
+            
+            // Adjust position so it sits on the ground
+            vizAsteroid.style.bottom = '20px'; // Ground height
+            
+            // Adjust color slightly based on velocity to simulate "heat"
+            // High velocity = more red/orange
+            const vScale = (velocity - 11) / (72 - 11); // 0 to 1
+            const r = 148 + (vScale * 100); // 148 to 248
+            const g = 163 - (vScale * 100);
+            const b = 184 - (vScale * 184);
+            
+            vizAsteroid.style.background = `radial-gradient(circle at 30% 30%, rgb(${r}, ${g}, ${b}), #334155)`;
+        }
+
+        // Add Event Listeners
+        inDiameter.addEventListener('input', calculateImpact);
+        inDensity.addEventListener('change', calculateImpact);
+        inVelocity.addEventListener('input', calculateImpact);
+
+        // Initial calculation on load
+        calculateImpact();
+
+    </script>
+</body>
+</html>

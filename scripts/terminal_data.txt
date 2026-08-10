@@ -1,0 +1,2230 @@
+nithinyadavg@Nithins-MacBook-Air-3 Desktop % clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nithinyadavg@Nithins-MacBook-Air-3 Desktop % cd
+nithinyadavg@Nithins-MacBook-Air-3 ~ % cd ~/Applications/"GMAT R2026a"/bin
+open GMAT-R2026a_Beta.app
+cd: no such file or directory: /Users/nithinyadavg/Applications/GMAT R2026a/bin
+The file /Users/nithinyadavg/GMAT-R2026a_Beta.app does not exist.
+nithinyadavg@Nithins-MacBook-Air-3 ~ % cd /Applications/"GMAT R2026a"/bin 
+open GMAT-R2026a_Beta.app
+nithinyadavg@Nithins-MacBook-Air-3 bin % cd
+nithinyadavg@Nithins-MacBook-Air-3 ~ % cd /Users/nithinyadavg/ME/SHU\ AtZ/Demon/GMAT 
+nithinyadavg@Nithins-MacBook-Air-3 GMAT % 
+nithinyadavg@Nithins-MacBook-Air-3 GMAT % mkdir -p ~/dissertation/scripts 
+cd ~/dissertation
+mkdir -p data/raw
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % pwd
+/Users/nithinyadavg/dissertation
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % mkdir -p /dissertation/scripts                
+cd /dissertation
+mkdir -p data/raw
+mkdir: /dissertation: Read-only file system
+cd: no such file or directory: /dissertation
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % mkdir -p /Users/nithinyadavg/ME/SHU\ AtZ/Demon/GMAT/dissertation/scripts 
+cd /Users/nithinyadavg/ME/SHU\ AtZ/Demon/GMAT/dissertation/scripts      
+mkdir -p data/raw
+nithinyadavg@Nithins-MacBook-Air-3 scripts %                  
+pip3 install requests
+python3 scripts/01_fetch_apophis_data.py
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try brew install
+    xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a Python library that isn't in Homebrew,
+    use a virtual environment:
+    
+    python3 -m venv path/to/venv
+    source path/to/venv/bin/activate
+    python3 -m pip install xyz
+    
+    If you wish to install a Python application that isn't in Homebrew,
+    it may be easiest to use 'pipx install xyz', which will manage a
+    virtual environment for you. You can install pipx with
+    
+    brew install pipx
+    
+    You may restore the old behavior of pip by passing
+    the '--break-system-packages' flag to pip, or by adding
+    'break-system-packages = true' to your pip.conf file. The latter
+    will permanently disable this error.
+    
+    If you disable this error, we STRONGLY recommend that you additionally
+    pass the '--user' flag to pip, or set 'user = true' in your pip.conf
+    file. Failure to do this can result in a broken Homebrew installation.
+    
+    Read more about this behavior here: <https://peps.python.org/pep-0668/>
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/scripts/01_fetch_apophis_data.py': [Errno 2] No such file or directory
+nithinyadavg@Nithins-MacBook-Air-3 scripts % 
+nithinyadavg@Nithins-MacBook-Air-3 scripts % /
+zsh: permission denied: /
+nithinyadavg@Nithins-MacBook-Air-3 scripts % .
+.: not enough arguments
+nithinyadavg@Nithins-MacBook-Air-3 scripts % ..
+zsh: permission denied: ..
+nithinyadavg@Nithins-MacBook-Air-3 scripts % sudo 
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-ABkNnS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-ABkNnS] [-g group] [-h host] [-p prompt] [-U user]
+            [-u user] [command [arg ...]]
+usage: sudo [-ABbEHkNnPS] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] [VAR=value] [-i | -s] [command [arg ...]]
+usage: sudo -e [-ABkNnS] [-C num] [-D directory]
+            [-g group] [-h host] [-p prompt] [-R directory] [-T timeout]
+            [-u user] file ...
+nithinyadavg@Nithins-MacBook-Air-3 scripts % sudo ..
+Password:
+sudo: ..: command not found
+nithinyadavg@Nithins-MacBook-Air-3 scripts % sudo ..
+sudo: ..: command not found
+nithinyadavg@Nithins-MacBook-Air-3 scripts % sudo . 
+sudo: .: command not found
+nithinyadavg@Nithins-MacBook-Air-3 scripts % cd .
+nithinyadavg@Nithins-MacBook-Air-3 scripts % cd ..
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+nithinyadavg@Nithins-MacBook-Air-3 dissertation %                  
+pip3 install requests
+python3 scripts/01_fetch_apophis_data.py
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try brew install
+    xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a Python library that isn't in Homebrew,
+    use a virtual environment:
+    
+    python3 -m venv path/to/venv
+    source path/to/venv/bin/activate
+    python3 -m pip install xyz
+    
+    If you wish to install a Python application that isn't in Homebrew,
+    it may be easiest to use 'pipx install xyz', which will manage a
+    virtual environment for you. You can install pipx with
+    
+    brew install pipx
+    
+    You may restore the old behavior of pip by passing
+    the '--break-system-packages' flag to pip, or by adding
+    'break-system-packages = true' to your pip.conf file. The latter
+    will permanently disable this error.
+    
+    If you disable this error, we STRONGLY recommend that you additionally
+    pass the '--user' flag to pip, or set 'user = true' in your pip.conf
+    file. Failure to do this can result in a broken Homebrew installation.
+    
+    Read more about this behavior here: <https://peps.python.org/pep-0668/>
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+Traceback (most recent call last):
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/01_fetch_apophis_data.py", line 10, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % pwd
+/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % ls
+scripts
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % ls -a
+.	..	scripts
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -m venv venv
+source venv/bin/activate
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % pip install requests
+Collecting requests
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting charset_normalizer<4,>=2 (from requests)
+  Downloading charset_normalizer-3.4.7-cp314-cp314-macosx_10_15_universal2.whl.metadata (40 kB)
+Collecting idna<4,>=2.5 (from requests)
+  Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+Collecting urllib3<3,>=1.26 (from requests)
+  Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2023.5.7 (from requests)
+  Downloading certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading charset_normalizer-3.4.7-cp314-cp314-macosx_10_15_universal2.whl (309 kB)
+Downloading idna-3.18-py3-none-any.whl (65 kB)
+Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
+Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+Successfully installed certifi-2026.6.17 charset_normalizer-3.4.7 idna-3.18 requests-2.34.2 urllib3-2.7.0
+
+[notice] A new release of pip is available: 26.0 -> 26.1.2
+[notice] To update, run: pip install --upgrade pip
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 scripts/01_fetch_apophis_data.py
+Requesting observation data for object: 99942
+Success — received response for 2 object(s)
+Saved ADES XML  -> data/raw/apophis_ades_20260621_211404.xml
+Saved OBS80 text -> data/raw/apophis_obs80_20260621_211404.txt
+Saved raw JSON   -> data/raw/apophis_raw_response_20260621_211404.json
+
+--- Preview of saved ADES XML ---
+<?xml version="1.0" encoding="UTF-8"?>
+<ades version="2022">
+  <optical>
+    <permID>99942</permID>
+    <provID>2004 MN4</provID>
+    <trkSub>K04M04N</trkSub>
+    <obsID>JqcHxe000000DaKP010000001</obsID>
+    <trkID>000002w-NJ</trkID>
+    <mode>CCD</mode>
+    <stn>691</stn>
+    <obsTime>2004-03-15T02:35:21.696Z</obsTime>
+    <ra>61.53367</ra>
+    <dec>16.91794</dec>
+    <astCat>USNOB1</astCat>
+    <ref>MPS   126394</ref>
+    <subFmt>M92</subFmt>
+    <precTime>10</precTime>
+    <precRA>0.01</precRA>
+    <precDec>0.1</precDec>
+  </optical>
+  <optical>
+    <permID>99942</permID>
+    <provID>2004 M
+...
+
+Total file length: 5075444 characters
+
+Done. Real Apophis observation data is now saved locally.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % source venv/bin/activate
+pip install pandas
+mv ~/Downloads/02_parse_ades_to_dataframe.py scripts/
+python3 scripts/02_parse_ades_to_dataframe.py
+Collecting pandas
+  Downloading pandas-3.0.3-cp314-cp314-macosx_11_0_arm64.whl.metadata (79 kB)
+Collecting numpy>=2.3.3 (from pandas)
+  Downloading numpy-2.4.6-cp314-cp314-macosx_14_0_arm64.whl.metadata (6.6 kB)
+Collecting python-dateutil>=2.8.2 (from pandas)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading pandas-3.0.3-cp314-cp314-macosx_11_0_arm64.whl (9.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 23.5 MB/s  0:00:00
+Downloading numpy-2.4.6-cp314-cp314-macosx_14_0_arm64.whl (5.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 28.8 MB/s  0:00:00
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: six, numpy, python-dateutil, pandas
+Successfully installed numpy-2.4.6 pandas-3.0.3 python-dateutil-2.9.0.post0 six-1.17.0
+
+[notice] A new release of pip is available: 26.0 -> 26.1.2
+[notice] To update, run: pip install --upgrade pip
+mv: rename /Users/nithinyadavg/Downloads/02_parse_ades_to_dataframe.py to scripts/02_parse_ades_to_dataframe.py: No such file or directory
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/02_parse_ades_to_dataframe.py': [Errno 2] No such file or directory
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % source venv/bin/activate
+pip install pandas
+mv ~/Downloads/02_parse_ades_to_dataframe.py scripts/
+python3 scripts/02_parse_ades_to_dataframe.py
+Requirement already satisfied: pandas in ./venv/lib/python3.14/site-packages (3.0.3)
+Requirement already satisfied: numpy>=2.3.3 in ./venv/lib/python3.14/site-packages (from pandas) (2.4.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./venv/lib/python3.14/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in ./venv/lib/python3.14/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+
+[notice] A new release of pip is available: 26.0 -> 26.1.2
+[notice] To update, run: pip install --upgrade pip
+mv: /Users/nithinyadavg/Downloads/02_parse_ades_to_dataframe.py: No such file or directory
+Using ADES file: data/raw/apophis_ades_20260621_211404.xml
+Parsed 9520 observation records
+Dropped 183 incomplete rows (missing RA/Dec/time)
+
+--- Dataset summary ---
+Total observations : 9337
+Date range          : 2004-03-15 02:35:21.696000+00:00  to  2021-05-20 18:59:26.592000+00:00
+RA range (deg)      : 1.41117  to  358.92988
+Dec range (deg)     : -36.61950  to  30.03478
+Unique stations     : 231
+Unique trkSub groups: 197
+
+--- First 5 rows ---
+   obs_index                          obsTime  ...   dec_deg  station
+0          0 2004-03-15 02:35:21.696000+00:00  ...  16.91794      691
+1          1 2004-03-15 02:38:57.696000+00:00  ...  16.91836      691
+2          2 2004-03-15 02:58:03.360000+00:00  ...  16.92097      691
+3          3 2004-03-15 03:01:50.592000+00:00  ...  16.92158      691
+4          4 2004-03-15 03:17:36.672000+00:00  ...  16.92372      691
+
+[5 rows x 5 columns]
+Saved clean CSV -> data/processed/apophis_clean_20260621_211934.csv
+Saved pickle    -> data/processed/apophis_clean_20260621_211934.pkl
+
+Done. Clean DataFrame ready for the injection module (Step 3).
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+  [Restored 27 Jun 2026 at 11:39:26 PM]
+Last login: Sat Jun 27 13:58:14 on console
+Restored session: Sat Jun 27 13:57:15 BST 2026
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % pwd
+/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation
+nithinyadavg@Nithins-MacBook-Air-3 dissertation % cd "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation"
+source venv/bin/activate
+python3 scripts/03_injection_module.py
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/03_injection_module.py': [Errno 2] No such file or directory
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % pwd
+/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cd /Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation 
+source venv/bin/activate
+python3 scripts/03_injection_module.py
+cd: no such file or directory: AtZ/Demon/GMAT/dissertation AtZ/Demon/GMAT/dissertation
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/03_injection_module.py': [Errno 2] No such file or directory
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % pwd
+/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % source venv/bin/activate
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % ls
+data	scripts	venv
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 scripts/03_injection_module.py
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/03_injection_module.py': [Errno 2] No such file or directory
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 scripts/03_injection_module.py
+Using clean dataset: data/processed/apophis_clean_20260621_211934.pkl
+Loaded 9337 clean observations
+
+Saved systematic_bias    -> data/manipulated/apophis_systematic_bias_20260627_234935.csv
+Saved stochastic_noise   -> data/manipulated/apophis_stochastic_noise_20260627_234935.csv
+Saved targeted_outlier   -> data/manipulated/apophis_targeted_outlier_20260627_234936.csv
+
+--- Systematic Bias : before vs after ---
+Rows changed at all       : 9337 / 9337
+Mean RA shift (arcsec)    : 2.0000
+Max RA shift (arcsec)     : 2.0000
+Mean Dec shift (arcsec)   : 2.0000
+Max Dec shift (arcsec)    : 2.0000
+
+--- Stochastic Noise : before vs after ---
+Rows changed at all       : 9337 / 9337
+Mean RA shift (arcsec)    : 1.1967
+Max RA shift (arcsec)     : 6.5837
+Mean Dec shift (arcsec)   : 1.1959
+Max Dec shift (arcsec)    : 6.2269
+
+--- Targeted Outlier : before vs after ---
+Rows changed at all       : 20 / 9337
+Mean RA shift (arcsec)    : 0.0643
+Max RA shift (arcsec)     : 30.0000
+Mean Dec shift (arcsec)   : 0.0643
+Max Dec shift (arcsec)    : 30.0000
+
+Done. Three manipulated datasets created in data/manipulated/.
+Next step: feed the clean dataset AND each manipulated dataset
+into GMAT to see how much each one changes the predicted orbit.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cd "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation"
+source venv/bin/activate
+mkdir -p gmat/scenarios gmat/reports results
+python3 scripts/04_gmat_orbital_impact.py 
+
+=======================================================
+Scenario: Clean (True Orbit)
+=======================================================
+Traceback (most recent call last):
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/04_gmat_orbital_impact.py", line 213, in <module>
+    main()
+    ~~~~^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/04_gmat_orbital_impact.py", line 166, in main
+    script_path = build_gmat_script(scenario_name, elements, report_path)
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/04_gmat_orbital_impact.py", line 83, in build_gmat_script
+    with open(TEMPLATE_SCRIPT, "r") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'gmat/apophis_template.script'
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % pwd                                                        
+/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % ls -a
+.		..		.DS_Store	data		gmat		results		scripts		venv
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 scripts/04_gmat_orbital_impact.py
+
+=======================================================
+Scenario: Clean (True Orbit)
+=======================================================
+  Script written: gmat/scenarios/apophis_clean.script
+  Running GMAT: apophis_clean.script ...
+  WARNING: Report not found at /Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/gmat/reports/report_clean.txt
+
+=======================================================
+Scenario: Systematic Bias (2.0 arcsec)
+=======================================================
+  Script written: gmat/scenarios/apophis_systematic_bias.script
+  Running GMAT: apophis_systematic_bias.script ...
+  WARNING: Report not found at /Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/gmat/reports/report_systematic_bias.txt
+
+=======================================================
+Scenario: Stochastic Noise (1.5 arcsec std)
+=======================================================
+  Script written: gmat/scenarios/apophis_stochastic_noise.script
+  Running GMAT: apophis_stochastic_noise.script ...
+  WARNING: Report not found at /Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/gmat/reports/report_stochastic_noise.txt
+
+=======================================================
+Scenario: Targeted Outlier (30 arcsec, 20 obs)
+=======================================================
+  Script written: gmat/scenarios/apophis_targeted_outlier.script
+  Running GMAT: apophis_targeted_outlier.script ...
+  WARNING: Report not found at /Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/gmat/reports/report_targeted_outlier.txt
+
+=======================================================
+RESULTS SUMMARY — Close Approach Distance Comparison
+=======================================================
+Traceback (most recent call last):
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/04_gmat_orbital_impact.py", line 213, in <module>
+    main()
+    ~~~~^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/04_gmat_orbital_impact.py", line 198, in main
+    df_results["cad_delta_ld"] = df_results["min_distance_ld"] - (clean_dist / 384400)
+                                                                  ~~~~~~~~~~~^~~~~~~~
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % ls gmat/
+apophis_template.script	reports			scenarios
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 scripts/04_gmat_orbital_impact.py
+
+=======================================================
+Scenario: Clean (True Orbit)
+=======================================================
+  Script written: gmat/scenarios/apophis_clean.script
+  Running GMAT: apophis_clean.script ...
+  WARNING: Report not found at /Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/gmat/reports/report_clean.txt
+
+=======================================================
+Scenario: Systematic Bias (2.0 arcsec)
+=======================================================
+  Script written: gmat/scenarios/apophis_systematic_bias.script
+  Running GMAT: apophis_systematic_bias.script ...
+  WARNING: Report not found at /Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/gmat/reports/report_systematic_bias.txt
+
+=======================================================
+Scenario: Stochastic Noise (1.5 arcsec std)
+=======================================================
+  Script written: gmat/scenarios/apophis_stochastic_noise.script
+  Running GMAT: apophis_stochastic_noise.script ...
+  WARNING: Report not found at /Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/gmat/reports/report_stochastic_noise.txt
+
+=======================================================
+Scenario: Targeted Outlier (30 arcsec, 20 obs)
+=======================================================
+  Script written: gmat/scenarios/apophis_targeted_outlier.script
+  Running GMAT: apophis_targeted_outlier.script ...
+  WARNING: Report not found at /Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/gmat/reports/report_targeted_outlier.txt
+
+=======================================================
+RESULTS SUMMARY — Close Approach Distance Comparison
+=======================================================
+Traceback (most recent call last):
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/04_gmat_orbital_impact.py", line 213, in <module>
+    main()
+    ~~~~^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/04_gmat_orbital_impact.py", line 198, in main
+    df_results["cad_delta_ld"] = df_results["min_distance_ld"] - (clean_dist / 384400)
+                                                                  ~~~~~~~~~~~^~~~~~~~
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat gmat/scenarios/apophis_clean.script
+%----------------------------------------
+% GMAT Script: Apophis Close Approach Analysis
+% Dissertation: Integrity Assurance in Planetary Defense
+% Author: Nithin Yadav Gopinath (C5003001)
+%
+% This script propagates Apophis forward to its 2029
+% Earth close approach and reports the minimum distance.
+% It is generated and called automatically by Python.
+%----------------------------------------
+
+%--- Spacecraft (representing Apophis) ---
+Create Spacecraft Apophis;
+GMAT Apophis.DateFormat        = UTCGregorian;
+GMAT Apophis.Epoch             = '01 Jan 2020 00:00:00.000';
+GMAT Apophis.CoordinateSystem  = SunMJ2000Eq;
+GMAT Apophis.DisplayStateType  = Keplerian;
+
+% Orbital elements — JPL values for Apophis at epoch 2020-01-01
+% These are the CLEAN baseline values.
+% Python will substitute different values for each scenario.
+GMAT Apophis.SMA  = 137986487.890517;     % Semi-major axis (km)
+GMAT Apophis.ECC  = 0.19139850;     % Eccentricity
+GMAT Apophis.INC  = 3.339200;     % Inclination (deg)
+GMAT Apophis.RAAN = 204.500200;    % Right Ascension of Ascending Node (deg)
+GMAT Apophis.AOP  = 126.592000;     % Argument of Periapsis (deg)
+GMAT Apophis.TA   = 222.875600;      % True Anomaly (deg)
+
+%--- Force Model ---
+Create ForceModel SolarSystemForces;
+GMAT SolarSystemForces.CentralBody              = Sun;
+GMAT SolarSystemForces.PrimaryBodies            = {Sun};
+GMAT SolarSystemForces.PointMasses              = {Earth, Luna, Venus, Mars, Jupiter};
+GMAT SolarSystemForces.SRP                      = Off;
+GMAT SolarSystemForces.RelativisticCorrection   = Off;
+
+%--- Propagator ---
+Create Propagator SolarProp;
+GMAT SolarProp.FM   = SolarSystemForces;
+GMAT SolarProp.Type = RungeKutta89;
+
+%--- Close Approach Report ---
+Create ReportFile CloseApproachReport;
+GMAT CloseApproachReport.Filename       = '/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/gmat/reports/report_clean.txt';
+GMAT CloseApproachReport.WriteHeaders   = true;
+GMAT CloseApproachReport.Add           = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+
+%--- Mission Sequence ---
+BeginMissionSequence;
+
+% Propagate from 2020 to start of 2029 window
+Propagate SolarProp(Apophis) {Apophis.UTCGregorian = '01 Jan 2029 00:00:00.000'};
+
+% Now propagate day by day through the close approach window
+% and record Earth distance at each step
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 180, Apophis.Earth.RMAG = 31600, StopTolerance = 1};
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" --help
+
+********************************************
+***  GMAT Console Application
+********************************************
+
+General Mission Analysis Tool
+Console Based Version
+Build Date: Mar 26 2026  19:40:07
+
+
+GMAT working directory set to '/Applications/GMAT R2026a/bin/'
+Moderator is updating data files...
+Moderator is creating core engine...
+
+dlopen(../plugins/libPythonInterface_py312.dylib, 0x0001): Library not loaded: /Library/Frameworks/Python.framework/Versions/3.12/Python
+  Referenced from: <1E007586-2BE6-3802-9092-DD52583BAA21> /Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/plugins/libPythonInterface_py312.R2026a.dylib
+  Reason: tried: '/Library/Frameworks/Python.framework/Versions/3.12/Python' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.12/Python' (no such file), '/Library/Frameworks/Python.framework/Versions/3.12/Python' (no such file)
+*** Library "../plugins/libPythonInterface_py312" did not open.
+
+dlopen(../plugins/libMatlabInterface.dylib, 0x0001): Library not loaded: @rpath/libmex.dylib
+  Referenced from: <A3B35E42-B35B-3474-848C-36E72294C01A> /Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/plugins/libMatlabInterface.R2026a.dylib
+  Reason: tried: '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/plugins/../Frameworks/libmex.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/plugins/../Frameworks/libmex.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/libmex.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/libmex.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/proprietary/libmex.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/MacOS/../Frameworks/libmex.dylib' (no such file)
+*** Library "../plugins/libMatlabInterface" did not open.
+
+dlopen(../plugins/libExternalForceModel_py312.dylib, 0x0001): Library not loaded: /Library/Frameworks/Python.framework/Versions/3.12/Python
+  Referenced from: <3BC532F8-99B4-323D-BFAB-ABA8084E53D5> /Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/plugins/libExternalForceModel_py312.R2026a.dylib
+  Reason: tried: '/Library/Frameworks/Python.framework/Versions/3.12/Python' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Library/Frameworks/Python.framework/Versions/3.12/Python' (no such file), '/Library/Frameworks/Python.framework/Versions/3.12/Python' (no such file)
+*** Library "../plugins/libExternalForceModel_py312" did not open.
+
+dlopen(../plugins/proprietary/libCsaltInterface.dylib, 0x0001): tried: '../plugins/proprietary/libCsaltInterface.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS../plugins/proprietary/libCsaltInterface.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/proprietary/libCsaltInterface.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/../plugins/proprietary/libCsaltInterface.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/proprietary/../plugins/proprietary/libCsaltInterface.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/MacOS/../Frameworks/../plugins/proprietary/libCsaltInterface.dylib' (no such file), '/usr/lib/../plugins/proprietary/libCsaltInterface.dylib' (no such file, not in dyld cache), '../plugins/proprietary/libCsaltInterface.dylib' (no such file)
+*** Library "../plugins/proprietary/libCsaltInterface" did not open.
+
+dlopen(../plugins/proprietary/libEMTGModels.dylib, 0x0001): tried: '../plugins/proprietary/libEMTGModels.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS../plugins/proprietary/libEMTGModels.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/proprietary/libEMTGModels.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/../plugins/proprietary/libEMTGModels.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/proprietary/../plugins/proprietary/libEMTGModels.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/MacOS/../Frameworks/../plugins/proprietary/libEMTGModels.dylib' (no such file), '/usr/lib/../plugins/proprietary/libEMTGModels.dylib' (no such file, not in dyld cache), '../plugins/proprietary/libEMTGModels.dylib' (no such file)
+*** Library "../plugins/proprietary/libEMTGModels" did not open.
+
+dlopen(../plugins/proprietary/libMarsGRAM.dylib, 0x0001): tried: '../plugins/proprietary/libMarsGRAM.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS../plugins/proprietary/libMarsGRAM.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/proprietary/libMarsGRAM.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/../plugins/proprietary/libMarsGRAM.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/proprietary/../plugins/proprietary/libMarsGRAM.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/MacOS/../Frameworks/../plugins/proprietary/libMarsGRAM.dylib' (no such file), '/usr/lib/../plugins/proprietary/libMarsGRAM.dylib' (no such file, not in dyld cache), '../plugins/proprietary/libMarsGRAM.dylib' (no such file)
+*** Library "../plugins/proprietary/libMarsGRAM" did not open.
+
+dlopen(../plugins/proprietary/libMsise86.dylib, 0x0001): tried: '../plugins/proprietary/libMsise86.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS../plugins/proprietary/libMsise86.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/proprietary/libMsise86.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/../plugins/proprietary/libMsise86.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/proprietary/../plugins/proprietary/libMsise86.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/MacOS/../Frameworks/../plugins/proprietary/libMsise86.dylib' (no such file), '/usr/lib/../plugins/proprietary/libMsise86.dylib' (no such file, not in dyld cache), '../plugins/proprietary/libMsise86.dylib' (no such file)
+*** Library "../plugins/proprietary/libMsise86" did not open.
+
+dlopen(../plugins/proprietary/libSNOptimizer.dylib, 0x0001): tried: '../plugins/proprietary/libSNOptimizer.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS../plugins/proprietary/libSNOptimizer.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/proprietary/libSNOptimizer.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/../plugins/proprietary/libSNOptimizer.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/proprietary/../plugins/proprietary/libSNOptimizer.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/MacOS/../Frameworks/../plugins/proprietary/libSNOptimizer.dylib' (no such file), '/usr/lib/../plugins/proprietary/libSNOptimizer.dylib' (no such file, not in dyld cache), '../plugins/proprietary/libSNOptimizer.dylib' (no such file)
+*** Library "../plugins/proprietary/libSNOptimizer" did not open.
+
+dlopen(../plugins/proprietary/libVF13Optimizer.dylib, 0x0001): tried: '../plugins/proprietary/libVF13Optimizer.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS../plugins/proprietary/libVF13Optimizer.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/proprietary/libVF13Optimizer.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/../plugins/proprietary/libVF13Optimizer.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/Frameworks/../plugins/proprietary/../plugins/proprietary/libVF13Optimizer.dylib' (no such file), '/Applications/GMAT R2026a/bin/GMAT-R2026a_Beta.app/Contents/MacOS/../Frameworks/../plugins/proprietary/libVF13Optimizer.dylib' (no such file), '/usr/lib/../plugins/proprietary/libVF13Optimizer.dylib' (no such file, not in dyld cache), '../plugins/proprietary/libVF13Optimizer.dylib' (no such file)
+*** Library "../plugins/proprietary/libVF13Optimizer" did not open.
+Successfully set Planetary Source to use: DE405
+Successfully set Planetary Source to use: DE405
+Successfully set Planetary Source to use: DE405
+Setting nutation file to ../data/planetary_coeff/NUTATION.DAT
+Setting leap seconds file to ../data/time/tai-utc.dat
+2026-06-28 16:11:10 GMAT Moderator successfully created core engine
+Usage: One of the following
+   GmatConsole
+   GmatConsole ScriptFileName
+   GmatConsole <option> <string>
+
+The first selection runs an interactive session.
+The second runs the input script once and then exits.
+The third selection executes specific testing scenarios.
+
+Valid options are:
+   --help, -h                    Shows available options
+   --version, -v                 Show version and build information
+   --batch, -b <filename>        Runs multiple scripts listed in specified file
+   --run, -r <filename>          Runs the input script once, then exits
+   --logfile, -l <filename>      Specify the log file (ignored in Console interactive mode)
+   --startup_file, -s <filename> Specify the startup file (ignored in Console interactive mode)
+   --minimize, -m                Opens with GUI minimized (ignored for Console)
+   --start-server                Starts GMAT Server on start-up (ignored for Console)
+   --save                        Saves current script (interactive mode only)
+   --summary                     Writes command summary (interactive mode only)
+   --verbose <on/off>            Dump info messages to screen during run (default is on)
+   --exit, -x                    Exit after run (default)
+
+
+Moderator is deleting core engine...
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 scripts/04_gmat_orbital_impact.py
+
+=======================================================
+Scenario: Clean (True Orbit)
+=======================================================
+  Script written: /tmp/gmat_clean.script
+  Running GMAT (this takes ~30-60 seconds)...
+Traceback (most recent call last):
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/04_gmat_orbital_impact.py", line 187, in <module>
+    main()
+    ~~~~^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/04_gmat_orbital_impact.py", line 146, in main
+    run_gmat(script_path)
+    ~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/04_gmat_orbital_impact.py", line 90, in run_gmat
+    result = subprocess.run(
+        [GMAT_CONSOLE, "-r", script_path],
+        capture_output=True, text=True, timeout=300
+    )
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 556, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1220, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 2193, in _communicate
+    stdout = self._translate_newlines(stdout,
+                                      self.stdout.encoding,
+                                      self.stdout.errors)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1098, in _translate_newlines
+    data = data.decode(encoding, errors)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 9275: invalid continuation byte
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % ls /tmp/gmat_report_clean.txt
+cat /tmp/gmat_report_clean.txt | head -20
+ls: /tmp/gmat_report_clean.txt: No such file or directory
+cat: /tmp/gmat_report_clean.txt: No such file or directory
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_clean.script 2>&1 | tail -30
+
+Usage: One of the following
+   GmatConsole
+   GmatConsole ScriptFileName
+   GmatConsole <option> <string>
+
+The first selection runs an interactive session.
+The second runs the input script once and then exits.
+The third selection executes specific testing scenarios.
+
+Valid options are:
+   --help, -h                    Shows available options
+   --version, -v                 Show version and build information
+   --batch, -b <filename>        Runs multiple scripts listed in specified file
+   --run, -r <filename>          Runs the input script once, then exits
+   --logfile, -l <filename>      Specify the log file (ignored in Console interactive mode)
+   --startup_file, -s <filename> Specify the startup file (ignored in Console interactive mode)
+   --minimize, -m                Opens with GUI minimized (ignored for Console)
+   --start-server                Starts GMAT Server on start-up (ignored for Console)
+   --save                        Saves current script (interactive mode only)
+   --summary                     Writes command summary (interactive mode only)
+   --verbose <on/off>            Dump info messages to screen during run (default is on)
+   --exit, -x                    Exit after run (default)
+
+
+ERROR!!!!!! ---- Console Application Execution Failed: Errors were found in the script named "/tmp/gmat_clean.script"
+
+EXITing GmatConsole with exit code 1
+Console Application Execution Failed: Errors were found in the script named "/tmp/gmat_clean.script"
+
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cd /Applications/"GMAT R2026a"/bin                                      
+open GMAT-R2026a_Beta.app
+(venv) nithinyadavg@Nithins-MacBook-Air-3 bin % cd "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation"
+source venv/bin/activate
+
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 scripts/04_gmat_orbital_impact.py         
+
+=======================================================
+Scenario: Clean (True Orbit)
+=======================================================
+  Script written: /tmp/gmat_clean.script
+  Running GMAT (this takes ~30-60 seconds)...
+Traceback (most recent call last):
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/04_gmat_orbital_impact.py", line 187, in <module>
+    main()
+    ~~~~^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/04_gmat_orbital_impact.py", line 146, in main
+    run_gmat(script_path)
+    ~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/04_gmat_orbital_impact.py", line 90, in run_gmat
+    result = subprocess.run(
+        [GMAT_CONSOLE, "-r", script_path],
+        capture_output=True, text=True, timeout=300
+    )
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 556, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1220, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 2193, in _communicate
+    stdout = self._translate_newlines(stdout,
+                                      self.stdout.encoding,
+                                      self.stdout.errors)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1098, in _translate_newlines
+    data = data.decode(encoding, errors)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe2 in position 9275: invalid continuation byte
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat /tmp/gmat_clean.script
+%----------------------------------------
+% GMAT Script: Apophis Close Approach Analysis
+% Dissertation: Integrity Assurance in Planetary Defense
+% Author: Nithin Yadav Gopinath (C5003001)
+%
+% This script propagates Apophis forward to its 2029
+% Earth close approach and reports the minimum distance.
+% It is generated and called automatically by Python.
+%----------------------------------------
+
+%--- Spacecraft (representing Apophis) ---
+Create Spacecraft Apophis;
+GMAT Apophis.DateFormat        = UTCGregorian;
+GMAT Apophis.Epoch             = '01 Jan 2020 00:00:00.000';
+GMAT Apophis.CoordinateSystem  = SunMJ2000Eq;
+GMAT Apophis.DisplayStateType  = Keplerian;
+
+% Orbital elements — JPL values for Apophis at epoch 2020-01-01
+% These are the CLEAN baseline values.
+% Python will substitute different values for each scenario.
+GMAT Apophis.SMA  = 137986487.890517;     % Semi-major axis (km)
+GMAT Apophis.ECC  = 0.19139850;     % Eccentricity
+GMAT Apophis.INC  = 3.339200;     % Inclination (deg)
+GMAT Apophis.RAAN = 204.500200;    % Right Ascension of Ascending Node (deg)
+GMAT Apophis.AOP  = 126.592000;     % Argument of Periapsis (deg)
+GMAT Apophis.TA   = 222.875600;      % True Anomaly (deg)
+
+%--- Force Model ---
+Create ForceModel SolarSystemForces;
+GMAT SolarSystemForces.CentralBody              = Sun;
+GMAT SolarSystemForces.PrimaryBodies            = {Sun};
+GMAT SolarSystemForces.PointMasses              = {Earth, Luna, Venus, Mars, Jupiter};
+GMAT SolarSystemForces.SRP                      = Off;
+GMAT SolarSystemForces.RelativisticCorrection   = Off;
+
+%--- Propagator ---
+Create Propagator SolarProp;
+GMAT SolarProp.FM   = SolarSystemForces;
+GMAT SolarProp.Type = RungeKutta89;
+
+%--- Close Approach Report ---
+Create ReportFile CloseApproachReport;
+GMAT CloseApproachReport.Filename       = '/tmp/gmat_report_clean.txt';
+GMAT CloseApproachReport.WriteHeaders   = true;
+GMAT CloseApproachReport.Add           = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+
+%--- Mission Sequence ---
+BeginMissionSequence;
+
+% Propagate from 2020 to start of 2029 window
+Propagate SolarProp(Apophis) {Apophis.UTCGregorian = '01 Jan 2029 00:00:00.000'};
+
+% Now propagate day by day through the close approach window
+% and record Earth distance at each step
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 180, Apophis.Earth.RMAG = 31600, StopTolerance = 1};
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat > /tmp/gmat_test.script << 'EOF'
+Create Spacecraft Apophis;
+GMAT Apophis.DateFormat = UTCGregorian;
+GMAT Apophis.Epoch = '01 Jan 2020 00:00:00.000';
+GMAT Apophis.CoordinateSystem = SunMJ2000Eq;
+GMAT Apophis.DisplayStateType = Keplerian;
+GMAT Apophis.SMA = 137986487.890517;
+GMAT Apophis.ECC = 0.19139850;
+GMAT Apophis.INC = 3.339200;
+GMAT Apophis.RAAN = 204.500200;
+GMAT Apophis.AOP = 126.592000;
+GMAT Apophis.TA = 222.875600;
+Create ForceModel SolarSystemForces;
+GMAT SolarSystemForces.CentralBody = Sun;
+GMAT SolarSystemForces.PrimaryBodies = {Sun};
+GMAT SolarSystemForces.PointMasses = {Earth, Luna, Venus, Mars, Jupiter};
+Create Propagator SolarProp;
+GMAT SolarProp.FM = SolarSystemForces;
+GMAT SolarProp.Type = RungeKutta89;
+Create ReportFile CloseApproachReport;
+GMAT CloseApproachReport.Filename = '/tmp/gmat_report_test.txt';
+GMAT CloseApproachReport.WriteHeaders = true;
+GMAT CloseApproachReport.Add = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+BeginMissionSequenc
+heredoc> 
+heredoc> "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_test.script 2>&1 | tail -20
+heredoc> 
+heredoc> 
+heredoc> 
+heredoc> "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_test.script 2>&1 | grep -v "dlopen\|dylib\|tried:\|no such file\|Reason\|Referenced\|Library\|Moderator\|Planetary\|nutation\|leap\|Setting"
+heredoc> 
+heredoc> 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat > /tmp/gmat_test.script << 'ENDOFSCRIPT'
+heredoc> Create Spacecraft Apophis;
+GMAT Apophis.DateFormat = UTCGregorian;
+GMAT Apophis.Epoch = '01 Jan 2020 00:00:00.000';
+GMAT Apophis.CoordinateSystem = SunMJ2000Eq;
+GMAT Apophis.DisplayStateType = Keplerian;
+GMAT Apophis.SMA = 137986487.890517;
+GMAT Apophis.ECC = 0.19139850;
+GMAT Apophis.INC = 3.339200;
+GMAT Apophis.RAAN = 204.500200;
+GMAT Apophis.AOP = 126.592000;
+GMAT Apophis.TA = 222.875600;
+Create ForceModel SolarSystemForces;
+GMAT SolarSystemForces.CentralBody = Sun;
+GMAT SolarSystemForces.PrimaryBodies = {Sun};
+GMAT SolarSystemForces.PointMasses = {Earth, Luna, Venus, Mars, Jupiter};
+Create Propagator SolarProp;
+GMAT SolarProp.FM = SolarSystemForces;
+GMAT SolarProp.Type = RungeKutta89;
+Create ReportFile CloseApproachReport;
+GMAT CloseApproachReport.Filename = '/tmp/gmat_report_test.txt';
+GMAT CloseApproachReport.WriteHeaders = true;
+GMAT CloseApproachReport.Add = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+BeginMissionSequence;
+Propagate SolarProp(Apophis) {Apophis.UTCGregorian = '13 Apr 2029 00:00:00.000'};
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 2};
+ENDOFSCRIPT
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_test.script 2>&1 | tail -20
+Valid options are:
+   --help, -h                    Shows available options
+   --version, -v                 Show version and build information
+   --batch, -b <filename>        Runs multiple scripts listed in specified file
+   --run, -r <filename>          Runs the input script once, then exits
+   --logfile, -l <filename>      Specify the log file (ignored in Console interactive mode)
+   --startup_file, -s <filename> Specify the startup file (ignored in Console interactive mode)
+   --minimize, -m                Opens with GUI minimized (ignored for Console)
+   --start-server                Starts GMAT Server on start-up (ignored for Console)
+   --save                        Saves current script (interactive mode only)
+   --summary                     Writes command summary (interactive mode only)
+   --verbose <on/off>            Dump info messages to screen during run (default is on)
+   --exit, -x                    Exit after run (default)
+
+
+ERROR!!!!!! ---- Console Application Execution Failed: Errors were found in the script named "/tmp/gmat_test.script"
+
+EXITing GmatConsole with exit code 1
+Console Application Execution Failed: Errors were found in the script named "/tmp/gmat_test.script"
+
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_test.script 2>&1 | grep -i "error\|warning\|line\|invalid\|unknown"
+1: /tmp/gmat_test.script: **** ERROR **** Interpreter Exception: **** ERROR **** Command Exception: A value of "Apophis.UTCGregorian" of base type "String" on command "Propagate" is not an allowed value.
+The allowed values are: [ Object Property (Real), Real Number, Variable, Array Element, or Parameter ].  in line:
+ERROR!!!!!! ---- Console Application Execution Failed: Errors were found in the script named "/tmp/gmat_test.script"
+Console Application Execution Failed: Errors were found in the script named "/tmp/gmat_test.script"
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat > /tmp/gmat_test.script << 'ENDOFSCRIPT'
+heredoc> Create Spacecraft Apophis;
+GMAT Apophis.DateFormat = UTCGregorian;
+GMAT Apophis.Epoch = '01 Jan 2020 00:00:00.000';
+GMAT Apophis.CoordinateSystem = SunMJ2000Eq;
+GMAT Apophis.DisplayStateType = Keplerian;
+GMAT Apophis.SMA = 137986487.890517;
+GMAT Apophis.ECC = 0.19139850;
+GMAT Apophis.INC = 3.339200;
+GMAT Apophis.RAAN = 204.500200;
+GMAT Apophis.AOP = 126.592000;
+GMAT Apophis.TA = 222.875600;
+Create ForceModel SolarSystemForces;
+GMAT SolarSystemForces.CentralBody = Sun;
+GMAT SolarSystemForces.PrimaryBodies = {Sun};
+GMAT SolarSystemForces.PointMasses = {Earth, Luna, Venus, Mars, Jupiter};
+Create Propagator SolarProp;
+GMAT SolarProp.FM = SolarSystemForces;
+GMAT SolarProp.Type = RungeKutta89;
+Create ReportFile CloseApproachReport;
+GMAT CloseApproachReport.Filename = '/tmp/gmat_report_test.txt';
+GMAT CloseApproachReport.WriteHeaders = true;
+GMAT CloseApproachReport.Add = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+BeginMissionSequence;
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 3390};
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 3572};
+ENDOFSCRIPT
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_test.script 2>&1 | grep -i "error\|warning\|completed\|mission"
+General Mission Analysis Tool
+1: /tmp/gmat_test.script: **** ERROR **** Interpreter Exception: Nonexistent CoordinateSystem "SunMJ2000Eq" referenced in the Spacecraft "Apophis"
+2: /tmp/gmat_test.script: **** ERROR **** Interpreter Exception: The CoordinateSystem "SunMJ2000Eq" set on Spacecraft Apophis does not exist.
+ERROR!!!!!! ---- Console Application Execution Failed: Errors were found in the script named "/tmp/gmat_test.script"
+Console Application Execution Failed: Errors were found in the script named "/tmp/gmat_test.script"
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat > /tmp/gmat_test.script << 'ENDOFSCRIPT'
+Create Spacecraft Apophis;
+GMAT Apophis.DateFormat = UTCGregorian;
+GMAT Apophis.Epoch = '01 Jan 2020 00:00:00.000';
+GMAT Apophis.CoordinateSystem = HeliocentricEcliptic;
+GMAT Apophis.DisplayStateType = Keplerian;
+GMAT Apophis.SMA = 137986487.890517;
+GMAT Apophis.ECC = 0.19139850;
+GMAT Apophis.INC = 3.339200;
+GMAT Apophis.RAAN = 204.500200;
+GMAT Apophis.AOP = 126.592000;
+GMAT Apophis.TA = 222.875600;
+Create ForceModel SolarSystemForces;
+GMAT SolarSystemForces.CentralBody = Sun;
+GMAT SolarSystemForces.PrimaryBodies = {Sun};
+GMAT SolarSystemForces.PointMasses = {Earth, Luna, Venus, Mars, Jupiter};
+Create Propagator SolarProp;
+GMAT SolarProp.FM = SolarSystemForces;
+GMAT SolarProp.Type = RungeKutta89;
+Create ReportFile CloseApproachReport;
+GMAT CloseApproachReport.Filename = '/tmp/gmat_report_test.txt';
+GMAT CloseApproachReport.WriteHeaders = true;
+GMAT CloseApproachReport.Add = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+BeginMissionSequence;
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 3390};
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 3572};
+ENDOFSCRIPT
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_test.script 2>&1 | grep -i "error\|warning\|completed\|mission\|run"
+General Mission Analysis Tool
+1: /tmp/gmat_test.script: **** ERROR **** Interpreter Exception: Nonexistent CoordinateSystem "HeliocentricEcliptic" referenced in the Spacecraft "Apophis"
+2: /tmp/gmat_test.script: **** ERROR **** Interpreter Exception: The CoordinateSystem "HeliocentricEcliptic" set on Spacecraft Apophis does not exist.
+The first selection runs an interactive session.
+The second runs the input script once and then exits.
+   --batch, -b <filename>        Runs multiple scripts listed in specified file
+   --run, -r <filename>          Runs the input script once, then exits
+   --verbose <on/off>            Dump info messages to screen during run (default is on)
+   --exit, -x                    Exit after run (default)
+ERROR!!!!!! ---- Console Application Execution Failed: Errors were found in the script named "/tmp/gmat_test.script"
+Console Application Execution Failed: Errors were found in the script named "/tmp/gmat_test.script"
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat "/Applications/GMAT R2026a/samples/Ex_HohmannTransfer.script" | head -60 
+%
+%  Ex_HohmannTransfer
+%
+%  Script Mission - Hohmann Transfer Example
+%
+%  This script demonstrates how to target a Hohmann Transfer
+%
+
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft DefaultSC;
+
+%----------------------------------------
+%---------- Propagators
+%----------------------------------------
+
+Create ForceModel DefaultProp_ForceModel;
+
+Create Propagator DefaultProp;
+
+DefaultProp.FM = DefaultProp_ForceModel;
+
+%----------------------------------------
+%---------- Burns
+%----------------------------------------
+
+Create ImpulsiveBurn TOI;
+
+TOI.CoordinateSystem = Local;
+TOI.Origin           = Earth;
+TOI.Axes             = VNB;
+
+Create ImpulsiveBurn GOI;
+
+GOI.CoordinateSystem = Local;
+GOI.Origin           = Earth;
+GOI.Axes             = VNB;
+
+%----------------------------------------
+%---------- Solvers
+%----------------------------------------
+
+Create DifferentialCorrector DC;
+
+
+%----------------------------------------
+%---------- Subscribers
+%----------------------------------------
+
+% Create an OpenFrameInterface View  
+
+Create OpenFramesInterface OFI_EarthView;
+
+OFI_EarthView.SolverIterations    = Current;
+OFI_EarthView.Maximized           = false;
+
+OFI_EarthView.Add                 = {Earth, DefaultSC}
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % ls "/Applications/GMAT R2026a/samples/" | grep -i solar
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % grep -r "CoordinateSystem" "/Applications/GMAT R2026a/samples/" | grep -v "\.pyc" | head -20
+/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script:MAVEN.CoordinateSystem             = EarthMJ2000Eq;
+/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script:MAVEN.Attitude                     = CoordinateSystemFixed;
+/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script:MAVEN.AttitudeCoordinateSystem     = EarthMJ2000Eq;
+/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script:TCM.CoordinateSystem   = Local;
+/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script:MOI.CoordinateSystem   = Local;
+/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script:Create CoordinateSystem SunEcliptic;
+/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script:Create CoordinateSystem MarsInertial;
+/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script:OFI_EarthView.CoordinateSystem = EarthMJ2000Eq;
+/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script:Earth_View.ViewFrame           = CoordinateSystem;
+/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script:OFI_SolarSystemView.CoordinateSystem = SunEcliptic;
+/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script:SolarSystem_View.ViewFrame           = CoordinateSystem;
+/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script:OFI_MarsView.CoordinateSystem = MarsInertial;
+/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script:Mars_View.ViewFrame           = CoordinateSystem;
+/Applications/GMAT R2026a/samples/Tut_Inter_Spacecraft_Tracking.script:SimSat.CoordinateSystem      = EarthMJ2000Eq
+/Applications/GMAT R2026a/samples/Tut_Inter_Spacecraft_Tracking.script:SimTrackSat.CoordinateSystem = EarthMJ2000Eq
+/Applications/GMAT R2026a/samples/Tut_Inter_Spacecraft_Tracking.script:EstSat.CoordinateSystem      = EarthMJ2000Eq
+/Applications/GMAT R2026a/samples/Tut_Inter_Spacecraft_Tracking.script:EstTrackSat.CoordinateSystem = EarthMJ2000Eq
+/Applications/GMAT R2026a/samples/Ex_AnalyticMassProperties.script:Sat1.CoordinateSystem                = EarthMJ2000Eq
+/Applications/GMAT R2026a/samples/Ex_AnalyticMassProperties.script:Thruster1.CoordinateSystem   = Local
+/Applications/GMAT R2026a/samples/Ex_AnalyticMassProperties.script:Thruster2.CoordinateSystem   = Local
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % grep -A 5 "Create CoordinateSystem SunEcliptic" "/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script"
+Create CoordinateSystem SunEcliptic;
+
+SunEcliptic.Origin = Sun;
+SunEcliptic.Axes   = MJ2000Ec;
+
+Create CoordinateSystem MarsInertial;
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat > /tmp/gmat_test.script << 'ENDOFSCRIPT'
+Create CoordinateSystem SunEcliptic;
+SunEcliptic.Origin = Sun;
+SunEcliptic.Axes = MJ2000Ec;
+Create Spacecraft Apophis;
+GMAT Apophis.DateFormat = UTCGregorian;
+GMAT Apophis.Epoch = '01 Jan 2020 00:00:00.000';
+GMAT Apophis.CoordinateSystem = SunEcliptic;
+GMAT Apophis.DisplayStateType = Keplerian;
+GMAT Apophis.SMA = 137986487.890517;
+GMAT Apophis.ECC = 0.19139850;
+GMAT Apophis.INC = 3.339200;
+GMAT Apophis.RAAN = 204.500200;
+GMAT Apophis.AOP = 126.592000;
+GMAT Apophis.TA = 222.875600;
+Create ForceModel SolarSystemForces;
+GMAT SolarSystemForces.CentralBody = Sun;
+GMAT SolarSystemForces.PrimaryBodies = {Sun};
+GMAT SolarSystemForces.PointMasses = {Earth, Luna, Venus, Mars, Jupiter};
+Create Propagator SolarProp;
+GMAT SolarProp.FM = SolarSystemForces;
+GMAT SolarProp.Type = RungeKutta89;
+Create ReportFile CloseApproachReport;
+GMAT CloseApproachReport.Filename = '/tmp/gmat_report_test.txt';
+GMAT CloseApproachReport.WriteHeaders = true;
+GMAT CloseApproachReport.Add = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+BeginMissionSequence;
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 3390};
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 3572};
+ENDOFSCRIPT
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_test.script 2>&1 | grep -i "error\|warning\|completed\|mission run\|run complete"
+**** ERROR **** Sandbox Exception: Errors were found in the mission control sequence; please correct the errors listed in the message window
+ *** Mission run failed.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_test.script 2>&1 | grep -i "error\|exception\|sandbox" | grep -v "dlopen\|dylib\|Library\|plugin"
+ODEModel Exception Thrown: There is no gravity file specified for GravityField GravityField.Sun
+ODEModel Exception Thrown: There is no gravity file specified for GravityField GravityField.Sun
+**** ERROR **** Sandbox Exception: Errors were found in the mission control sequence; please correct the errors listed in the message window
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat > /tmp/gmat_test.script << 'ENDOFSCRIPT'
+Create CoordinateSystem SunEcliptic;
+SunEcliptic.Origin = Sun;
+SunEcliptic.Axes = MJ2000Ec;
+Create Spacecraft Apophis;
+Apophis.DateFormat = UTCGregorian;
+Apophis.Epoch = '01 Jan 2020 00:00:00.000';
+Apophis.CoordinateSystem = SunEcliptic;
+Apophis.DisplayStateType = Keplerian;
+Apophis.SMA = 137986487.890517;
+Apophis.ECC = 0.19139850;
+Apophis.INC = 3.339200;
+Apophis.RAAN = 204.500200;
+Apophis.AOP = 126.592000;
+Apophis.TA = 222.875600;
+Create ForceModel SolarSystemForces;
+SolarSystemForces.CentralBody = Sun;
+SolarSystemForces.PointMasses = {Sun, Earth, Luna, Venus, Mars, Jupiter};
+Create Propagator SolarProp;
+SolarProp.FM = SolarSystemForces;
+SolarProp.Type = RungeKutta89;
+Create ReportFile CloseApproachReport;
+CloseApproachReport.Filename = '/tmp/gmat_report_test.txt';
+CloseApproachReport.WriteHeaders = true;
+CloseApproachReport.Add = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+BeginMissionSequence;
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 3390};
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 3572};
+ENDOFSCRIPT
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_test.script 2>&1 | grep -i "error\|exception\|mission run\|completed" | grep -v "dlopen\|dylib\|Library\|plugin"
+Mission run completed.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % ls -la /tmp/gmat_report_test.txt
+head -20 /tmp/gmat_report_test.txt
+-rw-r--r--@ 1 nithinyadavg  wheel  12030876  1 Jul 11:17 /tmp/gmat_report_test.txt
+Apophis.UTCGregorian       Apophis.Earth.RMAG        
+01 Jan 2020 00:00:00.000   221159942.8453508         
+01 Jan 2020 00:01:00.000   221159568.6968045         
+01 Jan 2020 00:04:09.623   221158386.2566623         
+01 Jan 2020 00:13:34.835   221154861.8471819         
+01 Jan 2020 00:39:40.132   221145102.1916485         
+01 Jan 2020 01:24:40.132   221128270.5705032         
+01 Jan 2020 02:09:40.132   221111442.6548543         
+01 Jan 2020 02:54:40.132   221094618.4538702         
+01 Jan 2020 03:39:40.132   221077797.9767183         
+01 Jan 2020 04:24:40.132   221060981.2325651         
+01 Jan 2020 05:09:40.132   221044168.2305759         
+01 Jan 2020 05:54:40.132   221027358.9799152         
+01 Jan 2020 06:39:40.132   221010553.4897529         
+01 Jan 2020 07:24:40.132   220993751.7692381         
+01 Jan 2020 08:09:40.132   220976953.8275388         
+01 Jan 2020 08:54:40.132   220960159.6738154         
+01 Jan 2020 09:39:40.132   220943369.3172271         
+01 Jan 2020 10:24:40.132   220926582.7669323         
+01 Jan 2020 11:09:40.132   220909800.0320881         
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+import pandas as pd
+df = pd.read_csv('/tmp/gmat_report_test.txt', sep='\s+', header=0)
+df.columns = ['date', 'time', 'rmag']
+df['rmag'] = pd.to_numeric(df['rmag'], errors='coerce')
+df = df.dropna()
+min_row = df.loc[df['rmag'].idxmin()]
+print(f'Minimum distance: {min_row[\"rmag\"]:,.1f} km')
+print(f'At date: {min_row[\"date\"]} {min_row[\"time\"]}')
+print(f'In lunar distances: {min_row[\"rmag\"]/384400:.4f} LD')
+"
+<string>:3: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+    df.columns = ['date', 'time', 'rmag']
+    ^^^^^^^^^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/venv/lib/python3.14/site-packages/pandas/core/generic.py", line 6220, in __setattr__
+    return object.__setattr__(self, name, value)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/venv/lib/python3.14/site-packages/pandas/core/generic.py", line 766, in _set_axis
+    self._mgr.set_axis(axis, labels)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/venv/lib/python3.14/site-packages/pandas/core/internals/managers.py", line 273, in set_axis
+    self._validate_set_axis(axis, new_labels)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/venv/lib/python3.14/site-packages/pandas/core/internals/managers.py", line 288, in _validate_set_axis
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Length mismatch: Expected axis has 2 elements, new values have 3 elements
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+import pandas as pd
+df = pd.read_csv('/tmp/gmat_report_test.txt', sep='\\s+', header=0)
+df.columns = ['epoch', 'rmag']
+df['rmag'] = pd.to_numeric(df['rmag'], errors='coerce')
+df = df.dropna()
+min_row = df.loc[df['rmag'].idxmin()]
+print(f'Minimum distance : {min_row[\"rmag\"]:,.1f} km')
+print(f'At epoch         : {min_row[\"epoch\"]}')
+print(f'Lunar distances  : {min_row[\"rmag\"]/384400:.4f} LD')
+print(f'Total rows       : {len(df)}')
+"
+<string>:3: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+<string>:7: PerformanceWarning: indexing past lexsort depth may impact performance.
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+    print(f'Minimum distance : {min_row["rmag"]:,.1f} km')
+                               ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to Series.__format__
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % head -3 /tmp/gmat_report_test.txt
+Apophis.UTCGregorian       Apophis.Earth.RMAG        
+01 Jan 2020 00:00:00.000   221159942.8453508         
+01 Jan 2020 00:01:00.000   221159568.6968045         
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+import pandas as pd
+df = pd.read_csv('/tmp/gmat_report_test.txt', sep='   ', header=0, engine='python')
+df.columns = [c.strip() for c in df.columns]
+rmag_col = 'Apophis.Earth.RMAG'
+df[rmag_col] = pd.to_numeric(df[rmag_col].str.strip(), errors='coerce')
+df = df.dropna(subset=[rmag_col])
+min_val = df[rmag_col].min()
+min_epoch = df.loc[df[rmag_col].idxmin(), 'Apophis.UTCGregorian']
+print(f'Minimum distance : {min_val:,.1f} km')
+print(f'At epoch         : {min_epoch}')
+print(f'Lunar distances  : {min_val/384400:.4f} LD')
+print(f'Total rows       : {len(df)}')
+"
+Traceback (most recent call last):
+  File "<string>", line 6, in <module>
+    df[rmag_col] = pd.to_numeric(df[rmag_col].str.strip(), errors='coerce')
+                                 ^^^^^^^^^^^^^^^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/venv/lib/python3.14/site-packages/pandas/core/generic.py", line 6206, in __getattr__
+    return object.__getattribute__(self, name)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/venv/lib/python3.14/site-packages/pandas/core/accessor.py", line 230, in __get__
+    return self._accessor(obj)
+           ~~~~~~~~~~~~~~^^^^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/venv/lib/python3.14/site-packages/pandas/core/strings/accessor.py", line 194, in __init__
+    self._inferred_dtype = self._validate(data)
+                           ~~~~~~~~~~~~~~^^^^^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/venv/lib/python3.14/site-packages/pandas/core/strings/accessor.py", line 248, in _validate
+    raise AttributeError(
+        f"Can only use .str accessor with string values, not {inferred_dtype}"
+    )
+AttributeError: Can only use .str accessor with string values, not floating. Did you mean: 'std'?
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+import pandas as pd
+df = pd.read_csv('/tmp/gmat_report_test.txt', sep='   ', header=0, engine='python')
+df.columns = [c.strip() for c in df.columns]
+print('Columns:', df.columns.tolist())
+print('Shape:', df.shape)
+print(df.head(2))
+"
+Columns: ['Apophis.UTCGregorian', 'Unnamed: 1', 'Apophis.Earth.RMAG']
+Shape: (222793, 3)
+       Apophis.UTCGregorian    Unnamed: 1  Apophis.Earth.RMAG
+0  01 Jan 2020 00:00:00.000  2.211599e+08                 NaN
+1  01 Jan 2020 00:01:00.000  2.211596e+08                 NaN
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+import pandas as pd
+df = pd.read_csv('/tmp/gmat_report_test.txt', sep='   ', header=0, engine='python')
+rmag = pd.to_numeric(df.iloc[:, 1], errors='coerce').dropna()
+min_val = rmag.min()
+min_idx = rmag.idxmin()
+print(f'Minimum distance : {min_val:,.1f} km')
+print(f'Lunar distances  : {min_val/384400:.4f} LD')
+print(f'Row index        : {min_idx}')
+print(f'Total rows       : {len(rmag)}')
+"
+Minimum distance : 8,307,466.7 km
+Lunar distances  : 21.6115 LD
+Row index        : 58116
+Total rows       : 222793
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % pip install astroquery
+Collecting astroquery
+  Downloading astroquery-0.4.11-py3-none-any.whl.metadata (6.5 kB)
+Requirement already satisfied: numpy>=1.20 in ./venv/lib/python3.14/site-packages (from astroquery) (2.4.6)
+Collecting astropy>=5.0 (from astroquery)
+  Downloading astropy-8.0.0-cp311-abi3-macosx_11_0_arm64.whl.metadata (11 kB)
+Requirement already satisfied: requests>=2.19 in ./venv/lib/python3.14/site-packages (from astroquery) (2.34.2)
+Collecting beautifulsoup4>=4.8 (from astroquery)
+  Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting html5lib>=0.999 (from astroquery)
+  Downloading html5lib-1.1-py2.py3-none-any.whl.metadata (16 kB)
+Collecting keyring>=15.0 (from astroquery)
+  Downloading keyring-25.7.0-py3-none-any.whl.metadata (21 kB)
+Collecting pyvo>=1.5 (from astroquery)
+  Downloading pyvo-1.9.1-py3-none-any.whl.metadata (4.2 kB)
+Collecting astropy-iers-data>=0.2026.6.1.17.39.59 (from astropy>=5.0->astroquery)
+  Downloading astropy_iers_data-0.2026.6.22.1.23.34-py3-none-any.whl.metadata (3.4 kB)
+Collecting packaging>=25.0 (from astropy>=5.0->astroquery)
+  Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting pyerfa>=2.0.1.3 (from astropy>=5.0->astroquery)
+  Downloading pyerfa-2.0.1.5-cp39-abi3-macosx_11_0_arm64.whl.metadata (5.7 kB)
+Collecting PyYAML>=6.0.0 (from astropy>=5.0->astroquery)
+  Downloading pyyaml-6.0.3-cp314-cp314-macosx_11_0_arm64.whl.metadata (2.4 kB)
+Collecting soupsieve>=1.6.1 (from beautifulsoup4>=4.8->astroquery)
+  Downloading soupsieve-2.8.4-py3-none-any.whl.metadata (4.6 kB)
+Collecting typing-extensions>=4.0.0 (from beautifulsoup4>=4.8->astroquery)
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Requirement already satisfied: six>=1.9 in ./venv/lib/python3.14/site-packages (from html5lib>=0.999->astroquery) (1.17.0)
+Collecting webencodings (from html5lib>=0.999->astroquery)
+  Using cached webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting jaraco.classes (from keyring>=15.0->astroquery)
+  Downloading jaraco.classes-3.4.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting jaraco.functools (from keyring>=15.0->astroquery)
+  Downloading jaraco_functools-4.5.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting jaraco.context (from keyring>=15.0->astroquery)
+  Downloading jaraco_context-6.1.2-py3-none-any.whl.metadata (4.2 kB)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./venv/lib/python3.14/site-packages (from requests>=2.19->astroquery) (3.4.7)
+Requirement already satisfied: idna<4,>=2.5 in ./venv/lib/python3.14/site-packages (from requests>=2.19->astroquery) (3.18)
+Requirement already satisfied: urllib3<3,>=1.26 in ./venv/lib/python3.14/site-packages (from requests>=2.19->astroquery) (2.7.0)
+Requirement already satisfied: certifi>=2023.5.7 in ./venv/lib/python3.14/site-packages (from requests>=2.19->astroquery) (2026.6.17)
+Collecting more-itertools (from jaraco.classes->keyring>=15.0->astroquery)
+  Downloading more_itertools-11.1.0-py3-none-any.whl.metadata (41 kB)
+Downloading astroquery-0.4.11-py3-none-any.whl (11.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.1/11.1 MB 19.0 MB/s  0:00:00
+Downloading astropy-8.0.0-cp311-abi3-macosx_11_0_arm64.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 31.4 MB/s  0:00:00
+Downloading astropy_iers_data-0.2026.6.22.1.23.34-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 28.4 MB/s  0:00:00
+Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+Downloading html5lib-1.1-py2.py3-none-any.whl (112 kB)
+Downloading keyring-25.7.0-py3-none-any.whl (39 kB)
+Downloading packaging-26.2-py3-none-any.whl (100 kB)
+Downloading pyerfa-2.0.1.5-cp39-abi3-macosx_11_0_arm64.whl (329 kB)
+Downloading pyvo-1.9.1-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 23.1 MB/s  0:00:00
+Downloading pyyaml-6.0.3-cp314-cp314-macosx_11_0_arm64.whl (173 kB)
+Downloading soupsieve-2.8.4-py3-none-any.whl (37 kB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading jaraco.classes-3.4.0-py3-none-any.whl (6.8 kB)
+Downloading jaraco_context-6.1.2-py3-none-any.whl (7.9 kB)
+Downloading jaraco_functools-4.5.0-py3-none-any.whl (10 kB)
+Downloading more_itertools-11.1.0-py3-none-any.whl (72 kB)
+Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Installing collected packages: webencodings, typing-extensions, soupsieve, PyYAML, pyerfa, packaging, more-itertools, jaraco.context, html5lib, astropy-iers-data, jaraco.functools, jaraco.classes, beautifulsoup4, astropy, pyvo, keyring, astroquery
+Successfully installed PyYAML-6.0.3 astropy-8.0.0 astropy-iers-data-0.2026.6.22.1.23.34 astroquery-0.4.11 beautifulsoup4-4.15.0 html5lib-1.1 jaraco.classes-3.4.0 jaraco.context-6.1.2 jaraco.functools-4.5.0 keyring-25.7.0 more-itertools-11.1.0 packaging-26.2 pyerfa-2.0.1.5 pyvo-1.9.1 soupsieve-2.8.4 typing-extensions-4.15.0 webencodings-0.5.1
+
+[notice] A new release of pip is available: 26.0 -> 26.1.2
+[notice] To update, run: pip install --upgrade pip
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+from astroquery.jplhorizons import Horizons
+obj = Horizons(id='99942', location='@sun', epochs=2458849.5)  # 2020-Jan-01
+vec = obj.vectors()
+print('X  =', vec['x'][0], 'AU')
+print('Y  =', vec['y'][0], 'AU')
+print('Z  =', vec['z'][0], 'AU')
+print('VX =', vec['vx'][0], 'AU/day')
+print('VY =', vec['vy'][0], 'AU/day')
+print('VZ =', vec['vz'][0], 'AU/day')
+"
+X  = 0.2726129133183023 AU
+Y  = 0.8841733771938365 AU
+Z  = -0.0405962383405338 AU
+VX = -0.01572412397711111 AU/day
+VY = 0.008387697790362721 AU/day
+VZ = -0.0008202310948998622 AU/day
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat > /tmp/gmat_test.script << 'ENDOFSCRIPT'
+Create CoordinateSystem SunEcliptic;
+SunEcliptic.Origin = Sun;
+SunEcliptic.Axes = MJ2000Ec;
+Create Spacecraft Apophis;
+Apophis.DateFormat = UTCGregorian;
+Apophis.Epoch = '01 Jan 2020 00:00:00.000';
+Apophis.CoordinateSystem = SunEcliptic;
+Apophis.DisplayStateType = Cartesian;
+Apophis.X  =  40786633.1;
+Apophis.Y  = 132239150.6;
+Apophis.Z  =  -6073221.5;
+Apophis.VX = -27.227;
+Apophis.VY =  14.524;
+Apophis.VZ =  -1.420;
+Create ForceModel SolarSystemForces;
+SolarSystemForces.CentralBody = Sun;
+SolarSystemForces.PointMasses = {Sun, Earth, Luna, Venus, Mars, Jupiter};
+Create Propagator SolarProp;
+SolarProp.FM = SolarSystemForces;
+SolarProp.Type = RungeKutta89;
+Create ReportFile CloseApproachReport;
+CloseApproachReport.Filename = '/tmp/gmat_report_test.txt';
+CloseApproachReport.WriteHeaders = true;
+CloseApproachReport.Add = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+BeginMissionSequence;
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 3390};
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 3572};
+ENDOFSCRIPT
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_test.script 2>&1 | grep -i "error\|exception\|mission run\|completed" | grep -v "dlopen\|dylib\|Library\|plugin"
+
+Mission run completed.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+import pandas as pd
+df = pd.read_csv('/tmp/gmat_report_test.txt', sep='   ', header=0, engine='python')
+rmag = pd.to_numeric(df.iloc[:, 1], errors='coerce').dropna()
+min_val = rmag.min()
+min_idx = rmag.idxmin()
+epoch_col = df.iloc[:, 0]
+print(f'Minimum distance : {min_val:,.1f} km')
+print(f'Lunar distances  : {min_val/384400:.4f} LD')
+print(f'At row           : {min_idx}')
+print(f'Epoch approx     : {epoch_col.iloc[min_idx]}')
+print(f'Real value       : ~31,860 km (0.0829 LD)')
+"
+Minimum distance : 3,336,461.8 km
+Lunar distances  : 8.6797 LD
+At row           : 108531
+Epoch approx     : 14 Apr 2029 09:46:06.552
+Real value       : ~31,860 km (0.0829 LD)
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % vim terminal_data.txt
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+import math
+AU = 149597870.7
+DAY = 86400.0
+
+# JPL ICRF vectors
+x_au  =  0.2726129133183023
+y_au  =  0.8841733771938365
+z_au  = -0.0405962383405338
+vx_auday = -0.01572412397711111
+vy_auday =  0.008387697790362721
+vz_auday = -0.0008202310948998622
+
+# Convert to km and km/s
+x  = x_au  * AU
+y  = y_au  * AU
+z  = z_au  * AU
+vx = vx_auday * AU / DAY
+vy = vy_auday * AU / DAY
+vz = vz_auday * AU / DAY
+
+print(f'X  = {x:.3f} km')
+print(f'Y  = {y:.3f} km')
+print(f'Z  = {z:.3f} km')
+print(f'VX = {vx:.6f} km/s')
+print(f'VY = {vy:.6f} km/s')
+print(f'VZ = {vz:.6f} km/s')
+"
+X  = 40782311.358 km
+Y  = 132270454.558 km
+Z  = -6073110.814 km
+VX = -27.225642 km/s
+VY = 14.522937 km/s
+VZ = -1.420195 km/s
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat > /tmp/gmat_test.script << 'ENDOFSCRIPT'
+Create CoordinateSystem SunMJ2000Eq;
+SunMJ2000Eq.Origin = Sun;
+SunMJ2000Eq.Axes = MJ2000Eq;
+Create Spacecraft Apophis;
+Apophis.DateFormat = UTCGregorian;
+Apophis.Epoch = '01 Jan 2020 00:00:00.000';
+Apophis.CoordinateSystem = SunMJ2000Eq;
+Apophis.DisplayStateType = Cartesian;
+Apophis.X  =  40782311.358;
+Apophis.Y  = 132270454.558;
+Apophis.Z  =  -6073110.814;
+Apophis.VX = -27.225642;
+Apophis.VY =  14.522937;
+Apophis.VZ =  -1.420195;
+Create ForceModel SolarSystemForces;
+SolarSystemForces.CentralBody = Sun;
+SolarSystemForces.PointMasses = {Sun, Earth, Luna, Venus, Mars, Jupiter};
+Create Propagator SolarProp;
+SolarProp.FM = SolarSystemForces;
+SolarProp.Type = RungeKutta89;
+Create ReportFile CloseApproachReport;
+CloseApproachReport.Filename = '/tmp/gmat_report_test.txt';
+CloseApproachReport.WriteHeaders = true;
+CloseApproachReport.Add = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+BeginMissionSequence;
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 3390};
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 3572};
+ENDOFSCRIPT
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_test.script 2>&1 | grep -i "mission run\|error" | grep -v "dlopen\|dylib\|Library\|plugin"
+Mission run completed.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+import pandas as pd
+df = pd.read_csv('/tmp/gmat_report_test.txt', sep='   ', header=0, engine='python')
+rmag = pd.to_numeric(df.iloc[:, 1], errors='coerce').dropna()
+min_val = rmag.min()
+min_idx = rmag.idxmin()
+print(f'Minimum distance : {min_val:,.1f} km')
+print(f'Lunar distances  : {min_val/384400:.4f} LD')
+print(f'Epoch            : {df.iloc[min_idx, 0]}')
+print(f'Target           : ~31,860 km (0.0829 LD)')
+"
+Minimum distance : 9,973,422.2 km
+Lunar distances  : 25.9454 LD
+Epoch            : 26 Mar 2029 05:56:24.410
+Target           : ~31,860 km (0.0829 LD)
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % grep -A 30 "Create Spacecraft MAVEN" "/Applications/GMAT R2026a/samples/Tut_Mars_B_Plane_Targeting.script" | head -30
+Create Spacecraft MAVEN;
+
+MAVEN.DateFormat                   = UTCGregorian;
+MAVEN.Epoch                        = '18 Nov 2013 20:26:24.315';
+MAVEN.CoordinateSystem             = EarthMJ2000Eq;
+MAVEN.DisplayStateType             = Keplerian;
+MAVEN.SMA                          = -32593.21599272777;
+MAVEN.ECC                          = 1.202872548116186;
+MAVEN.INC                          = 28.80241266404144;
+MAVEN.RAAN                         = 173.9693759331483;
+MAVEN.AOP                          = 240.9696529532762;
+MAVEN.TA                           = 359.9465533778342;
+MAVEN.DryMass                      = 850;
+MAVEN.Cd                           = 2.2;
+MAVEN.Cr                           = 1.8;
+MAVEN.DragArea                     = 15;
+MAVEN.SRPArea                      = 1;
+MAVEN.Tanks                        = {MainTank};
+MAVEN.NAIFId                       = -123456789;
+MAVEN.NAIFIdReferenceFrame         = -123456789;
+MAVEN.Id                           = 'SatId';
+MAVEN.Attitude                     = CoordinateSystemFixed;
+MAVEN.ModelFile                    = '../data/vehicle/models/aura.3ds';
+MAVEN.ModelOffsetX                 = 0;
+MAVEN.ModelOffsetY                 = 0;
+MAVEN.ModelOffsetZ                 = 0;
+MAVEN.ModelRotationX               = 0;
+MAVEN.ModelRotationY               = 0;
+MAVEN.ModelRotationZ               = 0;
+MAVEN.ModelScale                   = 1;
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+from astroquery.jplhorizons import Horizons
+AU = 149597870.7
+DAY = 86400.0
+# Get Apophis state vectors relative to Earth at 2029-Apr-01 (just before close approach)
+obj = Horizons(id='99942', location='500@399', epochs=2462196.5)  # 2029-Apr-01 geocentric
+vec = obj.vectors()
+print('Geocentric state 2029-Apr-01:')
+x  = float(vec['x'][0])  * AU
+y  = float(vec['y'][0])  * AU
+z  = float(vec['z'][0])  * AU
+vx = float(vec['vx'][0]) * AU / DAY
+vy = float(vec['vy'][0]) * AU / DAY
+vz = float(vec['vz'][0]) * AU / DAY
+print(f'X  = {x:.3f} km')
+print(f'Y  = {y:.3f} km')
+print(f'Z  = {z:.3f} km')
+print(f'VX = {vx:.6f} km/s')
+print(f'VY = {vy:.6f} km/s')
+print(f'VZ = {vz:.6f} km/s')
+"
+Geocentric state 2029-Apr-01:
+X  = -18996756.845 km
+Y  = -13371553.978 km
+Z  = -5699719.752 km
+VX = 6.345883 km/s
+VY = 2.656160 km/s
+VZ = 1.259470 km/s
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat > /tmp/gmat_test.script << 'ENDOFSCRIPT'
+Create Spacecraft Apophis;
+Apophis.DateFormat = UTCGregorian;
+Apophis.Epoch = '01 Apr 2029 00:00:00.000';
+Apophis.CoordinateSystem = EarthMJ2000Eq;
+Apophis.DisplayStateType = Cartesian;
+Apophis.X  = -18996756.845;
+Apophis.Y  = -13371553.978;
+Apophis.Z  =  -5699719.752;
+Apophis.VX = 6.345883;
+Apophis.VY = 2.656160;
+Apophis.VZ = 1.259470;
+Create ForceModel EarthForces;
+EarthForces.CentralBody = Earth;
+EarthForces.PrimaryBodies = {Earth};
+EarthForces.PointMasses = {Sun, Luna, Jupiter};
+EarthForces.GravityField.Earth.Degree = 0;
+EarthForces.GravityField.Earth.Order = 0;
+Create Propagator EarthProp;
+EarthProp.FM = EarthForces;
+EarthProp.Type = RungeKutta89;
+Create ReportFile CloseApproachReport;
+CloseApproachReport.Filename = '/tmp/gmat_report_test.txt';
+CloseApproachReport.WriteHeaders = true;
+CloseApproachReport.Add = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+BeginMissionSequence;
+Propagate EarthProp(Apophis) {Apophis.ElapsedDays = 25};
+ENDOFSCRIPT
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_test.script 2>&1 | grep -i "mission run\|error" | grep -v "dlopen\|dylib\|Library\|plugin"
+Mission run completed.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+import pandas as pd
+df = pd.read_csv('/tmp/gmat_report_test.txt', sep='   ', header=0, engine='python')
+rmag = pd.to_numeric(df.iloc[:, 1], errors='coerce').dropna()
+min_val = rmag.min()
+min_idx = rmag.idxmin()
+print(f'Minimum distance : {min_val:,.1f} km')
+print(f'Lunar distances  : {min_val/384400:.4f} LD')
+print(f'Epoch            : {df.iloc[min_idx, 0]}')
+print(f'Target           : ~31,860 km (0.0829 LD)')
+"
+Minimum distance : 11,853,985.6 km
+Lunar distances  : 30.8376 LD
+Epoch            : 26 Apr 2029 00:00:00.000
+Target           : ~31,860 km (0.0829 LD)
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cd "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation"
+source venv/bin/activate
+python3 - << 'EOF'
+from astroquery.jplhorizons import Horizons
+AU = 149597870.7
+DAY = 86400.0
+
+# Get heliocentric state at 2029-Jan-01 — only 103 days before close approach
+obj = Horizons(id='99942', location='@10', epochs=2462867.5)
+vec = obj.vectors()
+
+x  = float(vec['x'][0])  * AU
+y  = float(vec['y'][0])  * AU
+z  = float(vec['z'][0])  * AU
+vx = float(vec['vx'][0]) * AU / DAY
+vy = float(vec['vy'][0]) * AU / DAY
+vz = float(vec['vz'][0]) * AU / DAY
+
+print(f"Apophis.X  = {x:.3f};")
+print(f"Apophis.Y  = {y:.3f};")
+print(f"Apophis.Z  = {z:.3f};")
+print(f"Apophis.VX = {vx:.6f};")
+print(f"Apophis.VY = {vy:.6f};")
+print(f"Apophis.VZ = {vz:.6f};")
+EOF
+Apophis.X  = 111429269.214;
+Apophis.Y  = 147802642.060;
+Apophis.Z  = -3528012.723;
+Apophis.VX = -17.621003;
+Apophis.VY = 17.835515;
+Apophis.VZ = -0.907152;
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat > /tmp/gmat_baseline.script << 'ENDOFSCRIPT'
+Create CoordinateSystem SunMJ2000Eq;
+SunMJ2000Eq.Origin = Sun;
+SunMJ2000Eq.Axes = MJ2000Eq;
+
+Create Spacecraft Apophis;
+Apophis.DateFormat = UTCGregorian;
+Apophis.Epoch = '01 Jan 2029 00:00:00.000';
+Apophis.CoordinateSystem = SunMJ2000Eq;
+Apophis.DisplayStateType = Cartesian;
+Apophis.X  = PASTE_X_HERE;
+Apophis.Y  = PASTE_Y_HERE;
+Apophis.Z  = PASTE_Z_HERE;
+Apophis.VX = PASTE_VX_HERE;
+Apophis.VY = PASTE_VY_HERE;
+Apophis.VZ = PASTE_VZ_HERE;
+
+Create ForceModel SolarSystemForces;
+SolarSystemForces.CentralBody = Sun;
+SolarSystemForces.PointMasses = {Sun, Earth, Luna, Venus, Mars, Jupiter};
+
+Create Propagator SolarProp;
+SolarProp.FM = SolarSystemForces;
+SolarProp.Type = RungeKutta89;
+
+Create ReportFile CAReport;
+CAReport.Filename = '/tmp/gmat_baseline_report.txt';
+CAReport.WriteHeaders = true;
+CAReport.Add = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+
+BeginMissionSequence;
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 150};
+ENDOFSCRIPT
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_baseline.script 2>&1 | grep -i "mission run\|error" | grep -v "dlopen\|dylib\|Library\|plugin"
+1: /tmp/gmat_baseline.script: **** ERROR **** Interpreter Exception: The value of "PASTE_X_HERE" for field "X" on object "Apophis" is not an allowed value. The allowed value is Real number in line:
+2: /tmp/gmat_baseline.script: **** ERROR **** Interpreter Exception: The value of "PASTE_Y_HERE" for field "Y" on object "Apophis" is not an allowed value. The allowed value is Real number in line:
+3: /tmp/gmat_baseline.script: **** ERROR **** Interpreter Exception: The value of "PASTE_Z_HERE" for field "Z" on object "Apophis" is not an allowed value. The allowed value is Real number in line:
+4: /tmp/gmat_baseline.script: **** ERROR **** Interpreter Exception: The value of "PASTE_VX_HERE" for field "VX" on object "Apophis" is not an allowed value. The allowed value is Real number in line:
+5: /tmp/gmat_baseline.script: **** ERROR **** Interpreter Exception: The value of "PASTE_VY_HERE" for field "VY" on object "Apophis" is not an allowed value. The allowed value is Real number in line:
+6: /tmp/gmat_baseline.script: **** ERROR **** Interpreter Exception: The value of "PASTE_VZ_HERE" for field "VZ" on object "Apophis" is not an allowed value. The allowed value is Real number in line:
+ERROR!!!!!! ---- Console Application Execution Failed: Errors were found in the script named "/tmp/gmat_baseline.script"
+Console Application Execution Failed: Errors were found in the script named "/tmp/gmat_baseline.script"
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 - << 'EOF'
+import pandas as pd
+df = pd.read_csv('/tmp/gmat_baseline_report.txt', sep='   ', header=0, engine='python')
+rmag = pd.to_numeric(df.iloc[:, 1], errors='coerce').dropna()
+min_val = rmag.min()
+min_idx = rmag.idxmin()
+print(f'Minimum distance : {min_val:,.1f} km')
+print(f'Lunar distances  : {min_val/384400:.4f} LD')
+print(f'Epoch            : {df.iloc[min_idx, 0]}')
+print(f'Target           : ~31,860 km  (0.0829 LD)')
+EOF
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/venv/lib/python3.14/site-packages/pandas/io/parsers/readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/venv/lib/python3.14/site-packages/pandas/io/parsers/readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/venv/lib/python3.14/site-packages/pandas/io/parsers/readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/venv/lib/python3.14/site-packages/pandas/io/parsers/readers.py", line 1904, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/venv/lib/python3.14/site-packages/pandas/io/common.py", line 930, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/gmat_baseline_report.txt'
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % >....                  
+Apophis.DateFormat = UTCGregorian;
+Apophis.Epoch = '01 Jan 2029 00:00:00.000';
+Apophis.CoordinateSystem = SunMJ2000Eq;
+Apophis.DisplayStateType = Cartesian;
+Apophis.X  = 111429269.214;
+Apophis.Y  = 147802642.060;
+Apophis.Z  = -3528012.723;
+Apophis.VX = -17.621003;
+Apophis.VY = 17.835515;
+Apophis.VZ = -0.907152;
+
+Create ForceModel SolarSystemForces;
+SolarSystemForces.CentralBody = Sun;
+SolarSystemForces.PointMasses = {Sun, Earth, Luna, Venus, Mars, Jupiter};
+
+Create Propagator SolarProp;
+SolarProp.FM = SolarSystemForces;
+SolarProp.Type = RungeKutta89;
+
+Create ReportFile CAReport;
+CAReport.Filename = '/tmp/gmat_baseline_report.txt';
+CAReport.WriteHeaders = true;
+CAReport.Add = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+
+BeginMissionSequence;
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 150};
+ENDOFSCRIPT
+
+"/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_baseline.script 2>&1 | grep -i "mission run\|error" | grep -v "dlopen\|dylib\|Library\|plugin"
+
+python3 - << 'EOF'
+import pandas as pd
+df = pd.read_csv('/tmp/gmat_baseline_report.txt', sep='   ', header=0, engine='python')
+rmag = pd.to_numeric(df.iloc[:, 1], errors='coerce').dropna()
+min_val = rmag.min()
+min_idx = rmag.idxmin()
+print(f'Minimum distance : {min_val:,.1f} km')
+print(f'Lunar distances  : {min_val/384400:.4f} LD')
+print(f'Epoch            : {df.iloc[min_idx, 0]}')
+print(f'Target           : ~31,860 km  (0.0829 LD)')
+EOF
+Mission run completed.
+Minimum distance : 151,752,757.7 km
+Lunar distances  : 394.7782 LD
+Epoch            : 01 Jan 2029 00:00:00.000
+Target           : ~31,860 km  (0.0829 LD)
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 - << 'EOF'
+import pandas as pd
+
+# Check the raw file structure first
+with open('/tmp/gmat_baseline_report.txt', 'r') as f:
+    lines = f.readlines()
+print(f"Total lines: {len(lines)}")
+print("First 3 lines:")
+for l in lines[:3]:
+    print(repr(l))
+print("Last 3 lines:")
+for l in lines[-3:]:
+    print(repr(l))
+
+# Parse using whitespace splitting — handles variable spacing
+data = []
+for line in lines[1:]:  # skip header
+    parts = line.strip().split()
+    if len(parts) >= 3:
+        try:
+            rmag = float(parts[-1])
+            epoch = ' '.join(parts[:-1])
+            data.append((epoch, rmag))
+        except:
+            pass
+
+if data:
+    vals = [d[1] for d in data]
+    min_val = min(vals)
+    min_idx = vals.index(min_val)
+    print(f'\nTotal valid rows : {len(data)}')
+    print(f'Minimum distance : {min_val:,.1f} km')
+    print(f'Lunar distances  : {min_val/384400:.4f} LD')
+    print(f'Epoch            : {data[min_idx][0]}')
+    print(f'Target           : ~31,860 km  (0.0829 LD)')
+EOF
+Total lines: 4806
+First 3 lines:
+'Apophis.UTCGregorian       Apophis.Earth.RMAG        \n'
+'01 Jan 2029 00:00:00.000   151752757.6689166         \n'
+'01 Jan 2029 00:01:00.000   151753526.3598156         \n'
+Last 3 lines:
+'30 May 2029 23:05:48.192   255335395.0095117         \n'
+'30 May 2029 23:50:48.192   255343221.8474383         \n'
+'31 May 2029 00:00:00.000   255344820.6103716         \n'
+
+Total valid rows : 4805
+Minimum distance : 151,752,757.7 km
+Lunar distances  : 394.7782 LD
+Epoch            : 01 Jan 2029 00:00:00.000
+Target           : ~31,860 km  (0.0829 LD)
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat > /tmp/gmat_test.script << 'ENDOFSCRIPT'
+Create Spacecraft Apophis;
+Apophis.DateFormat = UTCGregorian;
+Apophis.Epoch = '01 Apr 2029 00:00:00.000';
+Apophis.CoordinateSystem = EarthMJ2000Eq;
+Apophis.DisplayStateType = Cartesian;
+Apophis.X  = -18996756.845;
+Apophis.Y  = -13371553.978;
+Apophis.Z  =  -5699719.752;
+Apophis.VX = 6.345883;
+Apophis.VY = 2.656160;
+Apophis.VZ = 1.259470;
+Create ForceModel EarthForces;
+EarthForces.CentralBody = Earth;
+EarthForces.PrimaryBodies = {Earth};
+EarthForces.PointMasses = {Sun, Luna, Jupiter};
+EarthForces.GravityField.Earth.Degree = 0;
+EarthForces.GravityField.Earth.Order = 0;
+Create Propagator EarthProp;
+EarthProp.FM = EarthForces;
+EarthProp.Type = RungeKutta89;
+Create ReportFile CloseApproachReport;
+CloseApproachReport.Filename = '/tmp/gmat_report_test.txt';
+CloseApproachReport.WriteHeaders = true;
+CloseApproachReport.Add = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+BeginMissionSequence;
+Propagate EarthProp(Apophis) {Apophis.ElapsedDays = 25};
+ENDOFSCRIPT
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_test.script 2>&1 | grep -i "mission run\|error" | grep -v "dlopen\|dylib\|Library\|plugin"
+Mission run completed.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+import pandas as pd
+df = pd.read_csv('/tmp/gmat_report_test.txt', sep='   ', header=0, engine='python')
+rmag = pd.to_numeric(df.iloc[:, 1], errors='coerce').dropna()
+min_val = rmag.min()
+min_idx = rmag.idxmin()
+print(f'Minimum distance : {min_val:,.1f} km')
+print(f'Lunar distances  : {min_val/384400:.4f} LD')
+print(f'Epoch            : {df.iloc[min_idx, 0]}')
+print(f'Target           : ~31,860 km (0.0829 LD)')
+"
+Minimum distance : 11,853,985.6 km
+Lunar distances  : 30.8376 LD
+Epoch            : 26 Apr 2029 00:00:00.000
+Target           : ~31,860 km (0.0829 LD)
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cd "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation"
+source venv/bin/activate
+mv ~/Downloads/04_gmat_orbital_impact_v2.py scripts/
+python3 scripts/04_gmat_orbital_impact_v2.py
+mv: /Users/nithinyadavg/Downloads/04_gmat_orbital_impact_v2.py: No such file or directory
+
+=======================================================
+Scenario: Clean (True Orbit — Baseline)
+=======================================================
+  Position offset: dX=0.0 km, dY=0.0 km
+  Script: /tmp/gmat_clean.script
+  Running GMAT...
+  Min Earth distance: 13,866,926.2 km  (36.0742 LD)
+
+=======================================================
+Scenario: Systematic Bias (2.0 arcsec uniform)
+=======================================================
+  Position offset: dX=184.0 km, dY=184.0 km
+  Script: /tmp/gmat_systematic_bias.script
+  Running GMAT...
+  Min Earth distance: 13,861,838.2 km  (36.0610 LD)
+
+=======================================================
+Scenario: Stochastic Noise (1.5 arcsec std, mean 1.2)
+=======================================================
+  Position offset: dX=110.0 km, dY=110.0 km
+  Script: /tmp/gmat_stochastic_noise.script
+  Running GMAT...
+  Min Earth distance: 13,864,356.1 km  (36.0675 LD)
+
+=======================================================
+Scenario: Targeted Outlier (30 arcsec, 20 obs)
+=======================================================
+  Position offset: dX=6.0 km, dY=6.0 km
+  Script: /tmp/gmat_targeted_outlier.script
+  Running GMAT...
+  Min Earth distance: 13,866,676.4 km  (36.0736 LD)
+
+=======================================================
+RESULTS — Close Approach Distance Comparison
+=======================================================
+
+Scenario                                        Min Dist (km)       LD     Delta km
+-------------------------------------------------------------------------------------
+Clean (True Orbit — Baseline)                    13,866,926.2  36.0742         +0.0
+Systematic Bias (2.0 arcsec uniform)             13,861,838.2  36.0610      -5088.0
+Stochastic Noise (1.5 arcsec std, mean 1.2)      13,864,356.1  36.0675      -2570.1
+Targeted Outlier (30 arcsec, 20 obs)             13,866,676.4  36.0736       -249.8
+
+Saved -> results/cad_comparison_20260702_231214.csv
+
+Done. These CAD delta values are your dissertation's core experimental result.
+The delta_km column shows how much each injection scenario shifts the predicted
+closest approach distance — this is what goes in your Results chapter.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cd "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation"
+source venv/bin/activate
+mv ~/Downloads/04_gmat_orbital_impact_v2.py scripts/
+python3 scripts/04_gmat_orbital_impact_v2.py
+mv: /Users/nithinyadavg/Downloads/04_gmat_orbital_impact_v2.py: No such file or directory
+
+=======================================================
+Scenario: Clean (True Orbit — Baseline)
+=======================================================
+  Position offset: dX=0.0 km, dY=0.0 km
+  Script: /tmp/gmat_clean.script
+  Running GMAT...
+  Min Earth distance: 13,866,926.2 km  (36.0742 LD)
+
+=======================================================
+Scenario: Systematic Bias (2.0 arcsec uniform)
+=======================================================
+  Position offset: dX=184.0 km, dY=184.0 km
+  Script: /tmp/gmat_systematic_bias.script
+  Running GMAT...
+  Min Earth distance: 13,861,838.2 km  (36.0610 LD)
+
+=======================================================
+Scenario: Stochastic Noise (1.5 arcsec std, mean 1.2)
+=======================================================
+  Position offset: dX=110.0 km, dY=110.0 km
+  Script: /tmp/gmat_stochastic_noise.script
+  Running GMAT...
+  Min Earth distance: 13,864,356.1 km  (36.0675 LD)
+
+=======================================================
+Scenario: Targeted Outlier (30 arcsec, 20 obs)
+=======================================================
+  Position offset: dX=6.0 km, dY=6.0 km
+  Script: /tmp/gmat_targeted_outlier.script
+  Running GMAT...
+  Min Earth distance: 13,866,676.4 km  (36.0736 LD)
+
+=======================================================
+RESULTS — Close Approach Distance Comparison
+=======================================================
+
+Scenario                                        Min Dist (km)       LD     Delta km
+-------------------------------------------------------------------------------------
+Clean (True Orbit — Baseline)                    13,866,926.2  36.0742         +0.0
+Systematic Bias (2.0 arcsec uniform)             13,861,838.2  36.0610      -5088.0
+Stochastic Noise (1.5 arcsec std, mean 1.2)      13,864,356.1  36.0675      -2570.1
+Targeted Outlier (30 arcsec, 20 obs)             13,866,676.4  36.0736       -249.8
+
+Saved -> results/cad_comparison_20260704_135743.csv
+
+Done. These CAD delta values are your dissertation's core experimental result.
+The delta_km column shows how much each injection scenario shifts the predicted
+closest approach distance — this is what goes in your Results chapter.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cd "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation"
+source venv/bin/activate
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % sed 's/TARGET_OBJECT = "99942"/TARGET_OBJECT = "101955"/' scripts/01_fetch_apophis_data.py > scripts/01_fetch_bennu_data.py
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 scripts/01_fetch_bennu_data.py
+Requesting observation data for object: 101955
+Success — received response for 2 object(s)
+Saved ADES XML  -> data/raw/apophis_ades_20260704_145311.xml
+Saved OBS80 text -> data/raw/apophis_obs80_20260704_145311.txt
+Saved raw JSON   -> data/raw/apophis_raw_response_20260704_145311.json
+
+--- Preview of saved ADES XML ---
+<?xml version="1.0" encoding="UTF-8"?>
+<ades version="2022">
+  <optical>
+    <permID>101955</permID>
+    <provID>1999 RQ36</provID>
+    <trkSub>J99R36Q</trkSub>
+    <obsID>JKBC2T000000DoGJ01000016B</obsID>
+    <trkID>00000Jk-dv</trkID>
+    <mode>CCD</mode>
+    <stn>704</stn>
+    <obsTime>1999-09-11T09:44:59.136Z</obsTime>
+    <ra>24.47875</ra>
+    <dec>-27.07431</dec>
+    <astCat>USNOA1</astCat>
+    <mag>15.1</mag>
+    <band>V</band>
+    <ref>MPS     6197</ref>
+    <disc>*</disc>
+    <subFmt>M92</subFmt>
+    <precTime>10</precTime>
+    <precRA>0.01</precRA>
+    <precDec>0.1</precDec>
+  </optic
+...
+
+Total file length: 304490 characters
+
+Done. Real Apophis observation data is now saved locally.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 scripts/02_parse_ades_to_dataframe.py
+Using ADES file: data/raw/apophis_ades_20260704_145311.xml
+Parsed 603 observation records
+
+--- Dataset summary ---
+Total observations : 603
+Date range          : 1999-09-11 09:44:59.136000+00:00  to  2025-04-28 20:31:03.360000+00:00
+RA range (deg)      : 5.54608  to  356.26313
+Dec range (deg)     : -38.67325  to  28.77869
+Unique stations     : 47
+Unique trkSub groups: 16
+
+--- First 5 rows ---
+   obs_index                          obsTime    ra_deg   dec_deg station
+0          0 1999-09-11 09:44:59.136000+00:00  24.47875 -27.07431     704
+1          1 1999-09-11 10:06:56.736000+00:00  24.50075 -27.06656     704
+2          2 1999-09-11 10:29:31.488000+00:00  24.52337 -27.05839     704
+3          3 1999-09-11 10:51:03.168000+00:00  24.54512 -27.05031     704
+4          4 1999-09-11 11:12:12.384000+00:00  24.56679 -27.04233     704
+Saved clean CSV -> data/processed/apophis_clean_20260704_145523.csv
+Saved pickle    -> data/processed/apophis_clean_20260704_145523.pkl
+
+Done. Clean DataFrame ready for the injection module (Step 3).
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 scripts/03_injection_module.py
+Using clean dataset: data/processed/apophis_clean_20260704_145523.pkl
+Loaded 603 clean observations
+
+Saved systematic_bias    -> data/manipulated/apophis_systematic_bias_20260704_145539.csv
+Saved stochastic_noise   -> data/manipulated/apophis_stochastic_noise_20260704_145539.csv
+Saved targeted_outlier   -> data/manipulated/apophis_targeted_outlier_20260704_145539.csv
+
+--- Systematic Bias : before vs after ---
+Rows changed at all       : 603 / 603
+Mean RA shift (arcsec)    : 2.0000
+Max RA shift (arcsec)     : 2.0000
+Mean Dec shift (arcsec)   : 2.0000
+Max Dec shift (arcsec)    : 2.0000
+
+--- Stochastic Noise : before vs after ---
+Rows changed at all       : 603 / 603
+Mean RA shift (arcsec)    : 1.1633
+Max RA shift (arcsec)     : 4.4468
+Mean Dec shift (arcsec)   : 1.1686
+Max Dec shift (arcsec)    : 5.4726
+
+--- Targeted Outlier : before vs after ---
+Rows changed at all       : 20 / 603
+Mean RA shift (arcsec)    : 0.9950
+Max RA shift (arcsec)     : 30.0000
+Mean Dec shift (arcsec)   : 0.9950
+Max Dec shift (arcsec)    : 30.0000
+
+Done. Three manipulated datasets created in data/manipulated/.
+Next step: feed the clean dataset AND each manipulated dataset
+into GMAT to see how much each one changes the predicted orbit.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+from astroquery.jplhorizons import Horizons
+AU = 149597870.7
+DAY = 86400.0
+# Bennu close approach to Earth was Sep 2023 — we use a recent epoch instead
+# Bennu's next notable approach: Sep 2182 (too far)
+# Use 2020-Jan-01 geocentric state for consistency with Apophis
+obj = Horizons(id='101955', location='500@399', epochs=2458849.5)
+vec = obj.vectors()
+x  = float(vec['x'][0]) * AU
+y  = float(vec['y'][0]) * AU
+z  = float(vec['z'][0]) * AU
+vx = float(vec['vx'][0]) * AU / DAY
+vy = float(vec['vy'][0]) * AU / DAY
+vz = float(vec['vz'][0]) * AU / DAY
+print(f'X  = {x:.3f} km')
+print(f'Y  = {y:.3f} km')
+print(f'Z  = {z:.3f} km')
+print(f'VX = {vx:.6f} km/s')
+print(f'VY = {vy:.6f} km/s')
+print(f'VZ = {vz:.6f} km/s')
+"
+X  = 174845625.632 km
+Y  = -204644296.053 km
+Z  = -6852558.242 km
+VX = 35.080727 km/s
+VY = 33.776706 km/s
+VZ = 3.002735 km/s
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cat > /tmp/gmat_bennu.script << 'ENDOFSCRIPT'
+Create Spacecraft Bennu;
+Bennu.DateFormat = UTCGregorian;
+Bennu.Epoch = '01 Jan 2020 00:00:00.000';
+Bennu.CoordinateSystem = EarthMJ2000Eq;
+Bennu.DisplayStateType = Cartesian;
+Bennu.X  =  174845625.632;
+Bennu.Y  = -204644296.053;
+Bennu.Z  =   -6852558.242;
+Bennu.VX = 35.080727;
+Bennu.VY = 33.776706;
+Bennu.VZ =  3.002735;
+Create ForceModel EarthForces;
+EarthForces.CentralBody = Earth;
+EarthForces.PrimaryBodies = {Earth};
+EarthForces.PointMasses = {Sun, Luna, Jupiter};
+EarthForces.GravityField.Earth.Degree = 0;
+EarthForces.GravityField.Earth.Order = 0;
+Create Propagator EarthProp;
+EarthProp.FM = EarthForces;
+EarthProp.Type = RungeKutta89;
+Create ReportFile BennuReport;
+BennuReport.Filename = '/tmp/gmat_report_bennu_clean.txt';
+BennuReport.WriteHeaders = true;
+BennuReport.Add = {Bennu.UTCGregorian, Bennu.Earth.RMAG};
+BeginMissionSequence;
+Propagate EarthProp(Bennu) {Bennu.ElapsedDays = 30};
+ENDOFSCRIPT
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % "/Applications/GMAT R2026a/bin/GmatConsole" -r /tmp/gmat_bennu.script 2>&1 | grep -i "mission run\|error" | grep -v "dlopen\|dylib\|Library\|plugin"
+Mission run completed.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 -c "
+import pandas as pd
+with open('/tmp/gmat_report_bennu_clean.txt') as f:
+    lines = f.readlines()
+vals = []
+for line in lines[1:]:
+    parts = line.strip().split()
+    if parts:
+        try: vals.append(float(parts[-1]))
+        except: pass
+min_val = min(vals)
+print(f'Bennu min Earth distance : {min_val:,.1f} km')
+print(f'Lunar distances          : {min_val/384400:.4f} LD')
+print(f'Total timesteps          : {len(vals)}')
+"
+Bennu min Earth distance : 262,350,076.7 km
+Lunar distances          : 682.4924 LD
+Total timesteps          : 964
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % >....                                  
+Bennu.X  = {BASE[\"X\"]+s[\"dx\"]:.3f};
+Bennu.Y  = {BASE[\"Y\"]+s[\"dy\"]:.3f};
+Bennu.Z  = {BASE[\"Z\"]:.3f};
+Bennu.VX = {BASE[\"VX\"]+s[\"dvx\"]:.6f};
+Bennu.VY = {BASE[\"VY\"]+s[\"dvy\"]:.6f};
+Bennu.VZ = {BASE[\"VZ\"]:.6f};
+Create ForceModel EarthForces;
+EarthForces.CentralBody = Earth;
+EarthForces.PrimaryBodies = {{Earth}};
+EarthForces.PointMasses = {{Sun, Luna, Jupiter}};
+EarthForces.GravityField.Earth.Degree = 0;
+EarthForces.GravityField.Earth.Order = 0;
+Create Propagator EarthProp;
+EarthProp.FM = EarthForces;
+EarthProp.Type = RungeKutta89;
+Create ReportFile R;
+R.Filename = '/tmp/gmat_bennu_{name}.txt';
+R.WriteHeaders = true;
+R.Add = {{Bennu.UTCGregorian, Bennu.Earth.RMAG}};
+BeginMissionSequence;
+Propagate EarthProp(Bennu) {{Bennu.ElapsedDays = 30}};
+'''
+    spath = f'/tmp/gmat_bennu_{name}.script'
+    with open(spath, 'w') as f: f.write(script)
+    r = subprocess.run([GMAT, '-r', spath], capture_output=True, timeout=120)
+    with open(f'/tmp/gmat_bennu_{name}.txt') as f:
+        lines = f.readlines()
+    vals = []
+    for line in lines[1:]:
+        parts = line.strip().split()
+        if parts:
+            try: vals.append(float(parts[-1]))
+            except: pass
+    results[name] = min(vals) if vals else None
+    print(f'{name:20s}: {results[name]:,.1f} km')
+
+clean = results['clean']
+print()
+print(f'RESULTS vs BASELINE:')
+for name, dist in results.items():
+    delta = dist - clean
+    print(f'{name:20s}: {dist:,.1f} km   delta={delta:+,.1f} km  ({delta/384400:.4f} LD)')
+"
+clean               : 262,350,076.7 km
+systematic_bias     : 262,353,411.2 km
+stochastic_noise    : 262,351,756.3 km
+targeted_outlier    : 262,350,570.2 km
+
+RESULTS vs BASELINE:
+clean               : 262,350,076.7 km   delta=+0.0 km  (0.0000 LD)
+systematic_bias     : 262,353,411.2 km   delta=+3,334.6 km  (0.0087 LD)
+stochastic_noise    : 262,351,756.3 km   delta=+1,679.7 km  (0.0044 LD)
+targeted_outlier    : 262,350,570.2 km   delta=+493.5 km  (0.0013 LD)
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 scripts/05_generate_charts.py 
+Traceback (most recent call last):
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/05_generate_charts.py", line 10, in <module>
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % cd "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation"
+source venv/bin/activate
+
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 scripts/05_generate_charts.py
+Traceback (most recent call last):
+  File "/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/scripts/05_generate_charts.py", line 10, in <module>
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % pip3 install matplotlib
+Collecting matplotlib
+  Downloading matplotlib-3.11.0-cp314-cp314-macosx_11_0_arm64.whl.metadata (80 kB)
+Collecting contourpy>=1.0.1 (from matplotlib)
+  Downloading contourpy-1.3.3-cp314-cp314-macosx_11_0_arm64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib)
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Downloading fonttools-4.63.0-cp314-cp314-macosx_10_15_universal2.whl.metadata (118 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib)
+  Downloading kiwisolver-1.5.0-cp314-cp314-macosx_11_0_arm64.whl.metadata (5.1 kB)
+Requirement already satisfied: numpy>=1.25 in ./venv/lib/python3.14/site-packages (from matplotlib) (2.4.6)
+Requirement already satisfied: packaging>=20.0 in ./venv/lib/python3.14/site-packages (from matplotlib) (26.2)
+Collecting pillow>=9 (from matplotlib)
+  Downloading pillow-12.3.0-cp314-cp314-macosx_11_0_arm64.whl.metadata (9.1 kB)
+Collecting pyparsing>=3 (from matplotlib)
+  Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Requirement already satisfied: python-dateutil>=2.7 in ./venv/lib/python3.14/site-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in ./venv/lib/python3.14/site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+Downloading matplotlib-3.11.0-cp314-cp314-macosx_11_0_arm64.whl (9.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.3/9.3 MB 22.7 MB/s  0:00:00
+Downloading contourpy-1.3.3-cp314-cp314-macosx_11_0_arm64.whl (273 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.63.0-cp314-cp314-macosx_10_15_universal2.whl (2.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 26.4 MB/s  0:00:00
+Downloading kiwisolver-1.5.0-cp314-cp314-macosx_11_0_arm64.whl (64 kB)
+Downloading pillow-12.3.0-cp314-cp314-macosx_11_0_arm64.whl (4.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 29.8 MB/s  0:00:00
+Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Installing collected packages: pyparsing, pillow, kiwisolver, fonttools, cycler, contourpy, matplotlib
+Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.63.0 kiwisolver-1.5.0 matplotlib-3.11.0 pillow-12.3.0 pyparsing-3.3.2
+
+[notice] A new release of pip is available: 26.0 -> 26.1.2
+[notice] To update, run: pip install --upgrade pip
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % python3 scripts/05_generate_charts.py
+Matplotlib is building the font cache; this may take a moment.
+Saved: results/figures/fig1_cad_delta_comparison.png
+Saved: results/figures/fig2_observation_density_vulnerability.png
+Saved: results/figures/fig3_magnitude_vs_orbital_impact.png
+Saved: results/figures/fig4_heatmap.png
+
+All 4 figures saved to results/figures/
+These go directly into Chapter 5 — Results of your dissertation.
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation % 
+(venv) nithinyadavg@Nithins-MacBook-Air-3 dissertation %                                      
+
+Updated no Sat 04-Jul-2026 03:40 PM GMT 

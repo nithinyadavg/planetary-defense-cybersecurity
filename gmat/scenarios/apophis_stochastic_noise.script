@@ -1,0 +1,55 @@
+%----------------------------------------
+% GMAT Script: Apophis Close Approach Analysis
+% Dissertation: Integrity Assurance in Planetary Defense
+% Author: Nithin Yadav Gopinath (C5003001)
+%
+% This script propagates Apophis forward to its 2029
+% Earth close approach and reports the minimum distance.
+% It is generated and called automatically by Python.
+%----------------------------------------
+
+%--- Spacecraft (representing Apophis) ---
+Create Spacecraft Apophis;
+GMAT Apophis.DateFormat        = UTCGregorian;
+GMAT Apophis.Epoch             = '01 Jan 2020 00:00:00.000';
+GMAT Apophis.CoordinateSystem  = SunMJ2000Eq;
+GMAT Apophis.DisplayStateType  = Keplerian;
+
+% Orbital elements — JPL values for Apophis at epoch 2020-01-01
+% These are the CLEAN baseline values.
+% Python will substitute different values for each scenario.
+GMAT Apophis.SMA  = 137987337.890517;     % Semi-major axis (km)
+GMAT Apophis.ECC  = 0.19140850;     % Eccentricity
+GMAT Apophis.INC  = 3.339600;     % Inclination (deg)
+GMAT Apophis.RAAN = 204.500200;    % Right Ascension of Ascending Node (deg)
+GMAT Apophis.AOP  = 126.592000;     % Argument of Periapsis (deg)
+GMAT Apophis.TA   = 222.875600;      % True Anomaly (deg)
+
+%--- Force Model ---
+Create ForceModel SolarSystemForces;
+GMAT SolarSystemForces.CentralBody              = Sun;
+GMAT SolarSystemForces.PrimaryBodies            = {Sun};
+GMAT SolarSystemForces.PointMasses              = {Earth, Luna, Venus, Mars, Jupiter};
+GMAT SolarSystemForces.SRP                      = Off;
+GMAT SolarSystemForces.RelativisticCorrection   = Off;
+
+%--- Propagator ---
+Create Propagator SolarProp;
+GMAT SolarProp.FM   = SolarSystemForces;
+GMAT SolarProp.Type = RungeKutta89;
+
+%--- Close Approach Report ---
+Create ReportFile CloseApproachReport;
+GMAT CloseApproachReport.Filename       = '/Users/nithinyadavg/ME/SHU AtZ/Demon/GMAT/dissertation/gmat/reports/report_stochastic_noise.txt';
+GMAT CloseApproachReport.WriteHeaders   = true;
+GMAT CloseApproachReport.Add           = {Apophis.UTCGregorian, Apophis.Earth.RMAG};
+
+%--- Mission Sequence ---
+BeginMissionSequence;
+
+% Propagate from 2020 to start of 2029 window
+Propagate SolarProp(Apophis) {Apophis.UTCGregorian = '01 Jan 2029 00:00:00.000'};
+
+% Now propagate day by day through the close approach window
+% and record Earth distance at each step
+Propagate SolarProp(Apophis) {Apophis.ElapsedDays = 180, Apophis.Earth.RMAG = 31600, StopTolerance = 1};

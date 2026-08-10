@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSc Cybersecurity — Dissertation Gantt Chart</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:      #0d0f14;
+    --surf:    #13161e;
+    --surf2:   #1a1e2a;
+    --border:  rgba(255,255,255,0.08);
+    --text:    #e8eaf0;
+    --muted:   #6b7080;
+    --blue:    #4f8ef7;
+    --blue2:   #378add;
+    --green:   #1d9e75;
+    --lime:    #639922;
+    --rose:    #993556;
+    --amber:   #f5a623;
+    --red:     #e24b4a;
+    --slate:   #6b7280;
+    --navy:    #1a2a40;
+    --now-bg:  #0e1e38;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    padding: 40px 36px 60px;
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  .hdr { margin-bottom: 36px; }
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: .15em;
+    color: var(--blue); text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .title { font-size: 28px; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; }
+  .subtitle { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.6; font-weight: 400; }
+
+  /* ── Meta badges ── */
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 32px; }
+  .badge {
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    padding: 4px 12px; border-radius: 20px;
+    border: 1px solid var(--border); color: var(--muted); letter-spacing: .04em;
+  }
+  .badge.hi  { border-color: rgba(79,142,247,.4); color: var(--blue); }
+  .badge.warn{ border-color: rgba(245,166,35,.4); color: var(--amber); }
+  .badge.red { border-color: rgba(226,75,74,.4);  color: var(--red); }
+
+  /* ── Alert boxes ── */
+  .alert {
+    border-radius: 10px; padding: 12px 16px;
+    font-size: 13px; line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .alert-blue { background: rgba(79,142,247,.08); border: 1px solid rgba(79,142,247,.25); color: #8ab4ff; }
+  .alert-amber{ background: rgba(245,166,35,.08); border: 1px solid rgba(245,166,35,.25); color: #fcd47a; }
+
+  /* ── Gantt ── */
+  .gantt-outer {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surf);
+    overflow: hidden;
+  }
+  .gantt-scroll { overflow-x: auto; }
+
+  table {
+    border-collapse: collapse;
+    min-width: 900px;
+    width: 100%;
+  }
+  th, td { border: 1px solid var(--border); }
+
+  /* month header */
+  .month-head {
+    text-align: center; padding: 10px 6px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; color: var(--muted);
+    background: var(--surf2); white-space: nowrap;
+    width: 80px; min-width: 70px;
+  }
+  .month-now {
+    background: var(--now-bg);
+    color: var(--blue);
+  }
+  .now-label {
+    display: block; font-size: 9px;
+    color: var(--blue); margin-top: 2px;
+    letter-spacing: .05em;
+  }
+
+  /* label column */
+  .task-label {
+    padding: 0 14px;
+    font-size: 12px; font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+    width: 220px; min-width: 200px;
+    background: var(--surf);
+  }
+  .task-label .sub {
+    display: block;
+    font-size: 10px; color: var(--muted);
+    font-weight: 400; margin-top: 2px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* phase rows */
+  .phase-row td {
+    background: var(--navy);
+    padding: 8px 14px;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    color: var(--blue2);
+    border-color: rgba(255,255,255,.05);
+  }
+
+  /* bar cells */
+  .bar-td { padding: 8px 4px; vertical-align: middle; height: 44px; }
+  .bar-now { background: var(--now-bg) !important; }
+  .bar {
+    height: 24px; border-radius: 5px;
+    display: flex; align-items: center;
+    padding: 0 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; font-weight: 500;
+    white-space: nowrap; overflow: hidden;
+    animation: grow .6s ease both;
+    transform-origin: left center;
+  }
+  @keyframes grow {
+    from { transform: scaleX(0); opacity: 0; }
+    to   { transform: scaleX(1); opacity: 1; }
+  }
+  .bar-span { display: block; overflow: hidden; text-overflow: ellipsis; }
+
+  .c-abandon { background: rgba(226,75,74,.25);  color: #fca5a5; border: 1px solid rgba(226,75,74,.4); }
+  .c-plan    { background: rgba(79,142,247,.22); color: #93c5fd; border: 1px solid rgba(79,142,247,.4); }
+  .c-lit     { background: rgba(55,138,221,.22); color: #93c5fd; border: 1px solid rgba(55,138,221,.4); }
+  .c-data    { background: rgba(29,158,117,.22); color: #6ee7b7; border: 1px solid rgba(29,158,117,.4); }
+  .c-sim     { background: rgba(99,153,34,.22);  color: #bef264; border: 1px solid rgba(99,153,34,.4); }
+  .c-write   { background: rgba(153,53,86,.28);  color: #f9a8d4; border: 1px solid rgba(153,53,86,.4); }
+  .c-super   { background: rgba(107,114,128,.2); color: #d1d5db; border: 1px solid rgba(107,114,128,.35); }
+
+  /* milestone row */
+  .milestone-row td { height: 38px; }
+  .milestone-label { color: var(--amber) !important; font-size: 11px !important; }
+  .milestone-label.red { color: var(--red) !important; }
+  .milestone-td { text-align: center; vertical-align: middle; }
+  .diamond {
+    width: 14px; height: 14px;
+    transform: rotate(45deg);
+    border-radius: 2px;
+    display: inline-block;
+    margin-top: 2px;
+  }
+  .m-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px; color: var(--amber);
+    white-space: nowrap;
+    text-align: left; padding-left: 6px;
+    vertical-align: middle;
+  }
+  .m-note.red { color: var(--red); }
+
+  /* ── Legend ── */
+  .legend {
+    display: flex; flex-wrap: wrap;
+    gap: 16px; margin-top: 28px;
+  }
+  .leg {
+    display: flex; align-items: center;
+    gap: 7px; font-size: 12px; color: var(--muted);
+  }
+  .leg-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+
+  /* ── Key dates ── */
+  .key-dates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px; margin-top: 28px;
+  }
+  .kd {
+    background: var(--surf);
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: 12px 16px;
+  }
+  .kd-label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+  .kd-val   { font-size: 14px; font-weight: 700; margin-top: 4px; }
+
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<div class="hdr">
+  <div class="eyebrow">Sheffield Hallam University · MSc Cybersecurity · 55-710260</div>
+  <h1 class="title">Dissertation Project Gantt Chart</h1>
+  <p class="subtitle">
+    Integrity Assurance in Planetary Defense: An Experimental Cybersecurity Framework<br>
+    for Near-Earth Object (NEO) Tracking Pipelines &nbsp;·&nbsp; Dr Sina Pournouri
+  </p>
+</div>
+
+<!-- ── BADGES ── -->
+<div class="badges">
+  <span class="badge hi">Project started: March 2026</span>
+  <span class="badge warn">RMS deadline: 18 June 2026</span>
+  <span class="badge red">Dissertation: September 2026</span>
+  <span class="badge">Total working time: ~6 months</span>
+  <span class="badge">Pivot from hardware project: March 2026</span>
+</div>
+
+<!-- ── ALERT BOXES ── -->
+<div class="alert alert-blue">
+  <strong>Current position:</strong> June 2026 — RMS submission due 18 June 2026. Experimental dissertation work (Phases 2–3) begins immediately after submission.
+</div>
+<div class="alert alert-amber">
+  <strong>Note:</strong> Project commenced March 2026. Research is conducted entirely within simulated environments using publicly available tools and datasets.
+</div>
+
+<!-- ── GANTT TABLE ── -->
+<div class="gantt-outer">
+<div class="gantt-scroll">
+<table id="gantt">
+  <thead>
+    <tr>
+      <th class="task-label" style="font-size:10px;color:var(--muted);font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:10px 14px;">Task / Activity</th>
+      <th class="month-head">Jan<br>2026</th>
+      <th class="month-head">Feb<br>2026</th>
+      <th class="month-head">Mar<br>2026</th>
+      <th class="month-head">Apr<br>2026</th>
+      <th class="month-head">May<br>2026</th>
+      <th class="month-head month-now">Jun 2026<span class="now-label">▲ NOW</span></th>
+      <th class="month-head">Jul<br>2026</th>
+      <th class="month-head">Aug<br>2026</th>
+      <th class="month-head">Sep<br>2026</th>
+    </tr>
+  </thead>
+  <tbody id="tbody">
+  </tbody>
+</table>
+</div>
+</div>
+
+<!-- ── LEGEND ── -->
+<div class="legend">
+  <div class="leg"><div class="leg-dot" style="background:#4f8ef7"></div>Planning / RMS</div>
+  <div class="leg"><div class="leg-dot" style="background:#378add"></div>Literature</div>
+  <div class="leg"><div class="leg-dot" style="background:#1d9e75"></div>Data collection</div>
+  <div class="leg"><div class="leg-dot" style="background:#639922"></div>Simulation</div>
+  <div class="leg"><div class="leg-dot" style="background:#993556"></div>Writing</div>
+  <div class="leg"><div class="leg-dot" style="background:#6b7280"></div>Supervision</div>
+  <div class="leg"><div class="leg-dot" style="background:#f5a623;transform:rotate(45deg);border-radius:2px"></div>Milestone</div>
+</div>
+
+<!-- ── KEY DATES ── -->
+<div class="key-dates">
+  <div class="kd">
+    <div class="kd-label">Project started</div>
+    <div class="kd-val">March 2026</div>
+  </div>
+  <div class="kd" style="border-color:rgba(245,166,35,.4)">
+    <div class="kd-label" style="color:#f5a623">RMS submission</div>
+    <div class="kd-val" style="color:#f5a623">18 June 2026</div>
+  </div>
+  <div class="kd" style="border-color:rgba(79,142,247,.4)">
+    <div class="kd-label" style="color:#4f8ef7">Experimental work</div>
+    <div class="kd-val" style="color:#4f8ef7">Jun – Aug 2026</div>
+  </div>
+  <div class="kd" style="border-color:rgba(226,75,74,.4)">
+    <div class="kd-label" style="color:#e24b4a">Dissertation deadline</div>
+    <div class="kd-val" style="color:#e24b4a">September 2026</div>
+  </div>
+</div>
+
+<script>
+// ── Data ──────────────────────────────────────────────────────
+// months: 0=Jan26 … 8=Sep26  (9 columns)
+// NOW = column 5 (Jun 26)
+const NOW = 5;
+const N = 9;
+
+const ROWS = [
+  // type, label, sub, start, end, cls, note
+  { type:'milestone', label:'Project Start — NEO Cybersecurity', col:2, colour:'#4f8ef7', note:'March 2026' },
+
+  { type:'phase', label:'PHASE 1  —  Literature & RMS Proposal  (Mar – Jun 2026)' },
+  { type:'task',  label:'Topic re-evaluation & scoping', sub:'Define research question & objectives', start:2, end:3, cls:'c-plan' },
+  { type:'task',  label:'Literature survey', sub:'SIN, SDLS, ADES, CCSDS, space cyber', start:2, end:4, cls:'c-lit' },
+  { type:'task',  label:'RMS proposal write-up', sub:'2,500-word research proposal', start:3, end:5, cls:'c-plan' },
+  { type:'task',  label:'Supervisor meetings', sub:'Ongoing throughout project', start:2, end:8, cls:'c-super' },
+  { type:'milestone', label:'RMS SUBMISSION DEADLINE', col:5, colour:'#f5a623', note:'18 June 2026' },
+
+  { type:'phase', label:'PHASE 2  —  Data Collection & Simulation  (Jun – Aug 2026)' },
+  { type:'task',  label:'MPC API data collection', sub:'Apophis & Bennu tracklet retrieval', start:5, end:6, cls:'c-data' },
+  { type:'task',  label:'ADES format synthesis', sub:'XML/JSON pipeline construction', start:5, end:6, cls:'c-data' },
+  { type:'task',  label:'GMAT & Python environment', sub:'Tool setup & dependency management', start:5, end:5, cls:'c-data' },
+  { type:'task',  label:'Adversarial injection module', sub:'RA/Dec perturbation — 3 archetypes', start:5, end:6, cls:'c-sim' },
+  { type:'task',  label:'Orbital propagation runs (GMAT)', sub:'50+ simulation scenarios', start:6, end:7, cls:'c-sim' },
+  { type:'task',  label:'MCDA risk scoring framework', sub:'L, V, A, I, C criteria', start:6, end:7, cls:'c-sim' },
+  { type:'milestone', label:'Interim supervisor review', col:7, colour:'#4f8ef7', note:'August 2026' },
+
+  { type:'phase', label:'PHASE 3  —  Writing & Submission  (Jul – Sep 2026)' },
+  { type:'task',  label:'Draft all dissertation chapters', sub:'Intro, lit review, methodology', start:6, end:7, cls:'c-write' },
+  { type:'task',  label:'Results & discussion write-up', sub:'Analysis, findings, implications', start:7, end:7, cls:'c-write' },
+  { type:'task',  label:'Supervisor full draft review', sub:'Feedback integration', start:7, end:8, cls:'c-super' },
+  { type:'task',  label:'Final revisions & proofread', sub:'Formatting, references, submission prep', start:7, end:8, cls:'c-write' },
+  { type:'milestone', label:'DISSERTATION SUBMISSION', col:8, colour:'#e24b4a', note:'September 2026' },
+];
+
+// ── Render ────────────────────────────────────────────────────
+const tbody = document.getElementById('tbody');
+
+ROWS.forEach((row, ri) => {
+  const tr = document.createElement('tr');
+  const delay = ri * 35;
+
+  if (row.type === 'phase') {
+    tr.className = 'phase-row';
+    const td = document.createElement('td');
+    td.colSpan = N + 1;
+    td.textContent = row.label;
+    tr.appendChild(td);
+
+  } else if (row.type === 'milestone') {
+    tr.className = 'milestone-row';
+    const isRed = row.colour === '#e24b4a';
+
+    // label cell
+    const lbl = document.createElement('td');
+    lbl.className = 'task-label milestone-label' + (isRed ? ' red' : '');
+    lbl.textContent = row.label;
+    tr.appendChild(lbl);
+
+    // month cells
+    for (let m = 0; m < N; m++) {
+      const td = document.createElement('td');
+      td.className = 'bar-td' + (m === NOW ? ' bar-now' : '');
+      if (m === row.col) {
+        td.className += ' milestone-td';
+        const d = document.createElement('div');
+        d.className = 'diamond';
+        d.style.background = row.colour;
+        d.style.animationDelay = delay + 'ms';
+        td.appendChild(d);
+      }
+      tr.appendChild(td);
+    }
+
+    // note after milestone
+    if (row.note) {
+      const noteTd = tr.children[row.col + 2] || null; // +1 label +1 for col
+      // insert note into adjacent cell
+      const nextCol = row.col + 1;
+      if (nextCol < N) {
+        const nc = tr.children[nextCol + 1];
+        if (nc) {
+          nc.style.fontSize = '10px';
+          nc.style.color = row.colour;
+          nc.style.fontFamily = 'DM Mono, monospace';
+          nc.style.padding = '0 6px';
+          nc.style.whiteSpace = 'nowrap';
+          nc.textContent = row.note;
+        }
+      }
+    }
+
+  } else {
+    // normal task row
+    // label
+    const lbl = document.createElement('td');
+    lbl.className = 'task-label';
+    lbl.innerHTML = row.label + (row.sub ? `<span class="sub">${row.sub}</span>` : '');
+    tr.appendChild(lbl);
+
+    // month cells
+    for (let m = 0; m < N; m++) {
+      const td = document.createElement('td');
+      td.className = 'bar-td' + (m === NOW ? ' bar-now' : '');
+      if (m >= row.start && m <= row.end) {
+        const isFirst = m === row.start;
+        const isLast  = m === row.end;
+        const bar = document.createElement('div');
+        bar.className = 'bar ' + row.cls;
+        bar.style.animationDelay = delay + 'ms';
+        bar.style.borderRadius =
+          isFirst && isLast ? '5px' :
+          isFirst ? '5px 0 0 5px' :
+          isLast  ? '0 5px 5px 0' : '0';
+        if (isFirst) {
+          const sp = document.createElement('span');
+          sp.className = 'bar-span';
+          sp.textContent = row.label;
+          bar.appendChild(sp);
+        }
+        td.appendChild(bar);
+      }
+      tr.appendChild(td);
+    }
+  }
+
+  tbody.appendChild(tr);
+});
+</script>
+</body>
+</html>

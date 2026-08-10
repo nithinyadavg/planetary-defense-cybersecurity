@@ -1,0 +1,214 @@
+
+<h2 class="sr-only">Guide to getting a secondary Linux machine for the dissertation — SHU loan scheme and secondhand market options</h2>
+<style>
+  .wrap { padding: 1rem 0; font-size: 14px; color: var(--color-text-primary); }
+  .alert { display:flex; gap:12px; align-items:flex-start; padding:12px 14px; border-radius:var(--border-radius-md); margin-bottom:1.25rem; }
+  .alert-warn { background:var(--color-background-warning); }
+  .alert-info { background:var(--color-background-info); }
+  .alert-ok { background:var(--color-background-success); }
+  .alert i { font-size:18px; flex-shrink:0; margin-top:1px; }
+  .alert-warn i { color:var(--color-text-warning); }
+  .alert-info i { color:var(--color-text-info); }
+  .alert-ok i { color:var(--color-text-success); }
+  .alert-body { font-size:12px; line-height:1.7; }
+  .alert-body strong { color:var(--color-text-primary); font-weight:500; }
+  .section-title { font-size:15px; font-weight:500; margin:1.5rem 0 0.75rem; padding-bottom:6px; border-bottom:0.5px solid var(--color-border-tertiary); }
+  .card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:10px; margin-bottom:1.25rem; }
+  .card { background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:var(--border-radius-lg); padding:12px 14px; }
+  .card.featured { border:2px solid var(--color-border-success); }
+  .card-label { font-size:10px; font-weight:500; padding:2px 8px; border-radius:20px; display:inline-block; margin-bottom:6px; }
+  .lbl-green { background:var(--color-background-success); color:var(--color-text-success); }
+  .lbl-amber { background:var(--color-background-warning); color:var(--color-text-warning); }
+  .lbl-red { background:var(--color-background-danger); color:var(--color-text-danger); }
+  .lbl-blue { background:var(--color-background-info); color:var(--color-text-info); }
+  .card-title { font-size:13px; font-weight:500; margin-bottom:4px; }
+  .card-body { font-size:12px; color:var(--color-text-secondary); line-height:1.6; }
+  .spec-block { background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:var(--border-radius-lg); padding:12px 14px; margin-bottom:10px; }
+  .spec-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+  .spec-name { font-size:13px; font-weight:500; }
+  .spec-price { font-size:13px; font-weight:500; color:var(--color-text-success); }
+  .spec-row { display:flex; gap:8px; font-size:12px; padding:3px 0; }
+  .spec-key { color:var(--color-text-secondary); min-width:80px; flex-shrink:0; }
+  .spec-val { color:var(--color-text-primary); }
+  .spec-val.good { color:var(--color-text-success); }
+  .spec-val.warn { color:var(--color-text-warning); }
+  .row-item { display:flex; align-items:flex-start; gap:10px; padding:7px 0; border-bottom:0.5px solid var(--color-border-tertiary); }
+  .row-item:last-child { border-bottom:none; }
+  .row-label { font-size:12px; font-weight:500; min-width:140px; flex-shrink:0; }
+  .row-desc { font-size:12px; color:var(--color-text-secondary); line-height:1.6; flex:1; }
+  .distro-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:8px; margin-bottom:1.25rem; }
+  .distro { background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:var(--border-radius-md); padding:10px 12px; }
+  .distro-name { font-size:13px; font-weight:500; margin-bottom:3px; }
+  .distro-why { font-size:11px; color:var(--color-text-secondary); line-height:1.5; }
+  .where-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:8px; margin-bottom:1.25rem; }
+  .where-card { background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:var(--border-radius-md); padding:10px 12px; }
+  .where-name { font-size:13px; font-weight:500; margin-bottom:3px; }
+  .where-tip { font-size:11px; color:var(--color-text-secondary); line-height:1.5; }
+</style>
+
+<div class="wrap">
+
+  <div class="section-title">The SHU laptop loan scheme — what it actually is</div>
+
+  <div class="alert alert-warn">
+    <i class="ti ti-alert-triangle" aria-hidden="true"></i>
+    <div class="alert-body">
+      <strong>SHU's loan scheme is NOT what you're thinking.</strong> It's a short-term library loan — 1 day or 1 week maximum, from lockers at Adsetts and Collegiate libraries, wiped after every return. You cannot install software on them, you cannot keep them for the dissertation period, and they are standard Windows library machines — not research-grade hardware. This will not work as your secondary Linux machine.
+    </div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-label lbl-red">SHU Library Loan — avoid for this</div>
+      <div class="card-title">Library laptop locker</div>
+      <div class="card-body">1-day or 1-week loan only. Wiped regularly — no persistent software. Available 24/7 at Adsetts & Collegiate. Useful for Word/browser work on campus. Useless for installing Docker, Python, GMAT, or cFS.</div>
+    </div>
+    <div class="card">
+      <div class="card-label lbl-amber">SHU IT — worth asking</div>
+      <div class="card-title">Hallam Help / IT Services</div>
+      <div class="card-body">Email hallamhelp@shu.ac.uk and ask specifically if extended hardware loans exist for postgraduate dissertation students. Some UK universities do have longer-term loans for PGT students — SHU may have a scheme not publicly advertised. Worth a 5-minute email.</div>
+    </div>
+    <div class="card">
+      <div class="card-label lbl-blue">SHU Labs — use freely</div>
+      <div class="card-title">Campus computer labs</div>
+      <div class="card-body">Cantor building labs have workstations with more power than library laptops. Check if any labs have Linux dual-boot or if you can request Linux access via IT. Your SDL sessions are in Cantor — ask the IT desk directly.</div>
+    </div>
+  </div>
+
+  <div class="alert alert-info">
+    <i class="ti ti-bulb" aria-hidden="true"></i>
+    <div class="alert-body"><strong>Real answer for your secondary machine: secondhand market.</strong> For £120–300 you can get a machine that runs Linux perfectly, handles all 4 dissertation phases, and is yours to keep and configure. This is a far better outcome than a borrowed machine you'd return in September anyway.</div>
+  </div>
+
+  <div class="section-title">Minimum specs you actually need for this dissertation on Linux</div>
+
+  <div class="row-item">
+    <span class="row-label">CPU</span>
+    <span class="row-desc">Intel Core i5 6th gen or newer (or AMD Ryzen 5 2000 series+). You need AVX2 instruction support for PyTorch — everything 6th gen Intel and Ryzen onwards has it. Don't go older.</span>
+  </div>
+  <div class="row-item">
+    <span class="row-label">RAM</span>
+    <span class="row-desc">16 GB minimum. Non-negotiable — running Docker (cFS), GMAT, and a Jupyter notebook simultaneously will hit 12 GB easily. 32 GB is ideal but not essential.</span>
+  </div>
+  <div class="row-item">
+    <span class="row-label">Storage</span>
+    <span class="row-desc">256 GB SSD minimum. An SSD is mandatory — GMAT and Docker on a spinning HDD is genuinely painful. 512 GB preferred. NVMe is faster but SATA SSD is fine.</span>
+  </div>
+  <div class="row-item">
+    <span class="row-label">GPU (for CNN)</span>
+    <span class="row-desc">NVIDIA GPU strongly preferred if you want local GPU training. GTX 1060 6GB or better for CUDA support. AMD GPUs work but PyTorch CUDA support is NVIDIA-only — AMD uses ROCm which is finicky on Linux. If no GPU, use Google Colab — no problem.</span>
+  </div>
+  <div class="row-item">
+    <span class="row-label">Display</span>
+    <span class="row-desc">1080p minimum. If it's a laptop, 14" or 15.6" is fine. If it's a desktop, you'll need a monitor — factor that into your budget.</span>
+  </div>
+  <div class="row-item">
+    <span class="row-label">Linux compatibility</span>
+    <span class="row-desc">ThinkPads, Dell Latitudes, and HP EliteBooks are the gold standard — all have excellent Linux driver support, documented community knowledge, and easily replaceable parts. Avoid anything with hybrid graphics (NVIDIA Optimus on budget machines) unless you're confident with drivers.</span>
+  </div>
+
+  <div class="section-title">Specific machines to target — ranked best to good</div>
+
+  <div class="spec-block">
+    <div class="spec-header">
+      <span class="spec-name">Lenovo ThinkPad T480 / T480s <span style="font-size:11px;font-weight:400;color:var(--color-text-secondary)">— the #1 recommendation</span></span>
+      <span class="spec-price">£120–200 secondhand</span>
+    </div>
+    <div class="spec-row"><span class="spec-key">CPU</span><span class="spec-val good">Intel Core i5-8250U / i7-8550U (8th gen, AVX2)</span></div>
+    <div class="spec-row"><span class="spec-key">RAM</span><span class="spec-val good">Up to 32 GB DDR4 (user-upgradeable — huge advantage)</span></div>
+    <div class="spec-row"><span class="spec-key">Storage</span><span class="spec-val good">M.2 NVMe + 2.5" SATA slot — can add a second drive</span></div>
+    <div class="spec-row"><span class="spec-key">Battery</span><span class="spec-val good">Dual battery design — swappable, 10+ hrs with both</span></div>
+    <div class="spec-row"><span class="spec-key">Linux support</span><span class="spec-val good">Perfect — one of the best-supported laptops on Linux ever made</span></div>
+    <div class="spec-row"><span class="spec-key">Why it wins</span><span class="spec-val">Keyboard is excellent for long writing sessions. Upgradeability means you can add RAM later if needed. Enormous community knowledge base — any Linux problem has a ThinkPad T480 specific solution online.</span></div>
+  </div>
+
+  <div class="spec-block">
+    <div class="spec-header">
+      <span class="spec-name">Dell Latitude 5490 / 5500 / E7470</span>
+      <span class="spec-price">£100–180 secondhand</span>
+    </div>
+    <div class="spec-row"><span class="spec-key">CPU</span><span class="spec-val good">i5-8250U / i7-8650U</span></div>
+    <div class="spec-row"><span class="spec-key">RAM</span><span class="spec-val good">Up to 32 GB DDR4</span></div>
+    <div class="spec-row"><span class="spec-key">Linux support</span><span class="spec-val good">Excellent — Dell officially supports Ubuntu on many Latitude models</span></div>
+    <div class="spec-row"><span class="spec-key">Why it's good</span><span class="spec-val">Often available cheaper than ThinkPads in the UK secondhand market. Dell's official Linux support means drivers just work. Build quality is solid for ex-corporate machines.</span></div>
+  </div>
+
+  <div class="spec-block">
+    <div class="spec-header">
+      <span class="spec-name">HP EliteBook 840 G5 / G6</span>
+      <span class="spec-price">£110–190 secondhand</span>
+    </div>
+    <div class="spec-row"><span class="spec-key">CPU</span><span class="spec-val good">i5-8250U / i7-8550U</span></div>
+    <div class="spec-row"><span class="spec-key">RAM</span><span class="spec-key">16–32 GB DDR4</span></div>
+    <div class="spec-row"><span class="spec-key">Linux support</span><span class="spec-val good">Very good — minor quirks with fingerprint reader (ignore it) but everything else works</span></div>
+    <div class="spec-row"><span class="spec-key">Why it's good</span><span class="spec-val">Premium build quality. Often available in bulk as ex-corporate leases — many in good condition. 14" form factor is lightweight.</span></div>
+  </div>
+
+  <div class="spec-block">
+    <div class="spec-header">
+      <span class="spec-name">Desktop option: used mini PC / SFF (BONUS)</span>
+      <span class="spec-price">£80–150 secondhand</span>
+    </div>
+    <div class="spec-row"><span class="spec-key">Examples</span><span class="spec-val">Lenovo ThinkCentre M900/M910 tiny, Dell OptiPlex 7050 Micro, HP EliteDesk 800 G3 Mini</span></div>
+    <div class="spec-row"><span class="spec-key">CPU</span><span class="spec-val good">i5-6500T / i7-7700T — fast, fanless-ish, tiny</span></div>
+    <div class="spec-row"><span class="spec-key">Why consider it</span><span class="spec-val">If you have a monitor already (or can get one cheap), a desktop gives you more RAM capacity and runs cooler under sustained load. Sits at your desk as a dedicated Linux workstation. Needs a separate monitor though.</span></div>
+    <div class="spec-row"><span class="spec-key">Downside</span><span class="spec-val warn">No portability. You'd need a monitor, keyboard, mouse separately.</span></div>
+  </div>
+
+  <div class="section-title">Where to buy secondhand in the UK</div>
+  <div class="where-grid">
+    <div class="where-card">
+      <div class="where-name"><i class="ti ti-shopping-cart" style="font-size:13px;margin-right:4px" aria-hidden="true"></i>eBay UK</div>
+      <div class="where-tip">Biggest selection. Filter: "Used", "Seller in United Kingdom". Buy from sellers with 99%+ feedback and 200+ reviews. Check "sold" listings to understand real market prices before bidding.</div>
+    </div>
+    <div class="where-card">
+      <div class="where-name"><i class="ti ti-building-store" style="font-size:13px;margin-right:4px" aria-hidden="true"></i>Bargain Hardware</div>
+      <div class="where-tip">bargainhardware.co.uk — specialist in ex-corporate refurb. Graded (A/B/C). Warranty included. Slightly more than eBay but more reliable. Great for ThinkPads and Latitudes.</div>
+    </div>
+    <div class="where-card">
+      <div class="where-name"><i class="ti ti-brand-facebook" style="font-size:13px;margin-right:4px" aria-hidden="true"></i>Facebook Marketplace</div>
+      <div class="where-tip">Sheffield local — meet in person, inspect before buying. Often private sellers clearing out old work laptops. Can negotiate. Meet in a public place.</div>
+    </div>
+    <div class="where-card">
+      <div class="where-name"><i class="ti ti-device-laptop" style="font-size:13px;margin-right:4px" aria-hidden="true"></i>Gumtree</div>
+      <div class="where-tip">Similar to Marketplace. Filter to Sheffield. Good for quick local deals. Always test before you hand over cash.</div>
+    </div>
+    <div class="where-card">
+      <div class="where-name"><i class="ti ti-refresh" style="font-size:13px;margin-right:4px" aria-hidden="true"></i>Back Market UK</div>
+      <div class="where-tip">backmarket.co.uk — professionally refurbished, graded, with warranty. Prices slightly higher than eBay but condition is more reliable. Good if you want peace of mind.</div>
+    </div>
+    <div class="where-card">
+      <div class="where-name"><i class="ti ti-school" style="font-size:13px;margin-right:4px" aria-hidden="true"></i>SHU Notice Board</div>
+      <div class="where-tip">Check MyHallam student noticeboard / SHU student Facebook groups — students often sell laptops at end of year. Sheffield student community is active on this.</div>
+    </div>
+  </div>
+
+  <div class="section-title">Which Linux distro to put on it</div>
+  <div class="distro-grid">
+    <div class="distro" style="border:2px solid var(--color-border-success);">
+      <div class="distro-name">Ubuntu 24.04 LTS</div>
+      <div class="distro-why">Best recommendation for you. Every dissertation tool (GMAT, Docker, PyTorch, astropy) has Ubuntu install docs. Huge community. Just works on ThinkPads and Latitudes.</div>
+    </div>
+    <div class="distro">
+      <div class="distro-name">Fedora 40</div>
+      <div class="distro-why">More cutting-edge, excellent hardware support. Good alternative if Ubuntu feels old. DNF package manager is fast. Strong for developer workloads.</div>
+    </div>
+    <div class="distro">
+      <div class="distro-name">Pop!_OS 22.04</div>
+      <div class="distro-why">Ubuntu base with better NVIDIA GPU support out-of-the-box. Best choice if the machine has an NVIDIA GPU — auto-installs correct drivers.</div>
+    </div>
+    <div class="distro">
+      <div class="distro-name">Debian 12</div>
+      <div class="distro-why">Ultra-stable, minimal, long support cycle. Slightly more manual setup. Good if you want a lean machine and are comfortable with Linux already.</div>
+    </div>
+  </div>
+
+  <div class="section-title">What to check before buying any secondhand machine</div>
+  <div class="row-item"><span class="row-label">Battery health</span><span class="row-desc">Ask for "battery wear percentage" — under 20% wear is good. Over 50% wear means it won't last long off-mains. Replaceable on ThinkPads for ~£20.</span></div>
+  <div class="row-item"><span class="row-label">Screen condition</span><span class="row-desc">Check for dead pixels, yellowing, or backlight bleed in photos. Ask seller to take a photo of a plain white screen.</span></div>
+  <div class="row-item"><span class="row-label">Keyboard / trackpad</span><span class="row-desc">Test every key. Ex-corporate machines are usually fine but check for sticky or missing keys in photos.</span></div>
+  <div class="row-item"><span class="row-label">RAM slots</span><span class="row-desc">Confirm how many RAM slots and current capacity. T480 has 2 slots — means you can upgrade to 32 GB for ~£25 later.</span></div>
+  <div class="row-item"><span class="row-label">BIOS unlock / corporate lock</span><span class="row-desc">Some ex-corporate ThinkPads have BIOS passwords. Ask seller to confirm the BIOS is unlocked and there's no corporate MDM enrollment.</span></div>
+  <div class="row-item"><span class="row-label">Thermal paste</span><span class="row-desc">On older ThinkPads (5+ years), thermal paste dries out and the machine throttles under load. A repaste (£5 of paste, 20 minutes) fixes this — worth doing before heavy work.</span></div>
+
+</div>
