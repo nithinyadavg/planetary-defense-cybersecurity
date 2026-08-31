@@ -1,0 +1,151 @@
+name,status,clean_dist_km,bias_delta_km,noise_delta_km,outlier_delta_km,n_observations
+AlbertA911TB,CAD fetch failed,,,,,
+GanymedA924UB,CAD fetch failed,,,,,
+Daedalus1971FA,CAD fetch failed,,,,,
+Boreas1953RA,CAD fetch failed,,,,,
+Tezcatlipoca1950LA,CAD fetch failed,,,,,
+Baboquivari1963UA,CAD fetch failed,,,,,
+Anza1960UA,OK,8031221.8,81.2,60.9,12.2,2056.0
+Tantalus1975YA,OK,20567333.0,251.4,188.6,37.7,2149.0
+Aristaeus1977HA,OK,67644634.4,155.6,116.7,23.3,62.0
+Pele1972RA,CAD fetch failed,,,,,
+Orthos1976WA,OK,14205609.9,-132.4,-99.3,-19.9,1882.0
+Beltrovata1977RA,CAD fetch failed,,,,,
+Seneca1978DA,OK,13469724.7,-165.2,-123.9,-24.8,85.0
+Krok1981QA,OK,29746630.0,-32.7,-24.5,-4.9,2806.0
+Eger1982BB,OK,28335928.6,350.3,262.8,52.6,8913.0
+Nefertiti1982RA,CAD fetch failed,,,,,
+Ul1982RB,CAD fetch failed,,,,,
+Seleucus1982DV,OK,20895365.8,-261.1,-195.7,-39.0,2617.0
+McAuliffe1981CW,CAD fetch failed,,,,,
+Syrinx1981VA,OK,22051747.0,179.8,134.9,27.0,595.0
+Verenia1983RD,OK,17637028.1,12.9,9.7,1.9,680.0
+Mera1985JA,CAD fetch failed,,,,,
+Amun1986EB,OK,57519637.3,337.9,253.4,50.7,1677.0
+Bede1982FT,CAD fetch failed,,,,,
+Camillo1985PA,OK,20607942.0,173.1,129.8,26.0,3146.0
+Cruithne1986TO,CAD fetch failed,,,,,
+Huma1986LA,OK,27726834.3,-24.3,-18.2,-3.6,631.0
+WilsonHarrington1979VA,OK,16200062.8,72.2,54.2,10.8,1891.0
+Vishnu1986PA,OK,23450599.0,26.3,19.7,3.9,1338.0
+Magellan1985DO2,CAD fetch failed,,,,,
+Morpheus1982TA,OK,29093448.4,101.1,75.9,15.2,1286.0
+Ubasti1987QA,OK,25525770.7,-159.2,-119.4,-23.9,3174.0
+Poseidon1987KF,CAD fetch failed,,,,,
+Aditi1985TB,CAD fetch failed,,,,,
+Pocahontas1987UA,CAD fetch failed,,,,,
+Cleobulus1989WM,CAD fetch failed,,,,,
+Xanthus1989FB,OK,29254218.4,-345.3,-258.8,-51.7,2968.0
+QB,CAD fetch failed,,,,,
+WF,OK,60116789.1,803.6,602.7,120.5,339.0
+Ninkasi1988TJ1,OK,24558374.5,281.9,211.4,42.3,1017.0
+MU,OK,4612130.3,-34.3,-25.7,-5.1,3136.0
+Eric1990SQ,CAD fetch failed,,,,,
+Brucemurray1990XJ,CAD fetch failed,,,,,
+Ptah6743PL,OK,28594843.8,39.9,29.9,6.0,785.0
+BG,CAD fetch failed,,,,,
+UQ,OK,10208406.7,-0.4,-0.3,-0.1,1659.0
+Lyapunov1987SL,CAD fetch failed,,,,,
+Davidaguilar1990DA,CAD fetch failed,,,,,
+Taranis1986RA,CAD fetch failed,,,,,
+NA,OK,22780894.9,60.1,45.1,9.0,344.0
+SB,CAD fetch failed,,,,,
+VA,OK,59045460.4,-488.4,-365.8,-72.9,
+FE,OK,19727200.6,218.6,164.0,32.8,1577.0
+Jasonwheeler1990OA,CAD fetch failed,,,,,
+Melissabrucker1991FE,CAD fetch failed,,,,,
+SP,OK,14734913.8,-133.5,-100.1,-20.0,1682.0
+TR,CAD fetch failed,,,,,
+Camarillo1992WD5,CAD fetch failed,,,,,
+MA,OK,24667798.8,14.0,10.5,2.1,561.0
+EA,OK,7939188.4,-80.1,-60.1,-12.0,2972.0
+Zeus1988VP4,OK,14786114.3,-105.8,-79.3,-15.9,1493.0
+Zao1992AC,CAD fetch failed,,,,,
+Talos1991RC,CAD fetch failed,,,,,
+Bivoj1980AA,OK,28399111.0,369.8,277.4,55.5,549.0
+AM,CAD fetch failed,,,,,
+MF,CAD fetch failed,,,,,
+Tara1983RB,CAD fetch failed,,,,,
+Tanith1988VN4,CAD fetch failed,,,,,
+Almeria1992CH1,OK,29733464.0,-271.8,-203.8,-40.7,1781.0
+EG,OK,6081487.9,-44.5,-33.4,-6.7,1145.0
+TB1,OK,24408074.4,2.2,1.6,0.3,819.0
+Miwablock1992AE,CAD fetch failed,,,,,
+BW3,CAD fetch failed,,,,,
+Jason1984KB,OK,14739256.5,-12.4,-9.3,-1.9,1336.0
+DA,OK,29624429.2,-333.1,-249.1,-49.6,1400.0
+Minos1989QF,OK,14819302.3,187.2,140.4,28.1,2064.0
+HE,CAD fetch failed,,,,,
+Golombek1992OM,CAD fetch failed,,,,,
+OA,OK,38538887.9,-103.3,-77.5,-15.5,204.0
+Ondaatje1993MO,CAD fetch failed,,,,,
+VW,OK,18138704.5,77.7,58.3,11.7,1786.0
+QA,OK,73563012.4,491.9,368.9,73.8,964.0
+Ishtar1992AA,CAD fetch failed,,,,,
+Cadmus1992LC,CAD fetch failed,,,,,
+PA,CAD fetch failed,,,,,
+JA,OK,4024658.4,-34.1,-25.6,-5.1,2613.0
+Saunders1989RS1,OK,28464478.9,222.5,166.9,33.4,1405.0
+VK,OK,10192407.3,-61.1,-45.8,-9.2,2410.0
+VA,OK,19359242.5,-71.4,-53.5,-10.7,
+Oze1995YA3,OK,18502379.4,119.1,89.3,17.9,8394.0
+TC,OK,29800184.4,298.7,224.0,44.8,578.0
+Norwan1994PC,OK,24650215.8,161.3,121.0,24.2,1292.0
+PC1,OK,1981476.6,25.8,19.3,3.9,2134.0
+XB,OK,17170649.3,-149.5,-112.1,-22.4,1333.0
+CS,OK,21754942.3,270.1,202.6,40.5,3895.0
+ND,OK,53642489.7,-744.3,-556.1,-110.3,205.0
+UC,OK,18846580.3,218.7,164.0,32.8,1378.0
+LX,CAD fetch failed,,,,,
+QQ5,CAD fetch failed,,,,,
+Gordonmoore1990KA,CAD fetch failed,,,,,
+MF,OK,8181493.5,-24.6,-18.5,-3.7,
+Akka1992LR,OK,13765426.6,-111.1,-83.3,-16.6,753.0
+TB,CAD fetch failed,,,,,
+HO1,CAD fetch failed,,,,,
+WA,OK,29777572.5,221.6,166.2,33.2,880.0
+AH2,OK,28876461.0,-103.6,-77.7,-15.5,1015.0
+CB1,CAD fetch failed,,,,,
+EN,OK,4534649.6,-58.9,-44.1,-8.8,3426.0
+HW1,OK,20207021.6,245.1,183.8,36.8,5351.0
+Kadlu1994JF1,CAD fetch failed,,,,,
+JB,OK,15290773.5,-100.6,-75.4,-15.1,2449.0
+Kwiila1987OA,OK,27266964.8,310.7,233.0,46.6,796.0
+Abhramu1989OB,CAD fetch failed,,,,,
+PB,CAD fetch failed,,,,,
+TW1,CAD fetch failed,,,,,
+EE,OK,14467872.7,-140.1,-105.1,-21.0,1369.0
+ESA1990VB,CAD fetch failed,,,,,
+SK,OK,29807792.7,111.3,83.5,16.7,2671.0
+CK1,OK,14869703.6,-96.9,-72.7,-14.5,1620.0
+PN,CAD fetch failed,,,,,
+BL2,CAD fetch failed,,,,,
+ML,OK,14878437.4,-191.0,-142.7,-28.3,1350.0
+Izhdubar1993WD,OK,74435350.0,73.9,55.4,11.1,628.0
+QK56,OK,20368234.7,116.7,87.5,17.5,886.0
+LE,CAD fetch failed,,,,,
+FA,OK,20007486.0,245.9,184.4,36.9,1455.0
+Sigurd1992CC1,OK,18491388.6,-67.3,-50.5,-10.1,2457.0
+Belenus1990BA,OK,25351624.2,20.0,15.0,3.0,820.0
+Peleus1993XN2,OK,29156443.9,210.6,157.9,31.6,1121.0
+YP11,CAD fetch failed,,,,,
+CV3,OK,20430561.6,-148.6,-111.4,-22.3,7118.0
+Tomaiyowit1989UR,OK,13288519.0,34.8,26.1,5.2,1339.0
+Summanus1990SS,OK,22078589.3,150.3,112.7,22.5,398.0
+OH,OK,27949045.7,11.4,8.6,1.7,11351.0
+Tukmit1991BB,OK,19336948.2,204.7,153.5,30.7,3610.0
+Zephyr1999GK4,OK,27827971.6,-209.0,-156.7,-31.3,3027.0
+Masaakikoyama1992JE,OK,29910656.0,84.8,63.6,12.7,2071.0
+BR,OK,25399847.4,-340.4,-255.2,-51.0,1128.0
+DB,OK,24394098.6,-297.0,-222.6,-44.5,706.0
+Hypnos1986JK,OK,11735069.1,8.5,6.3,1.3,391.0
+Yuliya1991PM5,CAD fetch failed,,,,,
+Lucianotesi1994QC,CAD fetch failed,,,,,
+Davidharvey1999RH27,OK,40914057.3,185.9,139.5,27.9,1060.0
+QP,CAD fetch failed,,,,,
+UB,CAD fetch failed,,,,,
+UF9,CAD fetch failed,,,,,
+WU22,CAD fetch failed,,,,,
+Rhiannon1998EP8,CAD fetch failed,,,,,
+QS52,OK,12153571.2,72.5,54.4,10.9,3368.0
+UM3,OK,16555312.4,-129.9,-97.4,-19.5,1167.0

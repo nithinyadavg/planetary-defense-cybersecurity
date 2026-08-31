@@ -1,0 +1,1879 @@
+
+=================================================================
+NEO BATCH PIPELINE — 150 OBJECTS
+Started: 2026-08-31 00:50:59
+=================================================================
+
+─────────────────────────────────────────────────────────────────
+OBJECT: AlbertA911TB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: GanymedA924UB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Daedalus1971FA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Boreas1953RA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Tezcatlipoca1950LA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Baboquivari1963UA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Anza1960UA
+  [CAD] Dynamically resolved epoch: 27 Sep 2035 13:57:00.000
+  [GMAT] clean: 8,031,221.8 km
+  [GMAT] systematic_bias: 8,031,303.0 km
+  [GMAT] stochastic_noise: 8,031,282.7 km
+  [GMAT] targeted_outlier: 8,031,234.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Tantalus1975YA
+  [CAD] Dynamically resolved epoch: 30 Dec 2016 14:32:00.000
+  [GMAT] clean: 20,567,333.0 km
+  [GMAT] systematic_bias: 20,567,584.4 km
+  [GMAT] stochastic_noise: 20,567,521.5 km
+  [GMAT] targeted_outlier: 20,567,370.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Aristaeus1977HA
+  [CAD] Dynamically resolved epoch: 19 Oct 2047 05:17:00.000
+  [GMAT] clean: 67,644,634.4 km
+  [GMAT] systematic_bias: 67,644,790.0 km
+  [GMAT] stochastic_noise: 67,644,751.1 km
+  [GMAT] targeted_outlier: 67,644,657.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Pele1972RA
+  [CAD] Dynamically resolved epoch: 07 Oct 1972 15:58:00.000
+  [GMAT] clean: 22,477,104.4 km
+  [GMAT] systematic_bias: 22,477,323.8 km
+  [GMAT] stochastic_noise: 22,477,269.0 km
+  [GMAT] targeted_outlier: 22,477,137.3 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Orthos1976WA
+  [CAD] Dynamically resolved epoch: 20 Sep 2032 09:23:00.000
+  [GMAT] clean: 14,205,609.9 km
+  [GMAT] systematic_bias: 14,205,477.5 km
+  [GMAT] stochastic_noise: 14,205,510.6 km
+  [GMAT] targeted_outlier: 14,205,590.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Beltrovata1977RA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Seneca1978DA
+  [CAD] Dynamically resolved epoch: 15 Mar 1978 10:10:00.000
+  [GMAT] clean: 13,469,724.7 km
+  [GMAT] systematic_bias: 13,469,559.5 km
+  [GMAT] stochastic_noise: 13,469,600.8 km
+  [GMAT] targeted_outlier: 13,469,699.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Krok1981QA
+  [CAD] Dynamically resolved epoch: 25 Aug 1981 20:23:00.000
+  [GMAT] clean: 29,746,630.0 km
+  [GMAT] systematic_bias: 29,746,597.3 km
+  [GMAT] stochastic_noise: 29,746,605.5 km
+  [GMAT] targeted_outlier: 29,746,625.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Eger1982BB
+  [CAD] Dynamically resolved epoch: 02 Aug 2016 13:24:00.000
+  [GMAT] clean: 28,335,928.6 km
+  [GMAT] systematic_bias: 28,336,278.9 km
+  [GMAT] stochastic_noise: 28,336,191.3 km
+  [GMAT] targeted_outlier: 28,335,981.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Nefertiti1982RA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Ul1982RB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Seleucus1982DV
+  [CAD] Dynamically resolved epoch: 12 Apr 1982 17:44:00.000
+  [GMAT] clean: 20,895,365.8 km
+  [GMAT] systematic_bias: 20,895,104.7 km
+  [GMAT] stochastic_noise: 20,895,170.1 km
+  [GMAT] targeted_outlier: 20,895,326.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: McAuliffe1981CW
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Syrinx1981VA
+  [CAD] Dynamically resolved epoch: 10 May 1962 14:37:00.000
+  [GMAT] clean: 22,051,747.0 km
+  [GMAT] systematic_bias: 22,051,926.9 km
+  [GMAT] stochastic_noise: 22,051,881.9 km
+  [GMAT] targeted_outlier: 22,051,774.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Verenia1983RD
+  [CAD] Dynamically resolved epoch: 04 Oct 1986 10:38:00.000
+  [GMAT] clean: 17,637,028.1 km
+  [GMAT] systematic_bias: 17,637,041.0 km
+  [GMAT] stochastic_noise: 17,637,037.7 km
+  [GMAT] targeted_outlier: 17,637,030.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Mera1985JA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Amun1986EB
+  [CAD] Dynamically resolved epoch: 04 Feb 2033 17:55:00.000
+  [GMAT] clean: 57,519,637.3 km
+  [GMAT] systematic_bias: 57,519,975.2 km
+  [GMAT] stochastic_noise: 57,519,890.8 km
+  [GMAT] targeted_outlier: 57,519,688.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Bede1982FT
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Camillo1985PA
+  [CAD] Dynamically resolved epoch: 20 Feb 2018 00:08:00.000
+  [GMAT] clean: 20,607,942.0 km
+  [GMAT] systematic_bias: 20,608,115.1 km
+  [GMAT] stochastic_noise: 20,608,071.8 km
+  [GMAT] targeted_outlier: 20,607,967.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Cruithne1986TO
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Huma1986LA
+  [CAD] Dynamically resolved epoch: 27 Jun 2011 09:02:00.000
+  [GMAT] clean: 27,726,834.3 km
+  [GMAT] systematic_bias: 27,726,810.1 km
+  [GMAT] stochastic_noise: 27,726,816.1 km
+  [GMAT] targeted_outlier: 27,726,830.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: WilsonHarrington1979VA
+  [CAD] Dynamically resolved epoch: 31 Oct 2039 09:05:00.000
+  [GMAT] clean: 16,200,062.8 km
+  [GMAT] systematic_bias: 16,200,135.1 km
+  [GMAT] stochastic_noise: 16,200,117.0 km
+  [GMAT] targeted_outlier: 16,200,073.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Vishnu1986PA
+  [CAD] Dynamically resolved epoch: 01 Apr 2025 10:03:00.000
+  [GMAT] clean: 23,450,599.0 km
+  [GMAT] systematic_bias: 23,450,625.3 km
+  [GMAT] stochastic_noise: 23,450,618.7 km
+  [GMAT] targeted_outlier: 23,450,602.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Magellan1985DO2
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Morpheus1982TA
+  [CAD] Dynamically resolved epoch: 10 May 2049 13:21:00.000
+  [GMAT] clean: 29,093,448.4 km
+  [GMAT] systematic_bias: 29,093,549.5 km
+  [GMAT] stochastic_noise: 29,093,524.2 km
+  [GMAT] targeted_outlier: 29,093,463.6 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Ubasti1987QA
+  [CAD] Dynamically resolved epoch: 04 Mar 1971 05:21:00.000
+  [GMAT] clean: 25,525,770.7 km
+  [GMAT] systematic_bias: 25,525,611.4 km
+  [GMAT] stochastic_noise: 25,525,651.3 km
+  [GMAT] targeted_outlier: 25,525,746.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Poseidon1987KF
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Aditi1985TB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Pocahontas1987UA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Cleobulus1989WM
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Xanthus1989FB
+  [CAD] Dynamically resolved epoch: 21 Oct 2023 21:21:00.000
+  [GMAT] clean: 29,254,218.4 km
+  [GMAT] systematic_bias: 29,253,873.1 km
+  [GMAT] stochastic_noise: 29,253,959.6 km
+  [GMAT] targeted_outlier: 29,254,166.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: QB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: WF
+  [CAD] Dynamically resolved epoch: 29 Jan 2031 00:31:00.000
+  [GMAT] clean: 60,116,789.1 km
+  [GMAT] systematic_bias: 60,117,592.8 km
+  [GMAT] stochastic_noise: 60,117,391.9 km
+  [GMAT] targeted_outlier: 60,116,909.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Ninkasi1988TJ1
+  [CAD] Dynamically resolved epoch: 27 Oct 1988 08:34:00.000
+  [GMAT] clean: 24,558,374.5 km
+  [GMAT] systematic_bias: 24,558,656.4 km
+  [GMAT] stochastic_noise: 24,558,585.9 km
+  [GMAT] targeted_outlier: 24,558,416.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: MU
+  [CAD] Dynamically resolved epoch: 06 Jun 2027 22:43:00.000
+  [GMAT] clean: 4,612,130.3 km
+  [GMAT] systematic_bias: 4,612,095.9 km
+  [GMAT] stochastic_noise: 4,612,104.5 km
+  [GMAT] targeted_outlier: 4,612,125.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Eric1990SQ
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Brucemurray1990XJ
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Ptah6743PL
+  [CAD] Dynamically resolved epoch: 03 Nov 2027 23:57:00.000
+  [GMAT] clean: 28,594,843.8 km
+  [GMAT] systematic_bias: 28,594,883.6 km
+  [GMAT] stochastic_noise: 28,594,873.7 km
+  [GMAT] targeted_outlier: 28,594,849.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: BG
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: UQ
+  [CAD] Dynamically resolved epoch: 06 May 2021 15:11:00.000
+  [GMAT] clean: 10,208,406.7 km
+  [GMAT] systematic_bias: 10,208,406.3 km
+  [GMAT] stochastic_noise: 10,208,406.4 km
+  [GMAT] targeted_outlier: 10,208,406.6 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Lyapunov1987SL
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Davidaguilar1990DA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Taranis1986RA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: NA
+  [CAD] Dynamically resolved epoch: 26 Jun 1992 22:31:00.000
+  [GMAT] clean: 22,780,894.9 km
+  [GMAT] systematic_bias: 22,780,955.0 km
+  [GMAT] stochastic_noise: 22,780,940.0 km
+  [GMAT] targeted_outlier: 22,780,903.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: SB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: VA
+  [CAD] Dynamically resolved epoch: 12 Oct 2031 20:27:00.000
+  [GMAT] clean: 59,045,460.4 km
+  [GMAT] systematic_bias: 59,044,972.0 km
+  [GMAT] stochastic_noise: 59,045,094.6 km
+  [GMAT] targeted_outlier: 59,045,387.5 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: FE
+  [CAD] Dynamically resolved epoch: 18 Jun 2019 08:23:00.000
+  [GMAT] clean: 19,727,200.6 km
+  [GMAT] systematic_bias: 19,727,419.2 km
+  [GMAT] stochastic_noise: 19,727,364.5 km
+  [GMAT] targeted_outlier: 19,727,233.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Jasonwheeler1990OA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Melissabrucker1991FE
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: SP
+  [CAD] Dynamically resolved epoch: 10 Nov 2031 17:00:00.000
+  [GMAT] clean: 14,734,913.8 km
+  [GMAT] systematic_bias: 14,734,780.3 km
+  [GMAT] stochastic_noise: 14,734,813.7 km
+  [GMAT] targeted_outlier: 14,734,893.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: TR
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Camarillo1992WD5
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: MA
+  [CAD] Dynamically resolved epoch: 04 Aug 2036 02:01:00.000
+  [GMAT] clean: 24,667,798.8 km
+  [GMAT] systematic_bias: 24,667,812.7 km
+  [GMAT] stochastic_noise: 24,667,809.2 km
+  [GMAT] targeted_outlier: 24,667,800.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: EA
+  [CAD] Dynamically resolved epoch: 30 Dec 2026 10:21:00.000
+  [GMAT] clean: 7,939,188.4 km
+  [GMAT] systematic_bias: 7,939,108.3 km
+  [GMAT] stochastic_noise: 7,939,128.3 km
+  [GMAT] targeted_outlier: 7,939,176.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Zeus1988VP4
+  [CAD] Dynamically resolved epoch: 08 Dec 2029 14:39:00.000
+  [GMAT] clean: 14,786,114.3 km
+  [GMAT] systematic_bias: 14,786,008.5 km
+  [GMAT] stochastic_noise: 14,786,035.0 km
+  [GMAT] targeted_outlier: 14,786,098.5 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Zao1992AC
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Talos1991RC
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Bivoj1980AA
+  [CAD] Dynamically resolved epoch: 02 Feb 2006 03:06:00.000
+  [GMAT] clean: 28,399,111.0 km
+  [GMAT] systematic_bias: 28,399,480.8 km
+  [GMAT] stochastic_noise: 28,399,388.3 km
+  [GMAT] targeted_outlier: 28,399,166.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: AM
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: MF
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Tara1983RB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Tanith1988VN4
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Almeria1992CH1
+  [CAD] Dynamically resolved epoch: 14 Feb 2021 11:48:00.000
+  [GMAT] clean: 29,733,464.0 km
+  [GMAT] systematic_bias: 29,733,192.2 km
+  [GMAT] stochastic_noise: 29,733,260.2 km
+  [GMAT] targeted_outlier: 29,733,423.3 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: EG
+  [CAD] Dynamically resolved epoch: 23 Aug 2023 08:18:00.000
+  [GMAT] clean: 6,081,487.9 km
+  [GMAT] systematic_bias: 6,081,443.4 km
+  [GMAT] stochastic_noise: 6,081,454.5 km
+  [GMAT] targeted_outlier: 6,081,481.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: TB1
+  [CAD] Dynamically resolved epoch: 18 Mar 1999 12:23:00.000
+  [GMAT] clean: 24,408,074.4 km
+  [GMAT] systematic_bias: 24,408,076.6 km
+  [GMAT] stochastic_noise: 24,408,076.0 km
+  [GMAT] targeted_outlier: 24,408,074.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Miwablock1992AE
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: BW3
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Jason1984KB
+  [CAD] Dynamically resolved epoch: 27 May 2017 15:06:00.000
+  [GMAT] clean: 14,739,256.5 km
+  [GMAT] systematic_bias: 14,739,244.1 km
+  [GMAT] stochastic_noise: 14,739,247.2 km
+  [GMAT] targeted_outlier: 14,739,254.6 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: DA
+  [CAD] Dynamically resolved epoch: 07 Apr 2038 00:47:00.000
+  [GMAT] clean: 29,624,429.2 km
+  [GMAT] systematic_bias: 29,624,096.1 km
+  [GMAT] stochastic_noise: 29,624,180.0 km
+  [GMAT] targeted_outlier: 29,624,379.6 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Minos1989QF
+  [CAD] Dynamically resolved epoch: 05 Feb 2025 09:34:00.000
+  [GMAT] clean: 14,819,302.3 km
+  [GMAT] systematic_bias: 14,819,489.5 km
+  [GMAT] stochastic_noise: 14,819,442.7 km
+  [GMAT] targeted_outlier: 14,819,330.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: HE
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Golombek1992OM
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: OA
+  [CAD] Dynamically resolved epoch: 03 May 2003 18:29:00.000
+  [GMAT] clean: 38,538,887.9 km
+  [GMAT] systematic_bias: 38,538,784.6 km
+  [GMAT] stochastic_noise: 38,538,810.4 km
+  [GMAT] targeted_outlier: 38,538,872.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Ondaatje1993MO
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: VW
+  [CAD] Dynamically resolved epoch: 02 Jan 2036 21:02:00.000
+  [GMAT] clean: 18,138,704.5 km
+  [GMAT] systematic_bias: 18,138,782.2 km
+  [GMAT] stochastic_noise: 18,138,762.8 km
+  [GMAT] targeted_outlier: 18,138,716.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: QA
+  [CAD] Dynamically resolved epoch: 09 Oct 2029 16:50:00.000
+  [GMAT] clean: 73,563,012.4 km
+  [GMAT] systematic_bias: 73,563,504.3 km
+  [GMAT] stochastic_noise: 73,563,381.3 km
+  [GMAT] targeted_outlier: 73,563,086.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Ishtar1992AA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Cadmus1992LC
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: PA
+  [CAD] Dynamically resolved epoch: 12 Jul 2023 05:40:00.000
+  [GMAT] clean: 69,320,465.1 km
+  [GMAT] systematic_bias: 69,321,154.9 km
+  [GMAT] stochastic_noise: 69,320,982.5 km
+  [GMAT] targeted_outlier: 69,320,568.6 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: JA
+  [CAD] Dynamically resolved epoch: 27 May 2022 14:26:00.000
+  [GMAT] clean: 4,024,658.4 km
+  [GMAT] systematic_bias: 4,024,624.3 km
+  [GMAT] stochastic_noise: 4,024,632.8 km
+  [GMAT] targeted_outlier: 4,024,653.3 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Saunders1989RS1
+  [CAD] Dynamically resolved epoch: 16 Sep 2003 19:49:00.000
+  [GMAT] clean: 28,464,478.9 km
+  [GMAT] systematic_bias: 28,464,701.4 km
+  [GMAT] stochastic_noise: 28,464,645.8 km
+  [GMAT] targeted_outlier: 28,464,512.3 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: VK
+  [CAD] Dynamically resolved epoch: 22 Jan 2027 03:02:00.000
+  [GMAT] clean: 10,192,407.3 km
+  [GMAT] systematic_bias: 10,192,346.2 km
+  [GMAT] stochastic_noise: 10,192,361.5 km
+  [GMAT] targeted_outlier: 10,192,398.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: VA
+  [CAD] Dynamically resolved epoch: 14 Nov 2023 21:47:00.000
+  [GMAT] clean: 19,359,242.5 km
+  [GMAT] systematic_bias: 19,359,171.1 km
+  [GMAT] stochastic_noise: 19,359,189.0 km
+  [GMAT] targeted_outlier: 19,359,231.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Oze1995YA3
+  [CAD] Dynamically resolved epoch: 15 Sep 1972 02:36:00.000
+  [GMAT] clean: 18,502,379.4 km
+  [GMAT] systematic_bias: 18,502,498.5 km
+  [GMAT] stochastic_noise: 18,502,468.7 km
+  [GMAT] targeted_outlier: 18,502,397.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: TC
+  [CAD] Dynamically resolved epoch: 03 Oct 2041 02:11:00.000
+  [GMAT] clean: 29,800,184.4 km
+  [GMAT] systematic_bias: 29,800,483.1 km
+  [GMAT] stochastic_noise: 29,800,408.4 km
+  [GMAT] targeted_outlier: 29,800,229.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Norwan1994PC
+  [CAD] Dynamically resolved epoch: 10 Sep 2049 22:30:00.000
+  [GMAT] clean: 24,650,215.8 km
+  [GMAT] systematic_bias: 24,650,377.1 km
+  [GMAT] stochastic_noise: 24,650,336.8 km
+  [GMAT] targeted_outlier: 24,650,240.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: PC1
+  [CAD] Dynamically resolved epoch: 18 Jan 2022 21:51:00.000
+  [GMAT] clean: 1,981,476.6 km
+  [GMAT] systematic_bias: 1,981,502.4 km
+  [GMAT] stochastic_noise: 1,981,495.9 km
+  [GMAT] targeted_outlier: 1,981,480.5 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: XB
+  [CAD] Dynamically resolved epoch: 09 Jul 2029 23:02:00.000
+  [GMAT] clean: 17,170,649.3 km
+  [GMAT] systematic_bias: 17,170,499.8 km
+  [GMAT] stochastic_noise: 17,170,537.2 km
+  [GMAT] targeted_outlier: 17,170,626.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: CS
+  [CAD] Dynamically resolved epoch: 25 Aug 2021 19:35:00.000
+  [GMAT] clean: 21,754,942.3 km
+  [GMAT] systematic_bias: 21,755,212.4 km
+  [GMAT] stochastic_noise: 21,755,144.9 km
+  [GMAT] targeted_outlier: 21,754,982.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: ND
+  [CAD] Dynamically resolved epoch: 24 Jul 2029 00:28:00.000
+  [GMAT] clean: 53,642,489.7 km
+  [GMAT] systematic_bias: 53,641,745.5 km
+  [GMAT] stochastic_noise: 53,641,933.6 km
+  [GMAT] targeted_outlier: 53,642,379.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: UC
+  [CAD] Dynamically resolved epoch: 20 Mar 2013 01:34:00.000
+  [GMAT] clean: 18,846,580.3 km
+  [GMAT] systematic_bias: 18,846,798.9 km
+  [GMAT] stochastic_noise: 18,846,744.3 km
+  [GMAT] targeted_outlier: 18,846,613.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: LX
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: QQ5
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Gordonmoore1990KA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: MF
+  [CAD] Dynamically resolved epoch: 23 Jul 2020 23:09:00.000
+  [GMAT] clean: 8,181,493.5 km
+  [GMAT] systematic_bias: 8,181,468.9 km
+  [GMAT] stochastic_noise: 8,181,475.1 km
+  [GMAT] targeted_outlier: 8,181,489.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Akka1992LR
+  [CAD] Dynamically resolved epoch: 04 Aug 2044 02:28:00.000
+  [GMAT] clean: 13,765,426.6 km
+  [GMAT] systematic_bias: 13,765,315.5 km
+  [GMAT] stochastic_noise: 13,765,343.3 km
+  [GMAT] targeted_outlier: 13,765,410.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: TB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: HO1
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: WA
+  [CAD] Dynamically resolved epoch: 17 Nov 1993 05:53:00.000
+  [GMAT] clean: 29,777,572.5 km
+  [GMAT] systematic_bias: 29,777,794.1 km
+  [GMAT] stochastic_noise: 29,777,738.7 km
+  [GMAT] targeted_outlier: 29,777,605.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: AH2
+  [CAD] Dynamically resolved epoch: 17 Jun 1998 13:22:00.000
+  [GMAT] clean: 28,876,461.0 km
+  [GMAT] systematic_bias: 28,876,357.4 km
+  [GMAT] stochastic_noise: 28,876,383.3 km
+  [GMAT] targeted_outlier: 28,876,445.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: CB1
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: EN
+  [CAD] Dynamically resolved epoch: 08 Sep 2033 14:41:00.000
+  [GMAT] clean: 4,534,649.6 km
+  [GMAT] systematic_bias: 4,534,590.7 km
+  [GMAT] stochastic_noise: 4,534,605.4 km
+  [GMAT] targeted_outlier: 4,534,640.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: HW1
+  [CAD] Dynamically resolved epoch: 12 Sep 2008 17:48:00.000
+  [GMAT] clean: 20,207,021.6 km
+  [GMAT] systematic_bias: 20,207,266.7 km
+  [GMAT] stochastic_noise: 20,207,205.4 km
+  [GMAT] targeted_outlier: 20,207,058.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Kadlu1994JF1
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: JB
+  [CAD] Dynamically resolved epoch: 21 Apr 2025 22:37:00.000
+  [GMAT] clean: 15,290,773.5 km
+  [GMAT] systematic_bias: 15,290,672.9 km
+  [GMAT] stochastic_noise: 15,290,698.1 km
+  [GMAT] targeted_outlier: 15,290,758.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Kwiila1987OA
+  [CAD] FAILED to fetch epoch: HTTPSConnectionPool(host='ssd-api.jpl.nasa.gov', port=443): Max retries exceeded with url: /cad.api?des=9162&date-min=1950-01-01&date-max=2060-01-01&dist-max=20&sort=date (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')))
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Abhramu1989OB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: PB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: TW1
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: EE
+  [CAD] Dynamically resolved epoch: 10 Sep 2028 00:20:00.000
+  [GMAT] clean: 14,467,872.7 km
+  [GMAT] systematic_bias: 14,467,732.6 km
+  [GMAT] stochastic_noise: 14,467,767.7 km
+  [GMAT] targeted_outlier: 14,467,851.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: ESA1990VB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: SK
+  [CAD] Dynamically resolved epoch: 25 Aug 2031 07:10:00.000
+  [GMAT] clean: 29,807,792.7 km
+  [GMAT] systematic_bias: 29,807,904.0 km
+  [GMAT] stochastic_noise: 29,807,876.1 km
+  [GMAT] targeted_outlier: 29,807,809.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: CK1
+  [CAD] Dynamically resolved epoch: 06 Jul 2019 15:50:00.000
+  [JPL] Exception: HTTPSConnectionPool(host='ssd.jpl.nasa.gov', port=443): Max retries exceeded with url: /api/horizons.api?format=text&EPHEM_TYPE=VECTORS&OUT_UNITS=AU-D&COMMAND=%2210145%22&CSV_FORMAT=%22YES%22&REF_PLANE=ECLIPTIC&REF_SYSTEM=ICRF&TP_TYPE=ABSOLUTE&VEC_LABELS=YES&VEC_CORR=%22NONE%22&VEC_DELTA_T=NO&OBJ_DATA=YES&CENTER=%27500%40399%27&TLIST=2458671.159663151 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')))
+
+─────────────────────────────────────────────────────────────────
+OBJECT: PN
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: BL2
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: ML
+  [CAD] Dynamically resolved epoch: 02 Jul 2022 10:21:00.000
+  [GMAT] clean: 14,878,437.4 km
+  [GMAT] systematic_bias: 14,878,246.4 km
+  [GMAT] stochastic_noise: 14,878,294.6 km
+  [GMAT] targeted_outlier: 14,878,409.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Izhdubar1993WD
+  [CAD] Dynamically resolved epoch: 13 Jun 2013 13:23:00.000
+  [GMAT] clean: 74,435,350.0 km
+  [GMAT] systematic_bias: 74,435,423.9 km
+  [GMAT] stochastic_noise: 74,435,405.4 km
+  [GMAT] targeted_outlier: 74,435,361.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: QK56
+  [CAD] Dynamically resolved epoch: 24 Feb 2017 13:32:00.000
+  [GMAT] clean: 20,368,234.7 km
+  [GMAT] systematic_bias: 20,368,351.5 km
+  [GMAT] stochastic_noise: 20,368,322.3 km
+  [GMAT] targeted_outlier: 20,368,252.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: LE
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: FA
+  [CAD] Dynamically resolved epoch: 06 Dec 2040 20:07:00.000
+  [GMAT] clean: 20,007,486.0 km
+  [GMAT] systematic_bias: 20,007,731.9 km
+  [GMAT] stochastic_noise: 20,007,670.4 km
+  [GMAT] targeted_outlier: 20,007,522.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Sigurd1992CC1
+  [CAD] Dynamically resolved epoch: 08 Sep 2027 14:28:00.000
+  [GMAT] clean: 18,491,388.6 km
+  [GMAT] systematic_bias: 18,491,321.3 km
+  [GMAT] stochastic_noise: 18,491,338.1 km
+  [GMAT] targeted_outlier: 18,491,378.5 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Belenus1990BA
+  [CAD] Dynamically resolved epoch: 26 Jan 2052 20:33:00.000
+  [GMAT] clean: 25,351,624.2 km
+  [GMAT] systematic_bias: 25,351,644.2 km
+  [GMAT] stochastic_noise: 25,351,639.2 km
+  [GMAT] targeted_outlier: 25,351,627.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Peleus1993XN2
+  [CAD] Dynamically resolved epoch: 23 Nov 2033 07:37:00.000
+  [GMAT] clean: 29,156,443.9 km
+  [GMAT] systematic_bias: 29,156,654.5 km
+  [GMAT] stochastic_noise: 29,156,601.9 km
+  [GMAT] targeted_outlier: 29,156,475.5 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: YP11
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: CV3
+  [CAD] Dynamically resolved epoch: 05 Aug 2043 19:16:00.000
+  [GMAT] clean: 20,430,561.6 km
+  [GMAT] systematic_bias: 20,430,413.0 km
+  [GMAT] stochastic_noise: 20,430,450.1 km
+  [GMAT] targeted_outlier: 20,430,539.3 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Tomaiyowit1989UR
+  [CAD] Dynamically resolved epoch: 11 Jun 2028 19:20:00.000
+  [GMAT] clean: 13,288,519.0 km
+  [GMAT] systematic_bias: 13,288,553.9 km
+  [GMAT] stochastic_noise: 13,288,545.1 km
+  [GMAT] targeted_outlier: 13,288,524.3 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Summanus1990SS
+  [CAD] Dynamically resolved epoch: 20 Mar 2031 09:23:00.000
+  [GMAT] clean: 22,078,589.3 km
+  [GMAT] systematic_bias: 22,078,739.5 km
+  [GMAT] stochastic_noise: 22,078,702.0 km
+  [GMAT] targeted_outlier: 22,078,611.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: OH
+  [CAD] Dynamically resolved epoch: 16 May 2019 09:49:00.000
+  [GMAT] clean: 27,949,045.7 km
+  [GMAT] systematic_bias: 27,949,057.2 km
+  [GMAT] stochastic_noise: 27,949,054.3 km
+  [GMAT] targeted_outlier: 27,949,047.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Tukmit1991BB
+  [CAD] Dynamically resolved epoch: 15 Jul 2022 10:32:00.000
+  [GMAT] clean: 19,336,948.2 km
+  [GMAT] systematic_bias: 19,337,152.9 km
+  [GMAT] stochastic_noise: 19,337,101.7 km
+  [GMAT] targeted_outlier: 19,336,978.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Zephyr1999GK4
+  [CAD] Dynamically resolved epoch: 22 Sep 2032 21:13:00.000
+  [GMAT] clean: 27,827,971.6 km
+  [GMAT] systematic_bias: 27,827,762.6 km
+  [GMAT] stochastic_noise: 27,827,814.9 km
+  [GMAT] targeted_outlier: 27,827,940.3 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Masaakikoyama1992JE
+  [CAD] Dynamically resolved epoch: 28 Jul 2018 01:27:00.000
+  [GMAT] clean: 29,910,656.0 km
+  [GMAT] systematic_bias: 29,910,740.9 km
+  [GMAT] stochastic_noise: 29,910,719.6 km
+  [GMAT] targeted_outlier: 29,910,668.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: BR
+  [CAD] Dynamically resolved epoch: 02 Aug 2034 17:16:00.000
+  [GMAT] clean: 25,399,847.4 km
+  [GMAT] systematic_bias: 25,399,507.0 km
+  [GMAT] stochastic_noise: 25,399,592.2 km
+  [GMAT] targeted_outlier: 25,399,796.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: DB
+  [CAD] Dynamically resolved epoch: 11 Mar 2018 17:42:00.000
+  [GMAT] clean: 24,394,098.6 km
+  [GMAT] systematic_bias: 24,393,801.6 km
+  [GMAT] stochastic_noise: 24,393,876.0 km
+  [GMAT] targeted_outlier: 24,394,054.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Hypnos1986JK
+  [CAD] Dynamically resolved epoch: 02 Jun 2024 20:59:00.000
+  [GMAT] clean: 11,735,069.1 km
+  [GMAT] systematic_bias: 11,735,077.6 km
+  [GMAT] stochastic_noise: 11,735,075.4 km
+  [GMAT] targeted_outlier: 11,735,070.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Yuliya1991PM5
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Lucianotesi1994QC
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Davidharvey1999RH27
+  [CAD] Dynamically resolved epoch: 16 Dec 2033 09:35:00.000
+  [GMAT] clean: 40,914,057.3 km
+  [GMAT] systematic_bias: 40,914,243.2 km
+  [GMAT] stochastic_noise: 40,914,196.7 km
+  [GMAT] targeted_outlier: 40,914,085.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: QP
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: UB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: UF9
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: WU22
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Rhiannon1998EP8
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: QS52
+  [CAD] Dynamically resolved epoch: 10 Jun 2038 23:46:00.000
+  [GMAT] clean: 12,153,571.2 km
+  [GMAT] systematic_bias: 12,153,643.7 km
+  [GMAT] stochastic_noise: 12,153,625.6 km
+  [GMAT] targeted_outlier: 12,153,582.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: UM3
+  [CAD] Dynamically resolved epoch: 17 Dec 1977 09:09:00.000
+  [GMAT] clean: 16,555,312.4 km
+  [GMAT] systematic_bias: 16,555,182.4 km
+  [GMAT] stochastic_noise: 16,555,214.9 km
+  [GMAT] targeted_outlier: 16,555,292.9 km
+
+SUCCESS! Results saved to -> /Users/nithinyadavg/ME/My 150/results/batch_50obj_results_20260831_005856.csv
+
+=================================================================
+NEO BATCH PIPELINE — 150 OBJECTS
+Started: 2026-08-31 01:37:36
+=================================================================
+
+─────────────────────────────────────────────────────────────────
+OBJECT: AlbertA911TB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: GanymedA924UB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Daedalus1971FA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Boreas1953RA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Tezcatlipoca1950LA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Baboquivari1963UA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Anza1960UA
+  [CAD] Dynamically resolved epoch: 27 Sep 2035 13:57:00.000
+  [GMAT] clean: 8,031,221.8 km
+  [GMAT] systematic_bias: 8,031,303.0 km
+  [GMAT] stochastic_noise: 8,031,282.7 km
+  [GMAT] targeted_outlier: 8,031,234.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Tantalus1975YA
+  [CAD] Dynamically resolved epoch: 30 Dec 2016 14:32:00.000
+  [GMAT] clean: 20,567,333.0 km
+  [GMAT] systematic_bias: 20,567,584.4 km
+  [GMAT] stochastic_noise: 20,567,521.5 km
+  [GMAT] targeted_outlier: 20,567,370.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Aristaeus1977HA
+  [CAD] Dynamically resolved epoch: 19 Oct 2047 05:17:00.000
+  [GMAT] clean: 67,644,634.4 km
+  [GMAT] systematic_bias: 67,644,790.0 km
+  [GMAT] stochastic_noise: 67,644,751.1 km
+  [GMAT] targeted_outlier: 67,644,657.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Pele1972RA
+  [CAD] FAILED to fetch epoch: HTTPSConnectionPool(host='ssd-api.jpl.nasa.gov', port=443): Max retries exceeded with url: /cad.api?des=2202&date-min=1950-01-01&date-max=2060-01-01&dist-max=20&sort=date (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')))
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Orthos1976WA
+  [CAD] Dynamically resolved epoch: 20 Sep 2032 09:23:00.000
+  [GMAT] clean: 14,205,609.9 km
+  [GMAT] systematic_bias: 14,205,477.5 km
+  [GMAT] stochastic_noise: 14,205,510.6 km
+  [GMAT] targeted_outlier: 14,205,590.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Beltrovata1977RA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Seneca1978DA
+  [CAD] Dynamically resolved epoch: 15 Mar 1978 10:10:00.000
+  [GMAT] clean: 13,469,724.7 km
+  [GMAT] systematic_bias: 13,469,559.5 km
+  [GMAT] stochastic_noise: 13,469,600.8 km
+  [GMAT] targeted_outlier: 13,469,699.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Krok1981QA
+  [CAD] Dynamically resolved epoch: 25 Aug 1981 20:23:00.000
+  [GMAT] clean: 29,746,630.0 km
+  [GMAT] systematic_bias: 29,746,597.3 km
+  [GMAT] stochastic_noise: 29,746,605.5 km
+  [GMAT] targeted_outlier: 29,746,625.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Eger1982BB
+  [CAD] Dynamically resolved epoch: 02 Aug 2016 13:24:00.000
+  [GMAT] clean: 28,335,928.6 km
+  [GMAT] systematic_bias: 28,336,278.9 km
+  [GMAT] stochastic_noise: 28,336,191.3 km
+  [GMAT] targeted_outlier: 28,335,981.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Nefertiti1982RA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Ul1982RB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Seleucus1982DV
+  [CAD] Dynamically resolved epoch: 12 Apr 1982 17:44:00.000
+  [GMAT] clean: 20,895,365.8 km
+  [GMAT] systematic_bias: 20,895,104.7 km
+  [GMAT] stochastic_noise: 20,895,170.1 km
+  [GMAT] targeted_outlier: 20,895,326.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: McAuliffe1981CW
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Syrinx1981VA
+  [CAD] Dynamically resolved epoch: 10 May 1962 14:37:00.000
+  [GMAT] clean: 22,051,747.0 km
+  [GMAT] systematic_bias: 22,051,926.9 km
+  [GMAT] stochastic_noise: 22,051,881.9 km
+  [GMAT] targeted_outlier: 22,051,774.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Verenia1983RD
+  [CAD] Dynamically resolved epoch: 04 Oct 1986 10:38:00.000
+  [GMAT] clean: 17,637,028.1 km
+  [GMAT] systematic_bias: 17,637,041.0 km
+  [GMAT] stochastic_noise: 17,637,037.7 km
+  [GMAT] targeted_outlier: 17,637,030.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Mera1985JA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Amun1986EB
+  [CAD] Dynamically resolved epoch: 04 Feb 2033 17:55:00.000
+  [GMAT] clean: 57,519,637.3 km
+  [GMAT] systematic_bias: 57,519,975.2 km
+  [GMAT] stochastic_noise: 57,519,890.8 km
+  [GMAT] targeted_outlier: 57,519,688.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Bede1982FT
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Camillo1985PA
+  [CAD] Dynamically resolved epoch: 20 Feb 2018 00:08:00.000
+  [GMAT] clean: 20,607,942.0 km
+  [GMAT] systematic_bias: 20,608,115.1 km
+  [GMAT] stochastic_noise: 20,608,071.8 km
+  [GMAT] targeted_outlier: 20,607,967.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Cruithne1986TO
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Huma1986LA
+  [CAD] Dynamically resolved epoch: 27 Jun 2011 09:02:00.000
+  [GMAT] clean: 27,726,834.3 km
+  [GMAT] systematic_bias: 27,726,810.1 km
+  [GMAT] stochastic_noise: 27,726,816.1 km
+  [GMAT] targeted_outlier: 27,726,830.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: WilsonHarrington1979VA
+  [CAD] Dynamically resolved epoch: 31 Oct 2039 09:05:00.000
+  [GMAT] clean: 16,200,062.8 km
+  [GMAT] systematic_bias: 16,200,135.1 km
+  [GMAT] stochastic_noise: 16,200,117.0 km
+  [GMAT] targeted_outlier: 16,200,073.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Vishnu1986PA
+  [CAD] Dynamically resolved epoch: 01 Apr 2025 10:03:00.000
+  [GMAT] clean: 23,450,599.0 km
+  [GMAT] systematic_bias: 23,450,625.3 km
+  [GMAT] stochastic_noise: 23,450,618.7 km
+  [GMAT] targeted_outlier: 23,450,602.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Magellan1985DO2
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Morpheus1982TA
+  [CAD] Dynamically resolved epoch: 10 May 2049 13:21:00.000
+  [GMAT] clean: 29,093,448.4 km
+  [GMAT] systematic_bias: 29,093,549.5 km
+  [GMAT] stochastic_noise: 29,093,524.2 km
+  [GMAT] targeted_outlier: 29,093,463.6 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Ubasti1987QA
+  [CAD] Dynamically resolved epoch: 04 Mar 1971 05:21:00.000
+  [GMAT] clean: 25,525,770.7 km
+  [GMAT] systematic_bias: 25,525,611.4 km
+  [GMAT] stochastic_noise: 25,525,651.3 km
+  [GMAT] targeted_outlier: 25,525,746.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Poseidon1987KF
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Aditi1985TB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Pocahontas1987UA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Cleobulus1989WM
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Xanthus1989FB
+  [CAD] Dynamically resolved epoch: 21 Oct 2023 21:21:00.000
+  [GMAT] clean: 29,254,218.4 km
+  [GMAT] systematic_bias: 29,253,873.1 km
+  [GMAT] stochastic_noise: 29,253,959.6 km
+  [GMAT] targeted_outlier: 29,254,166.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: QB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: WF
+  [CAD] Dynamically resolved epoch: 29 Jan 2031 00:31:00.000
+  [GMAT] clean: 60,116,789.1 km
+  [GMAT] systematic_bias: 60,117,592.8 km
+  [GMAT] stochastic_noise: 60,117,391.9 km
+  [GMAT] targeted_outlier: 60,116,909.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Ninkasi1988TJ1
+  [CAD] Dynamically resolved epoch: 27 Oct 1988 08:34:00.000
+  [GMAT] clean: 24,558,374.5 km
+  [GMAT] systematic_bias: 24,558,656.4 km
+  [GMAT] stochastic_noise: 24,558,585.9 km
+  [GMAT] targeted_outlier: 24,558,416.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: MU
+  [CAD] Dynamically resolved epoch: 06 Jun 2027 22:43:00.000
+  [GMAT] clean: 4,612,130.3 km
+  [GMAT] systematic_bias: 4,612,095.9 km
+  [GMAT] stochastic_noise: 4,612,104.5 km
+  [GMAT] targeted_outlier: 4,612,125.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Eric1990SQ
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Brucemurray1990XJ
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Ptah6743PL
+  [CAD] Dynamically resolved epoch: 03 Nov 2027 23:57:00.000
+  [GMAT] clean: 28,594,843.8 km
+  [GMAT] systematic_bias: 28,594,883.6 km
+  [GMAT] stochastic_noise: 28,594,873.7 km
+  [GMAT] targeted_outlier: 28,594,849.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: BG
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: UQ
+  [CAD] Dynamically resolved epoch: 06 May 2021 15:11:00.000
+  [GMAT] clean: 10,208,406.7 km
+  [GMAT] systematic_bias: 10,208,406.3 km
+  [GMAT] stochastic_noise: 10,208,406.4 km
+  [GMAT] targeted_outlier: 10,208,406.6 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Lyapunov1987SL
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Davidaguilar1990DA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Taranis1986RA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: NA
+  [CAD] Dynamically resolved epoch: 26 Jun 1992 22:31:00.000
+  [GMAT] clean: 22,780,894.9 km
+  [GMAT] systematic_bias: 22,780,955.0 km
+  [GMAT] stochastic_noise: 22,780,940.0 km
+  [GMAT] targeted_outlier: 22,780,903.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: SB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: VA
+  [CAD] Dynamically resolved epoch: 12 Oct 2031 20:27:00.000
+  [GMAT] clean: 59,045,460.4 km
+  [GMAT] systematic_bias: 59,044,972.0 km
+  [GMAT] stochastic_noise: 59,045,094.6 km
+  [GMAT] targeted_outlier: 59,045,387.5 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: FE
+  [CAD] Dynamically resolved epoch: 18 Jun 2019 08:23:00.000
+  [GMAT] clean: 19,727,200.6 km
+  [GMAT] systematic_bias: 19,727,419.2 km
+  [GMAT] stochastic_noise: 19,727,364.5 km
+  [GMAT] targeted_outlier: 19,727,233.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Jasonwheeler1990OA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Melissabrucker1991FE
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: SP
+  [CAD] Dynamically resolved epoch: 10 Nov 2031 17:00:00.000
+  [GMAT] clean: 14,734,913.8 km
+  [GMAT] systematic_bias: 14,734,780.3 km
+  [GMAT] stochastic_noise: 14,734,813.7 km
+  [GMAT] targeted_outlier: 14,734,893.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: TR
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Camarillo1992WD5
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: MA
+  [CAD] Dynamically resolved epoch: 04 Aug 2036 02:01:00.000
+  [GMAT] clean: 24,667,798.8 km
+  [GMAT] systematic_bias: 24,667,812.7 km
+  [GMAT] stochastic_noise: 24,667,809.2 km
+  [GMAT] targeted_outlier: 24,667,800.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: EA
+  [CAD] Dynamically resolved epoch: 30 Dec 2026 10:21:00.000
+  [GMAT] clean: 7,939,188.4 km
+  [GMAT] systematic_bias: 7,939,108.3 km
+  [GMAT] stochastic_noise: 7,939,128.3 km
+  [GMAT] targeted_outlier: 7,939,176.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Zeus1988VP4
+  [CAD] Dynamically resolved epoch: 08 Dec 2029 14:39:00.000
+  [GMAT] clean: 14,786,114.3 km
+  [GMAT] systematic_bias: 14,786,008.5 km
+  [GMAT] stochastic_noise: 14,786,035.0 km
+  [GMAT] targeted_outlier: 14,786,098.5 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Zao1992AC
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Talos1991RC
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Bivoj1980AA
+  [CAD] Dynamically resolved epoch: 02 Feb 2006 03:06:00.000
+  [GMAT] clean: 28,399,111.0 km
+  [GMAT] systematic_bias: 28,399,480.8 km
+  [GMAT] stochastic_noise: 28,399,388.3 km
+  [GMAT] targeted_outlier: 28,399,166.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: AM
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: MF
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Tara1983RB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Tanith1988VN4
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Almeria1992CH1
+  [CAD] Dynamically resolved epoch: 14 Feb 2021 11:48:00.000
+  [GMAT] clean: 29,733,464.0 km
+  [GMAT] systematic_bias: 29,733,192.2 km
+  [GMAT] stochastic_noise: 29,733,260.2 km
+  [GMAT] targeted_outlier: 29,733,423.3 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: EG
+  [CAD] Dynamically resolved epoch: 23 Aug 2023 08:18:00.000
+  [GMAT] clean: 6,081,487.9 km
+  [GMAT] systematic_bias: 6,081,443.4 km
+  [GMAT] stochastic_noise: 6,081,454.5 km
+  [GMAT] targeted_outlier: 6,081,481.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: TB1
+  [CAD] Dynamically resolved epoch: 18 Mar 1999 12:23:00.000
+  [GMAT] clean: 24,408,074.4 km
+  [GMAT] systematic_bias: 24,408,076.6 km
+  [GMAT] stochastic_noise: 24,408,076.0 km
+  [GMAT] targeted_outlier: 24,408,074.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Miwablock1992AE
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: BW3
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Jason1984KB
+  [CAD] Dynamically resolved epoch: 27 May 2017 15:06:00.000
+  [GMAT] clean: 14,739,256.5 km
+  [GMAT] systematic_bias: 14,739,244.1 km
+  [GMAT] stochastic_noise: 14,739,247.2 km
+  [GMAT] targeted_outlier: 14,739,254.6 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: DA
+  [CAD] Dynamically resolved epoch: 07 Apr 2038 00:47:00.000
+  [GMAT] clean: 29,624,429.2 km
+  [GMAT] systematic_bias: 29,624,096.1 km
+  [GMAT] stochastic_noise: 29,624,180.0 km
+  [GMAT] targeted_outlier: 29,624,379.6 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Minos1989QF
+  [CAD] Dynamically resolved epoch: 05 Feb 2025 09:34:00.000
+  [GMAT] clean: 14,819,302.3 km
+  [GMAT] systematic_bias: 14,819,489.5 km
+  [GMAT] stochastic_noise: 14,819,442.7 km
+  [GMAT] targeted_outlier: 14,819,330.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: HE
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Golombek1992OM
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: OA
+  [CAD] Dynamically resolved epoch: 03 May 2003 18:29:00.000
+  [GMAT] clean: 38,538,887.9 km
+  [GMAT] systematic_bias: 38,538,784.6 km
+  [GMAT] stochastic_noise: 38,538,810.4 km
+  [GMAT] targeted_outlier: 38,538,872.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Ondaatje1993MO
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: VW
+  [CAD] Dynamically resolved epoch: 02 Jan 2036 21:02:00.000
+  [GMAT] clean: 18,138,704.5 km
+  [GMAT] systematic_bias: 18,138,782.2 km
+  [GMAT] stochastic_noise: 18,138,762.8 km
+  [GMAT] targeted_outlier: 18,138,716.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: QA
+  [CAD] Dynamically resolved epoch: 09 Oct 2029 16:50:00.000
+  [GMAT] clean: 73,563,012.4 km
+  [GMAT] systematic_bias: 73,563,504.3 km
+  [GMAT] stochastic_noise: 73,563,381.3 km
+  [GMAT] targeted_outlier: 73,563,086.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Ishtar1992AA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Cadmus1992LC
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: PA
+  [CAD] FAILED to fetch epoch: HTTPSConnectionPool(host='ssd-api.jpl.nasa.gov', port=443): Max retries exceeded with url: /cad.api?des=7236&date-min=1950-01-01&date-max=2060-01-01&dist-max=20&sort=date (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')))
+
+─────────────────────────────────────────────────────────────────
+OBJECT: JA
+  [CAD] Dynamically resolved epoch: 27 May 2022 14:26:00.000
+  [GMAT] clean: 4,024,658.4 km
+  [GMAT] systematic_bias: 4,024,624.3 km
+  [GMAT] stochastic_noise: 4,024,632.8 km
+  [GMAT] targeted_outlier: 4,024,653.3 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Saunders1989RS1
+  [CAD] Dynamically resolved epoch: 16 Sep 2003 19:49:00.000
+  [GMAT] clean: 28,464,478.9 km
+  [GMAT] systematic_bias: 28,464,701.4 km
+  [GMAT] stochastic_noise: 28,464,645.8 km
+  [GMAT] targeted_outlier: 28,464,512.3 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: VK
+  [CAD] Dynamically resolved epoch: 22 Jan 2027 03:02:00.000
+  [GMAT] clean: 10,192,407.3 km
+  [GMAT] systematic_bias: 10,192,346.2 km
+  [GMAT] stochastic_noise: 10,192,361.5 km
+  [GMAT] targeted_outlier: 10,192,398.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: VA
+  [CAD] Dynamically resolved epoch: 14 Nov 2023 21:47:00.000
+  [GMAT] clean: 19,359,242.5 km
+  [GMAT] systematic_bias: 19,359,171.1 km
+  [GMAT] stochastic_noise: 19,359,189.0 km
+  [GMAT] targeted_outlier: 19,359,231.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Oze1995YA3
+  [CAD] Dynamically resolved epoch: 15 Sep 1972 02:36:00.000
+  [GMAT] clean: 18,502,379.4 km
+  [GMAT] systematic_bias: 18,502,498.5 km
+  [GMAT] stochastic_noise: 18,502,468.7 km
+  [GMAT] targeted_outlier: 18,502,397.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: TC
+  [CAD] Dynamically resolved epoch: 03 Oct 2041 02:11:00.000
+  [GMAT] clean: 29,800,184.4 km
+  [GMAT] systematic_bias: 29,800,483.1 km
+  [GMAT] stochastic_noise: 29,800,408.4 km
+  [GMAT] targeted_outlier: 29,800,229.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Norwan1994PC
+  [CAD] Dynamically resolved epoch: 10 Sep 2049 22:30:00.000
+  [GMAT] clean: 24,650,215.8 km
+  [GMAT] systematic_bias: 24,650,377.1 km
+  [GMAT] stochastic_noise: 24,650,336.8 km
+  [GMAT] targeted_outlier: 24,650,240.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: PC1
+  [CAD] Dynamically resolved epoch: 18 Jan 2022 21:51:00.000
+  [GMAT] clean: 1,981,476.6 km
+  [GMAT] systematic_bias: 1,981,502.4 km
+  [GMAT] stochastic_noise: 1,981,495.9 km
+  [GMAT] targeted_outlier: 1,981,480.5 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: XB
+  [CAD] Dynamically resolved epoch: 09 Jul 2029 23:02:00.000
+  [GMAT] clean: 17,170,649.3 km
+  [GMAT] systematic_bias: 17,170,499.8 km
+  [GMAT] stochastic_noise: 17,170,537.2 km
+  [GMAT] targeted_outlier: 17,170,626.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: CS
+  [CAD] Dynamically resolved epoch: 25 Aug 2021 19:35:00.000
+  [GMAT] clean: 21,754,942.3 km
+  [GMAT] systematic_bias: 21,755,212.4 km
+  [GMAT] stochastic_noise: 21,755,144.9 km
+  [GMAT] targeted_outlier: 21,754,982.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: ND
+  [CAD] Dynamically resolved epoch: 24 Jul 2029 00:28:00.000
+  [GMAT] clean: 53,642,489.7 km
+  [GMAT] systematic_bias: 53,641,745.5 km
+  [GMAT] stochastic_noise: 53,641,933.6 km
+  [GMAT] targeted_outlier: 53,642,379.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: UC
+  [CAD] Dynamically resolved epoch: 20 Mar 2013 01:34:00.000
+  [GMAT] clean: 18,846,580.3 km
+  [GMAT] systematic_bias: 18,846,798.9 km
+  [GMAT] stochastic_noise: 18,846,744.3 km
+  [GMAT] targeted_outlier: 18,846,613.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: LX
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: QQ5
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Gordonmoore1990KA
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: MF
+  [CAD] Dynamically resolved epoch: 23 Jul 2020 23:09:00.000
+  [GMAT] clean: 8,181,493.5 km
+  [GMAT] systematic_bias: 8,181,468.9 km
+  [GMAT] stochastic_noise: 8,181,475.1 km
+  [GMAT] targeted_outlier: 8,181,489.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Akka1992LR
+  [CAD] Dynamically resolved epoch: 04 Aug 2044 02:28:00.000
+  [GMAT] clean: 13,765,426.6 km
+  [GMAT] systematic_bias: 13,765,315.5 km
+  [GMAT] stochastic_noise: 13,765,343.3 km
+  [GMAT] targeted_outlier: 13,765,410.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: TB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: HO1
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: WA
+  [CAD] Dynamically resolved epoch: 17 Nov 1993 05:53:00.000
+  [GMAT] clean: 29,777,572.5 km
+  [GMAT] systematic_bias: 29,777,794.1 km
+  [GMAT] stochastic_noise: 29,777,738.7 km
+  [GMAT] targeted_outlier: 29,777,605.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: AH2
+  [CAD] Dynamically resolved epoch: 17 Jun 1998 13:22:00.000
+  [GMAT] clean: 28,876,461.0 km
+  [GMAT] systematic_bias: 28,876,357.4 km
+  [GMAT] stochastic_noise: 28,876,383.3 km
+  [GMAT] targeted_outlier: 28,876,445.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: CB1
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: EN
+  [CAD] Dynamically resolved epoch: 08 Sep 2033 14:41:00.000
+  [GMAT] clean: 4,534,649.6 km
+  [GMAT] systematic_bias: 4,534,590.7 km
+  [GMAT] stochastic_noise: 4,534,605.4 km
+  [GMAT] targeted_outlier: 4,534,640.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: HW1
+  [CAD] Dynamically resolved epoch: 12 Sep 2008 17:48:00.000
+  [GMAT] clean: 20,207,021.6 km
+  [GMAT] systematic_bias: 20,207,266.7 km
+  [GMAT] stochastic_noise: 20,207,205.4 km
+  [GMAT] targeted_outlier: 20,207,058.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Kadlu1994JF1
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: JB
+  [CAD] Dynamically resolved epoch: 21 Apr 2025 22:37:00.000
+  [GMAT] clean: 15,290,773.5 km
+  [GMAT] systematic_bias: 15,290,672.9 km
+  [GMAT] stochastic_noise: 15,290,698.1 km
+  [GMAT] targeted_outlier: 15,290,758.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Kwiila1987OA
+  [CAD] Dynamically resolved epoch: 07 Aug 2020 15:58:00.000
+  [GMAT] clean: 27,266,964.8 km
+  [GMAT] systematic_bias: 27,267,275.4 km
+  [GMAT] stochastic_noise: 27,267,197.8 km
+  [GMAT] targeted_outlier: 27,267,011.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Abhramu1989OB
+  [CAD] FAILED to fetch epoch: HTTPSConnectionPool(host='ssd-api.jpl.nasa.gov', port=443): Max retries exceeded with url: /cad.api?des=9172&date-min=1950-01-01&date-max=2060-01-01&dist-max=20&sort=date (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')))
+
+─────────────────────────────────────────────────────────────────
+OBJECT: PB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: TW1
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: EE
+  [CAD] Dynamically resolved epoch: 10 Sep 2028 00:20:00.000
+  [GMAT] clean: 14,467,872.7 km
+  [GMAT] systematic_bias: 14,467,732.6 km
+  [GMAT] stochastic_noise: 14,467,767.7 km
+  [GMAT] targeted_outlier: 14,467,851.7 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: ESA1990VB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: SK
+  [CAD] Dynamically resolved epoch: 25 Aug 2031 07:10:00.000
+  [GMAT] clean: 29,807,792.7 km
+  [GMAT] systematic_bias: 29,807,904.0 km
+  [GMAT] stochastic_noise: 29,807,876.1 km
+  [GMAT] targeted_outlier: 29,807,809.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: CK1
+  [CAD] Dynamically resolved epoch: 06 Jul 2019 15:50:00.000
+  [GMAT] clean: 14,869,703.6 km
+  [GMAT] systematic_bias: 14,869,606.7 km
+  [GMAT] stochastic_noise: 14,869,630.9 km
+  [GMAT] targeted_outlier: 14,869,689.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: PN
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: BL2
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: ML
+  [CAD] Dynamically resolved epoch: 02 Jul 2022 10:21:00.000
+  [GMAT] clean: 14,878,437.4 km
+  [GMAT] systematic_bias: 14,878,246.4 km
+  [GMAT] stochastic_noise: 14,878,294.6 km
+  [GMAT] targeted_outlier: 14,878,409.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Izhdubar1993WD
+  [CAD] Dynamically resolved epoch: 13 Jun 2013 13:23:00.000
+  [GMAT] clean: 74,435,350.0 km
+  [GMAT] systematic_bias: 74,435,423.9 km
+  [GMAT] stochastic_noise: 74,435,405.4 km
+  [GMAT] targeted_outlier: 74,435,361.0 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: QK56
+  [CAD] Dynamically resolved epoch: 24 Feb 2017 13:32:00.000
+  [GMAT] clean: 20,368,234.7 km
+  [GMAT] systematic_bias: 20,368,351.5 km
+  [GMAT] stochastic_noise: 20,368,322.3 km
+  [GMAT] targeted_outlier: 20,368,252.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: LE
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: FA
+  [CAD] Dynamically resolved epoch: 06 Dec 2040 20:07:00.000
+  [GMAT] clean: 20,007,486.0 km
+  [GMAT] systematic_bias: 20,007,731.9 km
+  [GMAT] stochastic_noise: 20,007,670.4 km
+  [GMAT] targeted_outlier: 20,007,522.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Sigurd1992CC1
+  [CAD] Dynamically resolved epoch: 08 Sep 2027 14:28:00.000
+  [GMAT] clean: 18,491,388.6 km
+  [GMAT] systematic_bias: 18,491,321.3 km
+  [GMAT] stochastic_noise: 18,491,338.1 km
+  [GMAT] targeted_outlier: 18,491,378.5 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Belenus1990BA
+  [CAD] Dynamically resolved epoch: 26 Jan 2052 20:33:00.000
+  [GMAT] clean: 25,351,624.2 km
+  [GMAT] systematic_bias: 25,351,644.2 km
+  [GMAT] stochastic_noise: 25,351,639.2 km
+  [GMAT] targeted_outlier: 25,351,627.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Peleus1993XN2
+  [CAD] Dynamically resolved epoch: 23 Nov 2033 07:37:00.000
+  [GMAT] clean: 29,156,443.9 km
+  [GMAT] systematic_bias: 29,156,654.5 km
+  [GMAT] stochastic_noise: 29,156,601.9 km
+  [GMAT] targeted_outlier: 29,156,475.5 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: YP11
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: CV3
+  [CAD] Dynamically resolved epoch: 05 Aug 2043 19:16:00.000
+  [GMAT] clean: 20,430,561.6 km
+  [GMAT] systematic_bias: 20,430,413.0 km
+  [GMAT] stochastic_noise: 20,430,450.1 km
+  [GMAT] targeted_outlier: 20,430,539.3 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Tomaiyowit1989UR
+  [CAD] Dynamically resolved epoch: 11 Jun 2028 19:20:00.000
+  [GMAT] clean: 13,288,519.0 km
+  [GMAT] systematic_bias: 13,288,553.9 km
+  [GMAT] stochastic_noise: 13,288,545.1 km
+  [GMAT] targeted_outlier: 13,288,524.3 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Summanus1990SS
+  [CAD] Dynamically resolved epoch: 20 Mar 2031 09:23:00.000
+  [GMAT] clean: 22,078,589.3 km
+  [GMAT] systematic_bias: 22,078,739.5 km
+  [GMAT] stochastic_noise: 22,078,702.0 km
+  [GMAT] targeted_outlier: 22,078,611.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: OH
+  [CAD] Dynamically resolved epoch: 16 May 2019 09:49:00.000
+  [GMAT] clean: 27,949,045.7 km
+  [GMAT] systematic_bias: 27,949,057.2 km
+  [GMAT] stochastic_noise: 27,949,054.3 km
+  [GMAT] targeted_outlier: 27,949,047.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Tukmit1991BB
+  [CAD] Dynamically resolved epoch: 15 Jul 2022 10:32:00.000
+  [GMAT] clean: 19,336,948.2 km
+  [GMAT] systematic_bias: 19,337,152.9 km
+  [GMAT] stochastic_noise: 19,337,101.7 km
+  [GMAT] targeted_outlier: 19,336,978.9 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Zephyr1999GK4
+  [CAD] Dynamically resolved epoch: 22 Sep 2032 21:13:00.000
+  [GMAT] clean: 27,827,971.6 km
+  [GMAT] systematic_bias: 27,827,762.6 km
+  [GMAT] stochastic_noise: 27,827,814.9 km
+  [GMAT] targeted_outlier: 27,827,940.3 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Masaakikoyama1992JE
+  [CAD] Dynamically resolved epoch: 28 Jul 2018 01:27:00.000
+  [GMAT] clean: 29,910,656.0 km
+  [GMAT] systematic_bias: 29,910,740.9 km
+  [GMAT] stochastic_noise: 29,910,719.6 km
+  [GMAT] targeted_outlier: 29,910,668.8 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: BR
+  [CAD] Dynamically resolved epoch: 02 Aug 2034 17:16:00.000
+  [GMAT] clean: 25,399,847.4 km
+  [GMAT] systematic_bias: 25,399,507.0 km
+  [GMAT] stochastic_noise: 25,399,592.2 km
+  [GMAT] targeted_outlier: 25,399,796.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: DB
+  [CAD] Dynamically resolved epoch: 11 Mar 2018 17:42:00.000
+  [GMAT] clean: 24,394,098.6 km
+  [GMAT] systematic_bias: 24,393,801.6 km
+  [GMAT] stochastic_noise: 24,393,876.0 km
+  [GMAT] targeted_outlier: 24,394,054.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Hypnos1986JK
+  [CAD] Dynamically resolved epoch: 02 Jun 2024 20:59:00.000
+  [GMAT] clean: 11,735,069.1 km
+  [GMAT] systematic_bias: 11,735,077.6 km
+  [GMAT] stochastic_noise: 11,735,075.4 km
+  [GMAT] targeted_outlier: 11,735,070.4 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Yuliya1991PM5
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Lucianotesi1994QC
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Davidharvey1999RH27
+  [CAD] Dynamically resolved epoch: 16 Dec 2033 09:35:00.000
+  [GMAT] clean: 40,914,057.3 km
+  [GMAT] systematic_bias: 40,914,243.2 km
+  [GMAT] stochastic_noise: 40,914,196.7 km
+  [GMAT] targeted_outlier: 40,914,085.2 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: QP
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: UB
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: UF9
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: WU22
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: Rhiannon1998EP8
+  [CAD] FAILED to fetch epoch: CAD API returned no close-approach records
+
+─────────────────────────────────────────────────────────────────
+OBJECT: QS52
+  [CAD] Dynamically resolved epoch: 10 Jun 2038 23:46:00.000
+  [GMAT] clean: 12,153,571.2 km
+  [GMAT] systematic_bias: 12,153,643.7 km
+  [GMAT] stochastic_noise: 12,153,625.6 km
+  [GMAT] targeted_outlier: 12,153,582.1 km
+
+─────────────────────────────────────────────────────────────────
+OBJECT: UM3
+  [CAD] Dynamically resolved epoch: 17 Dec 1977 09:09:00.000
+  [GMAT] clean: 16,555,312.4 km
+  [GMAT] systematic_bias: 16,555,182.4 km
+  [GMAT] stochastic_noise: 16,555,214.9 km
+  [GMAT] targeted_outlier: 16,555,292.9 km
+
+SUCCESS! Results saved to -> /Users/nithinyadavg/ME/My 150/results/batch_50obj_results_20260831_015040.csv
