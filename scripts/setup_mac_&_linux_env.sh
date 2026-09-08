@@ -25,7 +25,7 @@ echo "Using: $PYTHON_BIN ($($PYTHON_BIN --version))"
 
 # Create the venv INSIDE the dissertation project folder, so it's
 # self-contained and easy to delete/recreate if anything goes wrong.
-PROJECT_DIR="$HOME/ME/SHU AtZ/Demon/GMAT/dissertation"
+PROJECT_DIR="$HOME/Demon/GMAT/"
 if [ ! -d "$PROJECT_DIR" ]; then
     echo "ERROR: expected project folder not found at:"
     echo "  $PROJECT_DIR"
