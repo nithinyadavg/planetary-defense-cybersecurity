@@ -52,22 +52,12 @@ Logs
 Experimental results
 Backups and reproducibility artifacts
 Do not store large experimental outputs inside the venv/ directory.
+
 Recommended structure:
 
-Demon/
-└── GMAT/
-    ├── venv/
-    ├── scripts/   [download Full "scripts/"  inside Here]
-        ├── 00_batch_pipeline_50objects_fixed.py
-        ├── 00e_fetch_150_nobs.py
-        ├── 04_gmat_orbital_impact.py
-        ├── 05_generate_charts.py
-    ├── data/
-    ├── results/
-    ├── logs/
-    ├── simulations/
-        ├── 04_gmat_orbital_impact_v2.py
-    └── outputs/
+<img width="713" height="316" alt="Screenshot 2026-09-08 at 3 30 57 AM" src="https://github.com/user-attachments/assets/80d5de65-27d1-4725-8137-74101db294c7" />
+
+
 This keeps the disposable Python environment separate from research data and generated artifacts.
 
 **5. Python Environment**
