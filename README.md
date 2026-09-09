@@ -212,7 +212,8 @@ Full ten-object and 150-object study results are in
 
 ## 8. Author
 
-Nithin Yadav Gopinath — C5003001
-MSc Cybersecurity and Computer Networks, Sheffield Hallam University
+**Nithin Yadav Gopinath** — C5003001
+MSc Cybersecurity and Computer Networks,
+_Sheffield Hallam University_
 
-Supervisor: Dr Sina Pournouri
+Supervisor:** Dr Sina Pournouri**
