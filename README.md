@@ -1,196 +1,217 @@
+# Integrity Assurance in Planetary Defence
+### An Experimental Cybersecurity Framework for NEO Tracking Pipelines
 
-Environment Deployment Specification
-Planetary Defence Cybersecurity — GMAT/Python Pipeline
+MSc Dissertation — Cybersecurity and Computer Networks
+**Author:** Nithin Yadav Gopinath (C5003001)
+**Supervisor:** Dr Sina Pournouri
+**Institution:** Sheffield Hallam University
 
+---
 
-**1. Deployment Objective**
-Provision a clean, isolated, and reproducible computational environment for the Integrity Assurance in Planetary Defence research pipeline.
-The environment is intended to support Python-based data acquisition, astronomical data processing, analysis, visualisation, and GMAT-based simulation workflows.
-The deployment should be performed in a dedicated project workspace with sufficient storage and system resources so that the workload does not interfere with unrelated applications, projects, or system components.
+## 1. Overview
 
+This project investigates adversarial data-integrity attacks against the
+Minor Planet Center (MPC) astrometric pipeline used to track Near-Earth
+Objects (NEOs), and quantifies how corrupted observation data propagates
+into errors in predicted Close Approach Distance (CAD).
 
-**2. Supported Platforms**
-The environment should be prepared for:
+The pipeline:
 
-"macOS — native execution"
-"Linux — native execution"
+1. Pulls real astrometric observations from the MPC API (ADES XML format).
+2. Applies three adversarial injection archetypes to the observation data.
+3. Converts clean and attacked datasets into orbital state vectors via
+   JPL Horizons.
+4. Propagates each scenario forward in GMAT (General Mission Analysis
+   Tool) to the object's close-approach epoch.
+5. Compares the resulting minimum Earth distance across scenarios to
+   measure how much each attack shifts the predicted orbit.
 
-The macOS setup script should be used on macOS. A Linux-specific setup script should be maintained separately rather than executing the macOS configuration unchanged.
-No Linux virtual machine is required for the macOS deployment.
+This has been run both as a focused two-object study (Apophis, Bennu)
+and as a wider batch across ~150 additional NEOs to test generality.
 
+---
 
-**3. Project Workspace**
-The current macOS configuration expects the project workspace at:
+## 2. Injection Archetypes
 
+| Archetype | Description | Parameters |
+|---|---|---|
+| **Systematic Bias** | Every observation shifted by the same fixed amount — models a calibration fault or uniform spoofing | 2.0 arcsec, applied to 100% of observations |
+| **Stochastic Noise** | Random per-observation jitter — models signal degradation | 1.5 arcsec std, applied to 100% of observations |
+| **Targeted Outlier** | A small subset of observations heavily corrupted — models a precise, low-visibility attack | 30 arcsec, 20 observations only |
+
+---
+
+## 3. Repository Structure
+
+```
+scripts/
+├── setup_mac_&_linux_env.sh           # One-shot environment setup script
+├── 01_fetch_apophis_data.py           # Step 1: pull ADES XML from MPC API (Apophis)
+├── 01_fetch_bennu_data.py             # Step 1: pull ADES XML from MPC API (Bennu)
+├── 02_parse_ades_to_dataframe.py      # Step 2: parse ADES XML -> clean pandas DataFrame
+├── 03_injection_module.py             # Step 3: apply the 3 injection archetypes
+├── 04_gmat_orbital_impact.py          # Step 4 (v1): GMAT run, heliocentric Keplerian approach
+├── 04_gmat_orbital_impact_v2.py       # Step 4 (v2, final): geocentric Cartesian state near CA epoch
+├── 05_generate_charts.py              # Chapter 5 figures — dark theme
+├── 06_batch_pipeline.py               # End-to-end pipeline for the 10-object study set
+├── 07_generate_clean_charts.py        # Chapter 4 figures — clean academic (print) theme
+├── chapter4v2_figures.py              # Chapter 4 figures — full 10-object comparison
+├── 00_batch_pipeline_50objects_fixed.py   # Batch pipeline, 50+ curated NEOs, dynamic CAD epoch
+├── 00_batch_pipeline_150new_objects.py    # Batch pipeline, 150 additional NEOs (generated)
+├── 00d_fetch_150_new_objects.py       # Selects 150 NEOs not already used, from live JPL SBDB
+├── 00e_fetch_150_nobs.py              # Back-fills MPC observation counts for the 150-object run
+├── batch_log.txt                      # Log output from batch pipeline runs
+├── batch150_results_with_nobs.csv     # 150-object batch results + observation counts
+└── apophis_template.script            # GMAT script template (heliocentric Keplerian)
+ 
+```
+
+---
+
+## 4. Environment Setup
+
+### Requirements
+- macOS or Linux (native execution — no VM required)
+- Python 3.x with `venv`
+- GMAT R2026a
+- Network access (MPC API, JPL Horizons/CAD API, PyPI)
+
+### Project Workspace
+
+The setup script expects the project at:
+
+```
 $HOME/Demon/GMAT/
-Before execution, verify that this directory exists and is accessible:
+```
 
-_ls -ld "$HOME/Demon/GMAT/"_
-The workspace should have:
+Adjust `PROJECT_DIR` at the top of `setup_mac_&_linux_env.sh` if your
+path differs.
 
-Sufficient free storage
-Read/write permissions
-Stable filesystem access
-Appropriate I/O performance
-Separation from unrelated workloads where practical
-The project directory should be considered the root workspace for the computational pipeline.
+### Quick Start
 
+```bash
+chmod +x scripts/setup_mac_&_linux_env.sh
+./scripts/setup_mac_&_linux_env.sh
+```
 
-**4. Storage Provisioning**
-The complete workload may become storage-intensive even though the initial Python environment installation is relatively small.
-Provision sufficient storage for:
+This will:
+- Detect `python3` on `PATH`
+- Remove and recreate a clean `venv/` inside the project workspace
+- Upgrade pip and install: `requests`, `pandas`, `numpy`, `matplotlib`,
+  `astropy`, `astroquery`
+- Verify all imports succeed
+- Check for GMAT at `/Applications/GMAT R2026a/bin/GmatConsole`
+  (override with `export GMAT_CONSOLE="/path/to/your/GmatConsole"`)
 
-Python virtual environment
-Python package cache
-Astronomical observation data
-MPC/JPL datasets
-CSV/JSON files
-Intermediate processing data
-GMAT simulation outputs
-Generated plots and figures
-Logs
-Experimental results
-Backups and reproducibility artifacts
-Do not store large experimental outputs inside the venv/ directory.
+### Every New Terminal Session
 
-Recommended structure:
-
-<img width="713" height="316" alt="Screenshot 2026-09-08 at 3 30 57 AM" src="https://github.com/user-attachments/assets/80d5de65-27d1-4725-8137-74101db294c7" />
-
-
-This keeps the disposable Python environment separate from research data and generated artifacts.
-
-**5. Python Environment**
-The deployment script detects the first available python3 executable:
-PYTHON_BIN=$(command -v python3)
-The detected interpreter is then used to create a project-local virtual environment:
-
-"$PYTHON_BIN" -m venv venv
-The resulting environment is activated with:
-
-source venv/bin/activate
-This isolates the project's Python dependencies from the host system and other Python projects.
-
-
-**6. Required Python Dependencies**
-The following packages are provisioned inside the virtual environment:
-
-requests
-pandas
-numpy
-matplotlib
-astropy
-astroquery
-The installation process also upgrades pip before installing the dependencies.
-After installation, the script performs an import-level verification to ensure that all required modules can be loaded successfully.
-
-
-**7. Clean Environment Rebuild**
-The setup script intentionally removes an existing:
-
-venv/
-before creating a new environment.
-Therefore:
-
-Do not store research data, datasets, scripts, results, or other persistent project material inside venv/.
-The venv/ directory should be considered disposable and reproducible.
-If the environment becomes corrupted, it can be safely recreated without affecting the research data stored elsewhere in the project workspace.
-
-**8. GMAT Configuration**
-The deployment checks for GMAT R2026a at:
-
-/Applications/GMAT R2026a/bin/GmatConsole
-If GMAT is installed at another location, configure:
-
-export GMAT_CONSOLE="/path/to/your/GmatConsole"
-before executing the relevant pipeline.
-GMAT should remain independently installed from the Python virtual environment.
-
-**9. Network Requirements**
-An active network connection may be required during environment provisioning and subsequent research execution.
-The system may need network access for:
-
-Python package installation
-Astronomical data retrieval
-MPC services
-JPL services/APIs
-Other explicitly configured research data sources
-Network access should therefore be verified before running data-fetching components.
-
-**10. Resource Isolation**
-Select an appropriate location and execution environment for the mission.
-The workload should not unnecessarily compete with:
-
-Critical system processes
-Other computational workloads
-Unrelated development environments
-User data
-Other research projects
-Storage-intensive applications
-For large runs, monitor:
-
-CPU utilisation
-RAM utilisation
-Disk capacity
-Disk I/O
-Temporary storage
-Network utilisation
-The objective is to prevent the research pipeline from unintentionally degrading the operation of other applications or exhausting system resources.
-
-
-**11. Pre-Execution Validation**
-Before starting the main pipeline, confirm:
-
-[✓] Correct operating system
-[✓] python3 available
-[✓] Correct Python interpreter detected
-[✓] Project workspace exists
-[✓] Project workspace is writable
-[✓] Adequate storage available
-[✓] Virtual environment created
-[✓] Virtual environment activated
-[✓] pip operational
-[✓] Required dependencies installed
-[✓] Required dependencies successfully imported
-[✓] GMAT R2026a detected/configured
-[✓] Network connectivity available
-[✓] Research data directories separated from venv/
-[✓] System resources sufficient for the intended workload
-Only after these checks have passed should the data-fetching, processing, analysis, and GMAT simulation workflows be initiated.
-12. Standard Startup Procedure
-For a new terminal session:
-
+```bash
 cd "$HOME/Demon/GMAT/"
 source venv/bin/activate
-Then verify:
+which python3      # should resolve to .../venv/bin/python3
+```
 
-which python3
-python3 --version
-The Python executable should resolve to the project-local environment:
+### GMAT Notes
 
-$HOME/Demon/GMAT/venv/bin/python3
-The environment is then ready for the project scripts and pipeline.
-Deployment Architecture
-The intended execution architecture is:
-macOS / Linux Host
-↓
-Dedicated $HOME/Demon/GMAT/ Workspace
-↓
-Project-Local Python Virtual Environment
-↓
-Scientific & Astronomy Dependencies
-↓
-MPC / JPL Data Acquisition
-↓
-Python Processing & Analysis
-↓
-GMAT Simulation
-↓
-Experimental Results / Logs / Figures
-↓
-Research Outputs
+- GMAT must be installed independently of the Python virtual environment.
+- On macOS, missing bundled plugin libraries (Python/MATLAB/proprietary
+  interfaces) at startup are expected and harmless — GMAT continues to
+  run the core propagation engine without them.
+- Report files parsed by the pipeline use whitespace-delimited columns;
+  parse with `sep=r'\s+'`, not a fixed multi-space separator, since GMAT's
+  column padding is not exactly reproducible.
 
+---
 
-**Final Requirement**
-Before initiating the mission and associated computational tasks, ensure that the selected project location has adequate storage, appropriate filesystem permissions, sufficient computational resources, and proper isolation from unrelated workloads.
-The environment should be treated as a controlled research execution environment, with disposable dependencies separated from persistent research data and experimental outputs.
+## 5. Pipeline Usage
+
+Run in order from the project root, with the virtual environment active:
+
+```bash
+# Step 1 — fetch raw observations
+python3 scripts/01_fetch_apophis_data.py
+python3 scripts/01_fetch_bennu_data.py
+
+# Step 2 — parse into a clean DataFrame
+python3 scripts/02_parse_ades_to_dataframe.py
+
+# Step 3 — generate the three attacked datasets
+python3 scripts/03_injection_module.py
+
+# Step 4 — GMAT orbital impact assessment (final geocentric version)
+python3 scripts/04_gmat_orbital_impact_v2.py
+
+# Figures
+python3 scripts/05_generate_charts.py
+python3 scripts/07_generate_clean_charts.py
+```
+
+For the wider generality study across additional NEOs:
+
+```bash
+python3 scripts/00_batch_pipeline_50objects_fixed.py
+python3 scripts/00d_fetch_150_new_objects.py
+python3 scripts/00_batch_pipeline_150new_objects.py
+python3 scripts/00e_fetch_150_nobs.py
+```
+
+Batch runs write timestamped CSVs to `results/` and append progress to
+`batch_log.txt`. Many CAD lookups fail for provisional/obscure
+designations (no close-approach record in JPL's 1950–2060 window, or
+transient SSL errors from the JPL API) — these are logged as
+`CAD fetch failed` and skipped rather than halting the run.
+
+---
+
+## 6. Key Results
+
+Two-object headline comparison (geocentric state, CA epoch, per
+`04_gmat_orbital_impact_v2.py`). These figures reflect a specific MPC/JPL
+data pull and GMAT run — re-fetching observations or state vectors later
+(new observations added to MPC, updated JPL solutions, etc.) will shift
+these numbers, so treat this table as a snapshot rather than a fixed
+reference:
+
+| Scenario | Apophis CAD Δ (km) | Bennu CAD Δ (km) |
+|---|---:|---:|
+| Systematic Bias (2.0″) | 822.3 | 3,334.6 |
+| Stochastic Noise (1.5″) | 428.0 | 1,679.7 |
+| Targeted Outlier (30″, 20 obs) | 114.5 | 493.5 |
+
+Bennu (603 observations) shows a consistently larger CAD shift than
+Apophis (9,337 observations) for the same injection magnitude —
+sparser observation records are more vulnerable per unit of corrupted
+data, since each observation carries proportionally more weight in the
+orbit determination.
+
+Full ten-object and 150-object study results are in
+`chapter4v2_figures.py` / `07_generate_clean_charts.py` and
+`batch150_results_with_nobs.csv` respectively.
+
+---
+
+## 7. Known Issues / Fixed Bugs
+
+- **Stale epoch:** early versions propagated from a fixed 2020-01-01
+  epoch, accumulating ~103 days of unnecessary integration error before
+  reaching the 2029 close approach. Fixed in v2 by starting from a
+  geocentric state just before the CA epoch.
+- **Placeholder substitution:** an intermediate script version left
+  literal `PASTE_X_HERE`-style placeholders in the GMAT template instead
+  of the actual JPL Horizons values, which GMAT correctly rejected as
+  invalid Real values.
+- **Report parsing:** GMAT `ReportFile` output uses variable-width
+  whitespace padding, not a fixed separator — use
+  `pd.read_csv(path, sep=r'\s+', ...)` or manual line-splitting, not
+  `sep='   '` (fixed 3-space).
+- **CAD API instability:** the JPL `cad.api` endpoint intermittently
+  returns SSL errors under batch load; these are treated as fetch
+  failures for that object rather than aborting the whole run.
+
+---
+
+## 8. Author
+
+Nithin Yadav Gopinath — C5003001
+MSc Cybersecurity and Computer Networks, Sheffield Hallam University
+Supervisor: Dr Sina Pournouri
