@@ -216,4 +216,4 @@ Full ten-object and 150-object study results are in
 MSc Cybersecurity and Computer Networks,
 _Sheffield Hallam University_
 
-Supervisor:** Dr Sina Pournouri**
+Supervisor: **Dr Sina Pournouri**
