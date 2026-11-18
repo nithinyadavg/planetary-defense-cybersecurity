@@ -128,32 +128,25 @@ function globeGeometry(R, nLon = 256, nLat = 128) {
   g.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2)); g.setIndex(idx);
   return g;
 }
-const earthMat = new THREE.MeshPhongMaterial({ color: 0xffffff, emissive: 0xffffff, emissiveIntensity: 0.0, shininess: 6, specular: 0x0a1418 });
+const earthMat = new THREE.MeshPhongMaterial({ color: 0xffffff, emissive: 0xffffff, emissiveIntensity: 0.0, shininess: 12, specular: 0x224455 });
 const earth = new THREE.Mesh(globeGeometry(RE), earthMat);
 spin.add(earth);
-// Paint land (vivid) and sea (near-black with a soft coastal glow) — no political borders
+// Paint the globe texture — coastlines only, no political borders
 function paintEarth(land) {
   const W = 4096, H = 2048, c = document.createElement('canvas'); c.width = W; c.height = H;
   const g = c.getContext('2d');
   const X = (lon) => (lon + 180) / 360 * W, Y = (lat) => (90 - lat) / 180 * H;
-  const sea = g.createLinearGradient(0, 0, 0, H);
-  sea.addColorStop(0, '#060d14'); sea.addColorStop(0.5, '#03080d'); sea.addColorStop(1, '#060d14');
-  g.fillStyle = sea; g.fillRect(0, 0, W, H);
-  g.strokeStyle = 'rgba(94,240,255,.07)'; g.lineWidth = 1.5;
+  // subtle, original look: deep navy globe, land a shade lighter, cyan coastlines
+  g.fillStyle = '#0a2236'; g.fillRect(0, 0, W, H);
+  g.strokeStyle = 'rgba(42,111,134,.45)'; g.lineWidth = 2;
   for (let lat = -60; lat <= 60; lat += 30) { g.beginPath(); g.moveTo(0, Y(lat)); g.lineTo(W, Y(lat)); g.stroke(); }
   for (let lon = -150; lon <= 180; lon += 30) { g.beginPath(); g.moveTo(X(lon), 0); g.lineTo(X(lon), H); g.stroke(); }
   const path = (ring) => { g.beginPath(); g.moveTo(X(ring[0]), Y(ring[1])); for (let j = 2; j < ring.length; j += 2) g.lineTo(X(ring[j]), Y(ring[j + 1])); g.closePath(); };
-  // glow pass (shadow bleeds into the sea), then crisp land, then coastline
-  g.save(); g.shadowColor = 'rgba(60,255,200,.55)'; g.shadowBlur = 28; g.fillStyle = '#1b8f6c';
-  for (const r of land) { path(r); g.fill(); } g.restore();
-  const lg = g.createLinearGradient(0, 0, 0, H);
-  lg.addColorStop(0, '#d8f5ff'); lg.addColorStop(0.12, '#4fe0b0'); lg.addColorStop(0.35, '#2fd08f'); lg.addColorStop(0.5, '#3fdc8a');
-  lg.addColorStop(0.65, '#2fd08f'); lg.addColorStop(0.88, '#4fe0b0'); lg.addColorStop(1, '#e8f8ff');
-  g.fillStyle = lg; for (const r of land) { path(r); g.fill(); }
-  g.strokeStyle = '#b8fff0'; g.lineWidth = 2.2; g.lineJoin = 'round'; for (const r of land) { path(r); g.stroke(); }
+  g.fillStyle = '#0f2f47'; for (const r of land) { path(r); g.fill(); }
+  g.strokeStyle = 'rgba(94,240,255,.8)'; g.lineWidth = 2.4; g.lineJoin = 'round'; for (const r of land) { path(r); g.stroke(); }
   const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
   tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
-  earthMat.map = tex; earthMat.emissiveMap = tex; earthMat.emissiveIntensity = 0.16; earthMat.needsUpdate = true;
+  earthMat.map = tex; earthMat.emissiveMap = tex; earthMat.emissiveIntensity = 0.35; earthMat.needsUpdate = true;
 }
 const atmo = new THREE.Mesh(new THREE.SphereGeometry(RE * 1.018, 64, 48), new THREE.ShaderMaterial({
   transparent: true, depthWrite: false, side: THREE.BackSide, blending: THREE.AdditiveBlending,

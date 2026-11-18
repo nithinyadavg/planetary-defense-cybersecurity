@@ -1,6 +1,8 @@
 # NEO·EYE — Near-Earth Objects · Early-warning, Yield & Exposure
 *by NYG — Nithin Yadav Gopinath*
 
+Inspired by [God’s Eye View](https://github.com/bilawalsidhu/gods-eye-view) by Bilawal Sidhu: the idea of an open-data, AI-built “god’s-eye” globe. NEO·EYE turns it outward to near-Earth space; it is an independent implementation (no code copied).
+
 - **Early-warning** — what is coming close, and when (JPL CAD, Sentry, Horizons flybys)
 - **Yield** — impact energy if an object hit Earth (sphere of rock, 2,600 kg/m³; v from v∞ + escape speed)
 - **Exposure** — how close Earth and its satellite shells come to it
