@@ -63,7 +63,7 @@ camera.position.set(0.004, -0.009, 0.004);
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true; controls.dampingFactor = 0.08;
 controls.minDistance = RE * 1.15; controls.maxDistance = 60; controls.zoomSpeed = 1.4;
-controls.target.set(0, 0, 0);
+controls.target.set(0, 0, 0); controls.enablePan = false;
 scene.add(new THREE.AmbientLight(0x334455, 0.35));
 const sunLight = new THREE.DirectionalLight(0xffffff, 2.2);
 scene.add(sunLight, sunLight.target);
@@ -90,7 +90,9 @@ const geo = new THREE.Group();     // geocentric ecliptic content, positioned at
 const eq = new THREE.Group();      // geocentric equatorial (TEME≈) content
 eq.rotation.x = -OBL;
 const spin = new THREE.Group();    // Earth-fixed content
-scene.add(helio, geo); geo.add(eq); eq.add(spin);
+const root = new THREE.Group();   // whole sky; tilted so Earth's north pole is "up" when zoomed in on Earth
+scene.add(root); root.add(helio, geo, sunLight, sunLight.target); geo.add(eq); eq.add(spin);
+const toW = (p) => new THREE.Vector3(p[0], p[1], p[2]).applyMatrix4(root.matrixWorld);
 
 function glowTexture(rgb, soft = 0.4) {
   const c = document.createElement('canvas'); c.width = c.height = 128;
@@ -107,12 +109,56 @@ sunGlow.scale.set(0.09, 0.09, 1);
 helio.add(sun, sunGlow);
 
 // Earth
-const earth = new THREE.Mesh(new THREE.SphereGeometry(RE, 96, 64), new THREE.MeshPhongMaterial({ color: 0x0b2740, emissive: 0x020a12, shininess: 12, specular: 0x224455 }));
+// globe in Earth-fixed coordinates (x → 0°E, z → North) with UVs straight from lon/lat
+function globeGeometry(R, nLon = 256, nLat = 128) {
+  const pos = [], nor = [], uv = [], idx = [];
+  for (let j = 0; j <= nLat; j++) {
+    const lat = -90 + 180 * j / nLat, cl = Math.cos(lat * D2R), sl = Math.sin(lat * D2R);
+    for (let i = 0; i <= nLon; i++) {
+      const lon = -180 + 360 * i / nLon, x = cl * Math.cos(lon * D2R), y = cl * Math.sin(lon * D2R);
+      pos.push(R * x, R * y, R * sl); nor.push(x, y, sl); uv.push(i / nLon, j / nLat);
+    }
+  }
+  for (let j = 0; j < nLat; j++) for (let i = 0; i < nLon; i++) {
+    const a = j * (nLon + 1) + i, b = a + 1, c = a + nLon + 1, d = c + 1; idx.push(a, b, d, a, d, c);
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  g.setAttribute('normal', new THREE.Float32BufferAttribute(nor, 3));
+  g.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2)); g.setIndex(idx);
+  return g;
+}
+const earthMat = new THREE.MeshPhongMaterial({ color: 0xffffff, emissive: 0xffffff, emissiveIntensity: 0.0, shininess: 6, specular: 0x0a1418 });
+const earth = new THREE.Mesh(globeGeometry(RE), earthMat);
 spin.add(earth);
-const atmo = new THREE.Mesh(new THREE.SphereGeometry(RE * 1.035, 64, 48), new THREE.ShaderMaterial({
+// Paint land (vivid) and sea (near-black with a soft coastal glow) — no political borders
+function paintEarth(land) {
+  const W = 4096, H = 2048, c = document.createElement('canvas'); c.width = W; c.height = H;
+  const g = c.getContext('2d');
+  const X = (lon) => (lon + 180) / 360 * W, Y = (lat) => (90 - lat) / 180 * H;
+  const sea = g.createLinearGradient(0, 0, 0, H);
+  sea.addColorStop(0, '#060d14'); sea.addColorStop(0.5, '#03080d'); sea.addColorStop(1, '#060d14');
+  g.fillStyle = sea; g.fillRect(0, 0, W, H);
+  g.strokeStyle = 'rgba(94,240,255,.07)'; g.lineWidth = 1.5;
+  for (let lat = -60; lat <= 60; lat += 30) { g.beginPath(); g.moveTo(0, Y(lat)); g.lineTo(W, Y(lat)); g.stroke(); }
+  for (let lon = -150; lon <= 180; lon += 30) { g.beginPath(); g.moveTo(X(lon), 0); g.lineTo(X(lon), H); g.stroke(); }
+  const path = (ring) => { g.beginPath(); g.moveTo(X(ring[0]), Y(ring[1])); for (let j = 2; j < ring.length; j += 2) g.lineTo(X(ring[j]), Y(ring[j + 1])); g.closePath(); };
+  // glow pass (shadow bleeds into the sea), then crisp land, then coastline
+  g.save(); g.shadowColor = 'rgba(60,255,200,.55)'; g.shadowBlur = 28; g.fillStyle = '#1b8f6c';
+  for (const r of land) { path(r); g.fill(); } g.restore();
+  const lg = g.createLinearGradient(0, 0, 0, H);
+  lg.addColorStop(0, '#d8f5ff'); lg.addColorStop(0.12, '#4fe0b0'); lg.addColorStop(0.35, '#2fd08f'); lg.addColorStop(0.5, '#3fdc8a');
+  lg.addColorStop(0.65, '#2fd08f'); lg.addColorStop(0.88, '#4fe0b0'); lg.addColorStop(1, '#e8f8ff');
+  g.fillStyle = lg; for (const r of land) { path(r); g.fill(); }
+  g.strokeStyle = '#b8fff0'; g.lineWidth = 2.2; g.lineJoin = 'round'; for (const r of land) { path(r); g.stroke(); }
+  const tex = new THREE.CanvasTexture(c); tex.colorSpace = THREE.SRGBColorSpace;
+  tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+  earthMat.map = tex; earthMat.emissiveMap = tex; earthMat.emissiveIntensity = 0.16; earthMat.needsUpdate = true;
+}
+const atmo = new THREE.Mesh(new THREE.SphereGeometry(RE * 1.018, 64, 48), new THREE.ShaderMaterial({
   transparent: true, depthWrite: false, side: THREE.BackSide, blending: THREE.AdditiveBlending,
   vertexShader: `varying vec3 vN; varying vec3 vV; void main(){ vec4 mv = modelViewMatrix*vec4(position,1.); vN = normalize(normalMatrix*normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix*mv; }`,
-  fragmentShader: `varying vec3 vN; varying vec3 vV; void main(){ float f = pow(1.0-abs(dot(vN,vV)), 3.0); gl_FragColor = vec4(0.25,0.7,1.0,1.0)*f*0.9; }`,
+  fragmentShader: `varying vec3 vN; varying vec3 vV; void main(){ float f = pow(1.0-abs(dot(vN,vV)), 4.0); gl_FragColor = vec4(0.25,0.7,1.0,1.0)*f*0.55; }`,
 }));
 spin.add(atmo);
 function addGraticule() {
@@ -124,7 +170,6 @@ function addGraticule() {
   const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
   spin.add(new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: 0x2a6f86, transparent: true, opacity: 0.22 })));
 }
-addGraticule();
 const earthGlow = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTexture('94,200,255', 0.3), blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: false, transparent: true, opacity: 0.0 }));
 earthGlow.scale.set(0.035, 0.035, 1);
 geo.add(earthGlow);
@@ -145,7 +190,7 @@ bodyGeom.setAttribute('position', new THREE.BufferAttribute(bodyPos, 3));
 bodyGeom.setAttribute('color', new THREE.BufferAttribute(bodyCol, 3));
 const bodyPts = new THREE.Points(bodyGeom, new THREE.PointsMaterial({ size: 7, sizeAttenuation: false, vertexColors: true, map: glowTexture('255,255,255', 0.5), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
 bodyPts.frustumCulled = false;
-scene.add(bodyPts);
+root.add(bodyPts);
 const bodyWorld = {};
 
 // planet + Moon orbit lines
@@ -255,7 +300,7 @@ function buildNEO(neo) {
   g.setAttribute('el2', new THREE.BufferAttribute(el2, 4));
   g.setAttribute('meta', new THREE.BufferAttribute(meta, 4));
   const pts = new THREE.Points(g, neoMat); pts.frustumCulled = false; pts.renderOrder = 2;
-  scene.add(pts);
+  root.add(pts);
   NEO = { ...neo, n: nK, sentry };
 }
 
@@ -307,11 +352,24 @@ function buildSats(sats) {
   const isDeb = new Uint8Array(N); cols.forEach((c, i) => isDeb[i] = c === 0xff6b6b ? 1 : 0);
   const satMat = new THREE.ShaderMaterial({
     transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
-    uniforms: { uPx: { value: renderer.getPixelRatio() }, uShowA: { value: 1 }, uShowD: { value: 1 }, uSel: { value: -1 } },
-    vertexShader: `attribute vec3 color; attribute float deb; uniform float uPx, uShowA, uShowD, uSel; varying vec3 vC; varying float vA;
-      void main(){ vC = color; float show = deb > 0.5 ? uShowD : uShowA; vA = show; bool s = float(gl_VertexID)==uSel;
-        if (s) vC = vec3(1.0); gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); gl_PointSize = show*(s?9.:2.2)*uPx; }`,
-    fragmentShader: `varying vec3 vC; varying float vA; void main(){ vec2 q=gl_PointCoord-.5; float d=length(q); if(d>.5||vA<=0.) discard; gl_FragColor=vec4(vC, vA*smoothstep(.5,0.,d)); }`,
+    uniforms: { uPx: { value: renderer.getPixelRatio() }, uShowA: { value: 1 }, uShowD: { value: 1 }, uSel: { value: -1 }, uHov: { value: -1 }, uIcon: { value: 0 } },
+    vertexShader: `attribute vec3 color; attribute float deb; uniform float uPx, uShowA, uShowD, uSel, uHov, uIcon; varying vec3 vC; varying float vA; varying float vD;
+      void main(){ vC = color; vD = deb; float show = deb > 0.5 ? uShowD : uShowA; vA = show;
+        float id = float(gl_VertexID); bool s = id==uSel, h = id==uHov;
+        if (s || h) vC = vec3(1.0);
+        float base = uIcon > 0.5 ? (deb > 0.5 ? 5.0 : 9.0) : 2.2;
+        gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.);
+        gl_PointSize = show*(s ? max(base*1.6, 9.) : h ? max(base*1.4, 8.) : base)*uPx; }`,
+    fragmentShader: `varying vec3 vC; varying float vA; varying float vD; uniform float uIcon;
+      void main(){ if (vA <= 0.) discard; vec2 q = gl_PointCoord - .5;
+        if (uIcon > .5) {
+          vec2 a = abs(q); float m;
+          if (vD > .5) m = step(a.x + a.y, .42);                                   // debris: small diamond
+          else m = max(max(step(a.x,.11)*step(a.y,.15),                               // bus
+                           step(.19,a.x)*step(a.x,.49)*step(a.y,.09)),               // solar panels
+                       step(a.x,.19)*step(a.y,.025));                                 // struts
+          if (m < .5) discard; gl_FragColor = vec4(vC, vA);
+        } else { float d = length(q); if (d > .5) discard; gl_FragColor = vec4(vC, vA*smoothstep(.5,0.,d)); } }`,
   });
   g.setAttribute('deb', new THREE.BufferAttribute(new Float32Array(isDeb), 1));
   const pts = new THREE.Points(g, satMat); pts.frustumCulled = false;
@@ -368,7 +426,7 @@ function setLabels(items) {
   while (labelPool.length < items.length) { const d = document.createElement('div'); d.className = 'lb'; labelRoot.appendChild(d); labelPool.push(d); }
   const v = new THREE.Vector3(); let used = 0;
   for (const it of items) {
-    v.set(...it.p).project(camera);
+    (it.w ? v.copy(it.w) : v.copy(toW(it.p))).project(camera);
     if (v.z > 1 || v.z < -1 || Math.abs(v.x) > 1.05 || Math.abs(v.y) > 1.05) continue;
     const d = labelPool[used++];
     d.textContent = it.t; d.className = 'lb ' + (it.c || '');
@@ -428,13 +486,59 @@ function buildUI() {
     if (d.dataset.k) select({ type: 'neo', k: +d.dataset.k }); else select({ type: 'sat', k: +d.dataset.s });
     $('#sres').innerHTML = ''; $('#search').value = '';
   };
-  buildCAList(); drawLegend(); buildProv();
+  buildCAList(); drawLegend(); buildProv(); initTips();
   $('#fps').textContent = `TRACKING ${fmtInt(NEO.n + POP.count + SATS.N + TRACKS.length + BODIES.length)} OBJECTS · ${fmtInt(NEO.n + SATS.N)} CATALOGUED`;
   // timeline
   const tl = $('#tl');
   tl.onclick = (e) => { const r = tl.getBoundingClientRect(); const f = (e.clientX - r.left) / r.width; state.jd = TL0 + f * (TL1 - TL0); goManual(); };
   window.addEventListener('keydown', (e) => { if (e.key === 'Escape') select(null); });
 }
+const TIPS = {
+  'frame:geo': 'Earth stays fixed in the middle; the Sun, Moon and planets move around it. The analyst’s view of what is coming at us.',
+  'frame:helio': 'The real solar-system layout: the Sun in the middle, Earth and the asteroids orbiting it.',
+  'view:leo': 'Close-up of Earth and its satellites, out to the geostationary ring (36,000 km). Earth turns north-up here.',
+  'view:cis': 'Earth–Moon space (~400,000 km). Real asteroid flybys from JPL Horizons show here as orange paths.',
+  'view:near': 'About 40 million km around Earth: where close approaches start to matter.',
+  'view:inner': 'Out to Jupiter: the whole near-Earth asteroid population around the Sun.',
+  'mode:0': 'CLASS: colour asteroids by orbit family: Atira (inside Earth’s orbit), Aten, Apollo (cross Earth’s orbit), Amor (just outside), and comets.',
+  'mode:1': 'THREAT: highlight potentially hazardous asteroids (PHAs, red) and objects on NASA’s Sentry impact-monitoring list (amber). Everything else dims.',
+  'mode:2': 'INTEGRITY: colour by how well each orbit is known (JPL uncertainty U: 0 = precise, 9 = poorly constrained). This is the research lens: over half the catalogue is U ≥ 7.',
+  'mode:3': 'SIZE: colour by brightness, which stands in for size (absolute magnitude H: lower = bigger).',
+  'sensor:': 'EO (electro-optical): normal colour display.',
+  'sensor:nv': 'NV: night-vision style (green). A display effect only; the data does not change.',
+  'sensor:flir': 'FLIR: thermal-camera style (false colour). A display effect only; the data does not change.',
+  'speed:-86400': 'Run time backwards at 1 day per second.', 'speed:0': 'Pause the clock.', 'speed:1': 'Real time.',
+  'speed:3600': '1 hour per second: good for watching a flyby.', 'speed:86400': '1 day per second.', 'speed:2592000': '30 days per second: watch the planets and asteroids orbit.',
+  'live': 'Jump back to now and run in real time.',
+  'layer:known': 'Every near-Earth asteroid in NASA/JPL’s catalogue, moved along its orbit in real time.',
+  'layer:comets': 'Comets whose orbits come near Earth’s (perihelion < 1.3 au).',
+  'layer:model': 'NOT real objects: a statistical stand-in for the asteroids not yet discovered, from published population models. Shows the gap between what we know and what is out there.',
+  'layer:sentryOnly': 'Show only objects on NASA’s Sentry list: those with a non-zero impact probability in the next 100 years.',
+  'layer:sats': 'Active satellites, positions computed live with the SGP4 model from CelesTrak data.',
+  'layer:debris': 'Tracked fragments from the four biggest break-ups: Fengyun-1C (2007 missile test), Cosmos 2251 + Iridium 33 (2009 collision), Cosmos 1408 (2021 missile test). Over the years each cloud spread into a shell around Earth.',
+  'layer:tracks': 'Exact flyby paths (JPL Horizons) of every asteroid passing within 0.05 au (~19 Moon distances) of Earth in this window.',
+  'layer:orbits': 'Orbits of the planets and the Moon, and the geostationary ring.',
+  'layer:labels': 'Names on screen. Zoom into Earth to see satellite names and trails.',
+};
+function initTips() {
+  const tipBox = document.createElement('div'); tipBox.id = 'uitip'; document.body.appendChild(tipBox);
+  const keyOf = (el) => el.dataset.tip || (el.dataset.frame && 'frame:' + el.dataset.frame) || (el.dataset.view && 'view:' + el.dataset.view) || (el.dataset.mode != null && 'mode:' + el.dataset.mode) || (el.dataset.sensor != null && 'sensor:' + el.dataset.sensor) || (el.dataset.s != null && 'speed:' + el.dataset.s) || (el.id === 'live' && 'live') || (el.querySelector && el.querySelector('input[data-l]') && 'layer:' + el.querySelector('input[data-l]').dataset.l);
+  document.addEventListener('mouseover', (e) => {
+    const el = e.target.closest('button, label.tg, [data-tip]'); if (!el) { tipBox.style.display = 'none'; return; }
+    const k = keyOf(el); const t = TIPS[k] || (k && !TIPS[k] && el.dataset.tip && el.dataset.tip.length > 12 ? el.dataset.tip : null);
+    if (!t) { tipBox.style.display = 'none'; return; }
+    tipBox.textContent = t; tipBox.style.display = 'block';
+    const r = el.getBoundingClientRect(); const bw = Math.min(300, innerWidth - 20);
+    let x = Math.min(innerWidth - bw - 10, Math.max(10, r.left)); let y = r.bottom + 8;
+    tipBox.style.maxWidth = bw + 'px'; tipBox.style.left = x + 'px'; tipBox.style.top = y + 'px';
+    if (y + tipBox.offsetHeight > innerHeight - 8) tipBox.style.top = (r.top - tipBox.offsetHeight - 8) + 'px';
+  });
+  $('#guideBtn').onclick = () => { const g = $('#guide'); g.style.display = g.style.display === 'flex' ? 'none' : 'flex'; };
+  $('#guide').onclick = (e) => { if (e.target.id === 'guide' || e.target.id === 'gx') $('#guide').style.display = 'none'; };
+  $('#panelsBtn').onclick = () => { document.body.classList.toggle('clean'); $('#panelsBtn').classList.toggle('on', !document.body.classList.contains('clean')); };
+  try { if (!localStorage.getItem('neoeye-guided')) { $('#guide').style.display = 'flex'; localStorage.setItem('neoeye-guided', '1'); } } catch { }
+}
+
 function goManual() { state.live = false; document.querySelectorAll('#speeds button').forEach(x => x.classList.toggle('on', x.dataset.s === String(state.speed))); }
 
 function drawLegend() {
@@ -496,6 +600,21 @@ function showMethod() {
   $('#cx').onclick = () => select(null);
 }
 
+// ---------- Yield & Exposure ----------
+// Impact energy if the object hit Earth: sphere of rock (2,600 kg/m³), impact speed from the
+// encounter speed v∞ plus Earth's escape speed (11.19 km/s); 17 km/s typical if v∞ unknown.
+function impactYield(Dkm, vinf) {
+  if (Dkm == null) return null;
+  const v = vinf != null ? Math.sqrt(vinf * vinf + 11.19 * 11.19) : 17;
+  const m = 2600 * Math.PI / 6 * Math.pow(Dkm * 1000, 3);
+  const mt = 0.5 * m * Math.pow(v * 1000, 2) / 4.184e15;
+  const cls = Dkm < 0.03 ? 'mostly burns up — airburst' : Dkm < 0.14 ? 'local / city scale' : Dkm < 1 ? 'regional scale' : 'global effects';
+  const e = mt >= 1 ? `${mt >= 100 ? Math.round(mt).toLocaleString('en-GB') : mt.toFixed(1)} Mt TNT` : `${Math.max(0.1, mt * 1000).toFixed(mt * 1000 < 10 ? 1 : 0)} kt TNT`;
+  return { text: e, cls, v };
+}
+const yieldRow = (Dkm, vinf) => { const y = impactYield(Dkm, vinf); return y ? `<div>If it hit Earth</div><div>~${y.text} <span class="n">(${y.cls}; ${y.v.toFixed(1)} km/s)</span></div>` : ''; };
+function nextApproach(des) { const now = state.jd; return CAD.find(c => c.des === des && c.jd >= now - 0.5); }
+
 // ---------- selection & info card ----------
 let selLine = null;
 function select(s) {
@@ -547,6 +666,11 @@ function renderCard() {
         <div>Last observed</div><div>${NEO.last[k] || '—'}</div>
         ${sen ? `<div>Impact prob.</div><div style="color:#ffb020">${sen.ip.toExponential(2)} · PS ${sen.ps} · TS ${sen.ts}</div><div>Window</div><div>${sen.range} (${sen.n} VIs)</div>` : ''}
       </div>
+      <h2>Yield &amp; exposure</h2>
+      <div class="kv" style="margin-top:0">
+        ${yieldRow(NEO.D[k] ?? (NEO.H[k] != null && NEO.kind[k] === 'a' ? diamKm(NEO.H[k]) : null), sen ? sen.vi : (nextApproach(NEO.pdes[k]) || {}).vi)}
+        <div>Next close pass</div><div>${(() => { const c = nextApproach(NEO.pdes[k]); return c ? `${jdToDate(c.jd).toISOString().slice(0, 10)} · ${ldStr(c.dist)}` : 'none within 0.2 au in the next 12 months'; })()}</div>
+      </div>
       <div class="note"><a href="https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=${encodeURIComponent(NEO.pdes[k])}" target="_blank" rel="noopener">Open in JPL SBDB ↗</a></div>`;
   } else if (s.type === 'sat') {
     const rec = SATS.recs[s.k], nrev = rec.no * 1440 / (2 * Math.PI);
@@ -563,36 +687,117 @@ function renderCard() {
       <div><span class="tag" style="color:#ff6a3d">FLYBY</span><span class="tag" style="color:#5ef0ff">JPL HORIZONS</span></div>
       <div class="kv"><div>Closest approach</div><div>${jdToDate(t.jdca).toISOString().slice(0, 16).replace('T', ' ')} UTC</div>
       <div>Miss distance</div><div>${ldStr(t.dmin)} · ${fmtInt(Math.round(t.dmin * AU))} km</div>
-      ${ca ? `<div>3σ range</div><div>${fmtInt(Math.round(ca.dmin * AU))}–${fmtInt(Math.round(ca.dmax * AU))} km</div><div>Rel. velocity</div><div>${fmt(ca.v, 2)} km/s</div><div>Size</div><div>${sizeStr(ca.D, ca.h)}</div><div>CA time σ</div><div>${ca.ts}</div>` : ''}
+      ${ca ? `<div>3σ range</div><div>${fmtInt(Math.round(ca.dmin * AU))}–${fmtInt(Math.round(ca.dmax * AU))} km</div><div>Rel. velocity</div><div>${fmt(ca.v, 2)} km/s</div><div>Size</div><div>${sizeStr(ca.D, ca.h)}</div><div>CA time σ</div><div>${ca.ts}</div>${yieldRow(ca.D ?? (ca.h != null ? diamKm(ca.h) : null), ca.vi)}` : ''}
       <div>Now from Earth</div><div>${p ? ldStr(Math.hypot(...p)) : 'outside ±5 d window'}</div></div>
       <div class="note">Track: geocentric ecliptic state vectors, 1 h step, ±5 d around CA. SHA-256 ${t.sha256 ? t.sha256.slice(0, 16) + '…' : '—'}</div>`;
   }
   const x = $('#cx'); if (x) x.onclick = () => select(null);
 }
 
-// ---------- picking ----------
-let downAt = null;
+// ---------- picking & hover ----------
+// Near Earth only satellites/flybys are candidates (asteroids are millions of km away); anything
+// hidden behind the globe is ignored; empty-space clicks clear the selection.
+function earthWorld() { const v = new THREE.Vector3(); geo.getWorldPosition(v); return v; }
+function occluded(P, C, E) {
+  const d = P.clone().sub(C), L = d.length(); d.divideScalar(L);
+  const tca = E.clone().sub(C).dot(d); if (tca < 0) return false;
+  const d2 = E.distanceToSquared(C) - tca * tca, R2 = (RE * 0.999) ** 2; if (d2 > R2) return false;
+  return tca - Math.sqrt(R2 - d2) < L;
+}
+function findAt(px, py, radius) {
+  camera.updateMatrixWorld(); root.updateMatrixWorld();
+  const v = new THREE.Vector3(), C = camera.position, E = earthWorld();
+  const camDist = C.distanceTo(controls.target), near = camDist < 0.02;
+  let best = null, bd = radius;
+  const test = (W, obj) => {
+    v.copy(W).project(camera); if (v.z > 1 || v.z < -1) return;
+    const d = Math.hypot((v.x + 1) / 2 * innerWidth - px, (1 - v.y) / 2 * innerHeight - py);
+    if (d < bd && !(near && occluded(W, C, E))) { bd = d; best = obj; }
+  };
+  const O = state.origin, w = new THREE.Vector3();
+  if (!near && (state.layers.known || state.layers.comets)) for (let k = 0; k < NEO.n; k++) {
+    const com = NEO.kind[k] === 'c'; if (com ? !state.layers.comets : !state.layers.known) continue;
+    if (state.layers.sentryOnly && !NEO.sen[k]) continue;
+    const p = neoHelio(k, state.jd); test(toW([p[0] - O[0], p[1] - O[1], p[2] - O[2]]), { type: 'neo', k });
+  }
+  if (state.layers.tracks) TRACKS.forEach((t, i) => { const p = trackPos(t, state.jd); if (p) test(geo.localToWorld(w.set(p[0], p[1], p[2])).clone(), { type: 'track', k: i }); });
+  if (SATS && camDist < 0.05 && (state.layers.sats || state.layers.debris)) {
+    const m = eq.matrixWorld;
+    for (let i = 0; i < SATS.N; i++) {
+      if (SATS.isDeb[i] ? !state.layers.debris : !state.layers.sats) continue;
+      if (SATS.pos[i * 3] > 100) continue;
+      test(w.set(SATS.pos[i * 3], SATS.pos[i * 3 + 1], SATS.pos[i * 3 + 2]).applyMatrix4(m).clone(), { type: 'sat', k: i });
+    }
+  }
+  return best;
+}
+function nameOf(o) { return !o ? '' : o.type === 'neo' ? NEO.name[o.k] : o.type === 'sat' ? SATS.names[o.k] : TRACKS[o.k].des + ' (flyby)'; }
+let downAt = null, hoverT = 0;
+const tip = document.createElement('div'); tip.id = 'hovertip'; document.body.appendChild(tip);
 canvas.addEventListener('pointerdown', (e) => downAt = [e.clientX, e.clientY]);
 canvas.addEventListener('pointerup', (e) => {
   if (!downAt || Math.hypot(e.clientX - downAt[0], e.clientY - downAt[1]) > 4) return;
-  pick(e.clientX, e.clientY);
+  const hit = findAt(e.clientX, e.clientY, e.pointerType === 'touch' ? 22 : 11);
+  select(hit);
 });
-function pick(px, py) {
-  camera.updateMatrixWorld(); const v = new THREE.Vector3(); let best = null, bd = 12;
-  const test = (x, y, z, obj) => { v.set(x, y, z).project(camera); if (v.z > 1) return; const sx = (v.x + 1) / 2 * innerWidth, sy = (1 - v.y) / 2 * innerHeight; const d = Math.hypot(sx - px, sy - py); if (d < bd) { bd = d; best = obj; } };
-  const o = state.origin;
-  if (state.layers.known || state.layers.comets) for (let k = 0; k < NEO.n; k++) {
-    const com = NEO.kind[k] === 'c'; if (com ? !state.layers.comets : !state.layers.known) continue;
-    if (state.layers.sentryOnly && !NEO.sen[k]) continue;
-    const p = neoHelio(k, state.jd); test(p[0] - o[0], p[1] - o[1], p[2] - o[2], { type: 'neo', k });
+canvas.addEventListener('pointermove', (e) => {
+  if (e.buttons || !NEO) return; const now = performance.now(); if (now - hoverT < 90) return; hoverT = now;
+  const hit = findAt(e.clientX, e.clientY, 11);
+  if (SATS) SATS.mat.uniforms.uHov.value = hit && hit.type === 'sat' ? hit.k : -1;
+  canvas.style.cursor = hit ? 'pointer' : 'grab';
+  if (hit) { tip.textContent = nameOf(hit); tip.style.left = (e.clientX + 14) + 'px'; tip.style.top = (e.clientY + 12) + 'px'; tip.style.display = 'block'; }
+  else tip.style.display = 'none';
+});
+canvas.addEventListener('pointerleave', () => { tip.style.display = 'none'; });
+
+// ---------- satellite names + motion trails when close to Earth ----------
+const trailGeom = new THREE.BufferGeometry();
+const trails = new THREE.LineSegments(trailGeom, new THREE.LineBasicMaterial({ vertexColors: true, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
+trails.frustumCulled = false; eq.add(trails);
+const FAMOUS = [/^ISS \(ZARYA\)/, /^CSS \(TIANHE\)/, /^HST$/, /^TIANGONG/];
+function refreshSatLabels() {
+  state.satLabels = [];
+  if (!SATS || !state.layers.labels) { trailGeom.setDrawRange(0, 0); return; }
+  const camDist = camera.position.distanceTo(controls.target);
+  if (camDist > 0.004) { trailGeom.setDrawRange(0, 0); return; }
+  camera.updateMatrixWorld(); root.updateMatrixWorld();
+  const m = eq.matrixWorld, C = camera.position, E = earthWorld(), w = new THREE.Vector3(), v = new THREE.Vector3();
+  const cand = [];
+  for (let i = 0; i < SATS.N; i++) {
+    if (SATS.isDeb[i] ? !state.layers.debris : !state.layers.sats) continue;
+    if (SATS.pos[i * 3] > 100) continue;
+    w.set(SATS.pos[i * 3], SATS.pos[i * 3 + 1], SATS.pos[i * 3 + 2]).applyMatrix4(m);
+    v.copy(w).project(camera); if (v.z > 1 || Math.abs(v.x) > 0.92 || Math.abs(v.y) > 0.9) continue;
+    if (occluded(w, C, E)) continue;
+    const sx = (v.x + 1) / 2 * innerWidth, sy = (1 - v.y) / 2 * innerHeight;
+    const fam = FAMOUS.some(r => r.test(SATS.names[i]));
+    cand.push({ i, sx, sy, score: fam ? -1e9 : Math.hypot(v.x, v.y * 1.4) + (SATS.isDeb[i] ? 0.5 : 0) + (/ DEB| R\/B/.test(SATS.names[i]) ? 0.3 : 0) + (/^STARLINK|^ONEWEB/.test(SATS.names[i]) ? 0.35 : 0) });
   }
-  const ew = new THREE.Vector3(); geo.getWorldPosition(ew);
-  if (state.layers.tracks) TRACKS.forEach((t, i) => { const p = trackPos(t, state.jd); if (p) test(ew.x + p[0], ew.y + p[1], ew.z + p[2], { type: 'track', k: i }); });
-  if (SATS && (state.layers.sats || state.layers.debris)) {
-    const m = eq.matrixWorld, w = new THREE.Vector3();
-    for (let i = 0; i < SATS.N; i++) { if (SATS.isDeb[i] ? !state.layers.debris : !state.layers.sats) continue; w.set(SATS.pos[i * 3], SATS.pos[i * 3 + 1], SATS.pos[i * 3 + 2]).applyMatrix4(m); test(w.x, w.y, w.z, { type: 'sat', k: i }); }
+  cand.sort((a, b) => a.score - b.score);
+  const chosen = [];
+  for (const c of cand) {
+    if (chosen.length >= 12) break;
+    if (chosen.some(o => Math.abs(o.sx - c.sx) < 170 && Math.abs(o.sy - c.sy) < 30)) continue;
+    chosen.push(c);
   }
-  select(best);
+  state.satLabels = chosen.map(c => c.i);
+  // trails: last ~1/10 of an orbit, fading out
+  const list = [...state.satLabels]; if (state.sel && state.sel.type === 'sat' && !list.includes(state.sel.k)) list.push(state.sel.k);
+  const pos = [], col = [], t0 = jdToDate(state.jd).getTime(), N = 24;
+  for (const i of list) {
+    const rec = SATS.recs[i], P = 2 * Math.PI / rec.no * 60000, span = P / 36;
+    let prev = null;
+    for (let k = 0; k <= N; k++) {
+      let pv = null; try { pv = SAT.propagate(rec, new Date(t0 - span * k / N)); } catch { }
+      const p = pv && pv.position; if (!p || typeof p !== 'object' || !isFinite(p.x)) { prev = null; continue; }
+      const cur = [p.x / AU, p.y / AU, p.z / AU];
+      if (prev) { pos.push(...prev, ...cur); const a = 1 - (k - 1) / N, b = 1 - k / N; col.push(0.37 * a, 0.94 * a, a, 0.37 * b, 0.94 * b, b); }
+      prev = cur;
+    }
+  }
+  trailGeom.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  trailGeom.setAttribute('color', new THREE.Float32BufferAttribute(col, 3));
+  trailGeom.setDrawRange(0, pos.length / 3);
 }
 
 // ---------- camera ----------
@@ -643,7 +848,7 @@ function applyLayers() {
   const L = state.layers, u = neoMat.uniforms;
   u.uShowKnown.value = L.known ? 1 : 0; u.uShowComets.value = L.comets ? 1 : 0; u.uShowModel.value = L.model ? 1 : 0; u.uSentryOnly.value = L.sentryOnly ? 1 : 0;
   if (SATS) { SATS.mat.uniforms.uShowA.value = L.sats ? 1 : 0; SATS.mat.uniforms.uShowD.value = L.debris ? 1 : 0; }
-  trackGroup.visible = L.tracks; if (trackMarkers) trackMarkers.visible = L.tracks;
+  trackGroup.visible = L.tracks && !state.closeUp; if (trackMarkers) trackMarkers.visible = L.tracks;
   orbitGroup.visible = L.orbits; if (state.moonOrbit) state.moonOrbit.visible = L.orbits; if (state.geoRing) state.geoRing.visible = L.orbits;
   labelRoot.style.display = L.labels ? '' : 'none';
 }
@@ -673,6 +878,12 @@ function frame(now) {
   }
   bodyGeom.attributes.position.needsUpdate = true;
   const camDist = camera.position.distanceTo(controls.target);
+  // north-up near Earth, ecliptic-flat far away (smooth in between)
+  const tl = Math.min(1, Math.max(0, (Math.log10(camDist) - Math.log10(0.08)) / (Math.log10(0.006) - Math.log10(0.08))));
+  root.rotation.x = OBL * tl * tl * (3 - 2 * tl);
+  if (SATS) SATS.mat.uniforms.uIcon.value = camDist < 0.0025 ? 1 : 0;
+  const cu = camDist < 0.0022; if (cu !== state.closeUp) { state.closeUp = cu; applyLayers(); }
+  if (now - (state.lblT || 0) > 400) { state.lblT = now; refreshSatLabels(); }
   bodyPts.material.size = camDist < 0.02 ? 0 : 7;
   earthGlow.material.opacity = camDist > 0.02 ? 0.8 : 0;
   sunLight.position.set(...pw.Sun); sunLight.target.position.set(...pw.Earth);
@@ -687,7 +898,7 @@ function frame(now) {
     const tp = trackMarkers.geometry.attributes.position.array;
     TRACKS.forEach((t, i) => {
       const p = trackPos(t, state.jd);
-      if (p) { tp.set(p, i * 3); const d = Math.hypot(...p); if (state.layers.tracks && d < 0.03 && camDist < 0.2) lbs.push({ p: [pw.Earth[0] + p[0], pw.Earth[1] + p[1], pw.Earth[2] + p[2]], t: `${t.des} · ${ldStr(d)}`, c: 'trk', d }); }
+      if (p) { tp.set(p, i * 3); const d = Math.hypot(...p); if (state.layers.tracks && d < 0.03 && camDist < 0.2 && camDist > 0.0025) lbs.push({ p: [pw.Earth[0] + p[0], pw.Earth[1] + p[1], pw.Earth[2] + p[2]], t: `${t.des} · ${ldStr(d)}`, c: 'trk', d }); }
       else tp.set([1e3, 1e3, 1e3], i * 3);
     });
     trackMarkers.geometry.attributes.position.needsUpdate = true;
@@ -704,16 +915,19 @@ function frame(now) {
   // labels
   if (state.layers.labels) {
     for (const [name] of BODIES) {
-      if ((name === 'Earth' && camDist < 0.0012) || (name === 'Moon' && camDist > 1.5)) continue;
+      if ((name === 'Earth' && camDist < 0.0025) || (name === 'Moon' && camDist > 1.5)) continue;
+      if (camDist < 0.0025 && name !== 'Moon') continue;
       lbs.push({ p: pw[name], t: name.toUpperCase(), c: 'body' });
     }
-    if (SATS && SATS.iss >= 0 && camDist < 0.004 && state.layers.sats) {
-      const w = new THREE.Vector3(SATS.pos[SATS.iss * 3], SATS.pos[SATS.iss * 3 + 1], SATS.pos[SATS.iss * 3 + 2]).applyMatrix4(eq.matrixWorld);
-      lbs.push({ p: [w.x, w.y, w.z], t: 'ISS', c: 'body' });
+    if (SATS && state.satLabels) for (const i of state.satLabels) {
+      if (state.sel && state.sel.type === 'sat' && state.sel.k === i) continue;
+      const w = new THREE.Vector3(SATS.pos[i * 3], SATS.pos[i * 3 + 1], SATS.pos[i * 3 + 2]).applyMatrix4(eq.matrixWorld);
+      const nm = SATS.names[i].replace(/^ISS \(ZARYA\)/, 'ISS · Space Station').replace(/^CSS \(TIANHE\)/, 'Tiangong · Space Station');
+      lbs.push({ w, t: nm, c: SATS.isDeb[i] ? 'deb' : 'sat' });
     }
     const s = state.sel;
     if (s && s.type === 'neo') { const p = neoHelio(s.k, state.jd); lbs.push({ p: [p[0] - O[0], p[1] - O[1], p[2] - O[2]], t: NEO.name[s.k], c: 'sel' }); }
-    if (s && s.type === 'sat') { const w = new THREE.Vector3(SATS.pos[s.k * 3], SATS.pos[s.k * 3 + 1], SATS.pos[s.k * 3 + 2]).applyMatrix4(eq.matrixWorld); lbs.push({ p: [w.x, w.y, w.z], t: SATS.names[s.k], c: 'sel' }); }
+    if (s && s.type === 'sat') { const w = new THREE.Vector3(SATS.pos[s.k * 3], SATS.pos[s.k * 3 + 1], SATS.pos[s.k * 3 + 2]).applyMatrix4(eq.matrixWorld); lbs.push({ w, t: SATS.names[s.k], c: 'sel' }); }
   }
   renderer.render(scene, camera);
   setLabels(lbs);
@@ -737,14 +951,7 @@ addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; cam
     $('#bootmsg').textContent = 'PROPAGATING ORBITS…';
     await new Promise(r => setTimeout(r, 20));
     CAD = cad; SENTRY = sentry;
-    // coastlines
-    const R = RE * 1.002, seg = [];
-    for (const ring of land) for (let j = 0; j + 3 < ring.length; j += 2) {
-      const P = (lo, la) => [R * Math.cos(la * D2R) * Math.cos(lo * D2R), R * Math.cos(la * D2R) * Math.sin(lo * D2R), R * Math.sin(la * D2R)];
-      seg.push(...P(ring[j], ring[j + 1]), ...P(ring[j + 2], ring[j + 3]));
-    }
-    const lg = new THREE.BufferGeometry(); lg.setAttribute('position', new THREE.Float32BufferAttribute(seg, 3));
-    spin.add(new THREE.LineSegments(lg, new THREE.LineBasicMaterial({ color: 0x5ef0ff, transparent: true, opacity: 0.75 })));
+    paintEarth(land);
     buildNEO(neo); buildSats(sats); buildTracks(tracks); buildPlanetOrbits();
     propagateSats(jdToDate(state.jd), 1e6);
     buildUI(); applyLayers();
@@ -752,7 +959,7 @@ addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; cam
     if (h === 'inner') { clickFrame('helio'); }
     flyTo(VIEWS[h] ? h : 'cis');
     $('#boot').style.display = 'none';
-    window.__neo = { state, flyTo, select, clickFrame, TRACKS, NEO, POP, SATS, verify };
+    window.__neo = { THREE, earth, sunLight, earthMat, camera, controls, state, flyTo, select, clickFrame, TRACKS, NEO, POP, SATS, verify };
     requestAnimationFrame((t) => { last = t; frame(t); });
   } catch (err) {
     console.error(err); $('#bootmsg').textContent = 'BOOT FAILED: ' + err.message;

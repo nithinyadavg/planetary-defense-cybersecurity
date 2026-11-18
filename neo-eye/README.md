@@ -1,4 +1,9 @@
-# NEO·EYE
+# NEO·EYE — Near-Earth Objects · Early-warning, Yield & Exposure
+*by NYG — Nithin Yadav Gopinath*
+
+- **Early-warning** — what is coming close, and when (JPL CAD, Sentry, Horizons flybys)
+- **Yield** — impact energy if an object hit Earth (sphere of rock, 2,600 kg/m³; v from v∞ + escape speed)
+- **Exposure** — how close Earth and its satellite shells come to it
 
 Near-Earth space situational awareness: every catalogued near-Earth asteroid and comet, the
 active satellite catalogue and major debris clouds, real flyby trajectories, and a modelled

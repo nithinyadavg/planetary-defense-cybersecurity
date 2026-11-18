@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NEO·EYE — Near-Earth Space Situational Awareness</title>
+<title>NEO·EYE — Near-Earth Objects · Early-warning, Yield &amp; Exposure · by NYG</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
 <style>
@@ -78,6 +78,19 @@ table.cmp td{padding:2px 0;white-space:nowrap}
 a{color:var(--acc)}
 .note{font-size:10px;color:var(--dim);margin-top:6px}
 #help{position:fixed;left:14px;bottom:14px;font-size:10px;color:var(--dim);display:none}
+#uitip,#hovertip{position:fixed;z-index:20;display:none;pointer-events:none;background:rgba(4,10,16,.96);border:1px solid var(--acc);color:var(--fg);padding:7px 9px;font-size:11px;line-height:1.45;max-width:300px}
+#hovertip{border-color:var(--line2);color:#fff;font-weight:600;letter-spacing:.04em;padding:4px 7px;white-space:nowrap}
+#topbar{position:fixed;top:14px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:5}
+#topbar button{background:rgba(6,14,20,.85)}
+body.clean #left,body.clean #right,body.clean #card{display:none!important}
+body.clean #bottom{left:14px;right:14px}
+#guide{position:fixed;inset:0;z-index:15;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.55)}
+#guide .box{width:min(560px,92vw);max-height:86vh;overflow:auto;padding:18px 20px;background:rgba(6,14,20,.97);border:1px solid var(--line2);position:relative}
+#guide ol{padding-left:18px;margin:8px 0}#guide li{margin:7px 0}
+#guide .k{color:var(--acc)}
+.byline{font-size:10px;letter-spacing:.14em;color:var(--fg);margin-top:4px}
+.byline b{color:var(--acc);font-weight:600}
+.lb.sat{color:#9ff6ff}.lb.deb{color:#ff9b9b}
 @media (max-width:1100px){#right{display:none}#bottom{right:14px}}
 @media (max-width:760px){#left{display:none}#bottom{left:14px}#card{left:14px}}
 </style>
@@ -95,11 +108,31 @@ a{color:var(--acc)}
 <div id="scan"></div><div id="vign"></div>
 <div id="labels"></div>
 
-<div id="boot"><div class="t">NEO<span style="color:var(--acc)">·</span>EYE</div><div class="s" id="bootmsg">LOADING DATA PACKET…</div></div>
+<div id="boot"><div class="t">NEO<span style="color:var(--acc)">·</span>EYE</div><div class="s">NEAR-EARTH OBJECTS · EARLY-WARNING, YIELD &amp; EXPOSURE</div><div class="s" style="color:var(--fg)">by NYG</div><div class="s" id="bootmsg">LOADING DATA PACKET…</div></div>
+<div id="topbar"><button id="guideBtn">? Guide</button><button id="panelsBtn" class="on" data-tip="Show or hide the side panels for a clean view of space.">▣ Panels</button></div>
+<div id="guide"><div class="box">
+  <div class="row"><h1 style="font-size:20px">NEO<b>·</b>EYE</h1><span class="sp"></span><button id="gx">✕</button></div>
+  <div class="sub">NEAR-EARTH OBJECTS · <span class="k">E</span>ARLY-WARNING, <span class="k">Y</span>IELD &amp; <span class="k">E</span>XPOSURE</div>
+  <div class="note" style="color:var(--fg);font-size:11px">What it does: <b>early-warning</b> (what is coming close, and when), <b>yield</b> (how much energy an object would release if it hit) and <b>exposure</b> (how close Earth and its satellites come to it).</div>
+  <h2>What am I looking at?</h2>
+  <ol>
+    <li><span class="k">Earth is in the middle.</span> The Sun, Moon and planets are where they really are right now.</li>
+    <li><span class="k">Coloured dots far out</span> are the ~43,000 known near-Earth asteroids and comets, each moving along its real orbit.</li>
+    <li><span class="k">Orange lines</span> are real asteroid flybys past Earth this month, straight from NASA JPL.</li>
+    <li><span class="k">Close to Earth</span> are satellites (cyan) and debris (red). Zoom into Earth to see their names, icons and trails.</li>
+    <li><span class="k">Right-hand list:</span> upcoming close approaches. Click one to fly there. 1 LD = the Moon’s distance (384,400 km).</li>
+    <li><span class="k">Bottom bar:</span> run time faster or backwards, and change the lens. Hover over any button for an explanation.</li>
+  </ol>
+  <h2>Controls</h2>
+  <div class="note" style="color:var(--fg)">Drag to rotate · scroll or pinch to zoom · click an object for details · Esc to clear · ▣ Panels for a clean view.</div>
+  <div class="note">Data from NASA/JPL (SBDB, CNEOS CAD &amp; Sentry, Horizons) and CelesTrak, refreshed every 6 hours. Violet “modelled” dots are statistical, not real objects.</div>
+  <div class="byline" style="margin-top:12px">by <b>NYG</b> · Nithin Yadav Gopinath · Integrity Assurance in Planetary Defence</div>
+</div></div>
 
 <div id="left" class="panel">
   <h1>NEO<b>·</b>EYE</h1>
-  <div class="sub">NEAR-EARTH SPACE SITUATIONAL AWARENESS</div>
+  <div class="sub">NEAR-EARTH OBJECTS · EARLY-WARNING, YIELD &amp; EXPOSURE</div>
+  <div class="byline">by <b>NYG</b> · Nithin Yadav Gopinath</div>
   <div class="sub" id="pkt">PACKET —</div>
 
   <h2>Frame</h2>
@@ -118,7 +151,7 @@ a{color:var(--acc)}
   <h2>Layers</h2>
   <div id="layers"></div>
 
-  <h2>Known vs estimated</h2>
+  <h2 data-tip="How much of the real population has been found, by size. Known = in NASA/JPL’s catalogue; estimated = published survey models.">Known vs estimated ⓘ</h2>
   <table class="cmp" id="cmp"></table>
   <div class="note">Known = JPL SBDB asteroids in this packet. Estimated = published debiased models. <a href="#" id="popinfo">Method</a></div>
 
@@ -126,7 +159,7 @@ a{color:var(--acc)}
   <input id="search" placeholder="Name or designation… e.g. Apophis" autocomplete="off">
   <div id="sres"></div>
 
-  <h2>Provenance</h2>
+  <h2 data-tip="Every data file is fingerprinted (SHA-256) when it is fetched and re-checked in your browser when the page loads: proof the data was not altered on the way. The Zero Trust idea from the research, working live.">Provenance ⓘ</h2>
   <div id="prov">—</div>
 </div>
 
@@ -170,7 +203,7 @@ a{color:var(--acc)}
     <span class="sp"></span>
     <span class="n" style="margin:0" id="fps"></span>
   </div>
-  <canvas id="tl"></canvas>
+  <canvas id="tl" data-tip="Timeline: 30 days back to 12 months ahead. Each tick is a close approach; taller and redder = closer (red = inside the Moon’s distance). Click to jump in time."></canvas>
   <div class="row note" id="legend" style="margin-top:4px"></div>
 </div>
 

@@ -115,7 +115,7 @@ def build_cad(P):
     out.sort(key=lambda r: float(r["jd"]))
     slim = [{"des": r["des"], "name": (r.get("fullname") or r["des"]).strip(), "jd": f(r["jd"], 5), "cd": r["cd"],
              "dist": f(r["dist"], 7), "dmin": f(r["dist_min"], 7), "dmax": f(r["dist_max"], 7),
-             "v": f(r["v_rel"], 3), "h": f(r["h"], 2), "D": f(r.get("diameter"), 4), "ts": r["t_sigma_f"]} for r in out]
+             "v": f(r["v_rel"], 3), "vi": f(r.get("v_inf"), 3), "h": f(r["h"], 2), "D": f(r.get("diameter"), 4), "ts": r["t_sigma_f"]} for r in out]
     print(f"cad: {len(slim)} approaches")
     return slim
 
@@ -126,7 +126,7 @@ def build_sentry(P):
         return [], set()
     d = json.load(open(p))["data"]
     rows = [{"des": r["des"], "name": r["fullname"], "ip": f(r["ip"], 12), "ps": f(r["ps_cum"], 2), "ts": int(r["ts_max"] or 0),
-             "D": f(r["diameter"], 4), "range": r["range"], "n": r["n_imp"], "h": f(r["h"], 2), "last": r["last_obs"]} for r in d]
+             "D": f(r["diameter"], 4), "vi": f(r.get("v_inf"), 3), "range": r["range"], "n": r["n_imp"], "h": f(r["h"], 2), "last": r["last_obs"]} for r in d]
     rows.sort(key=lambda r: -(r["ps"] if r["ps"] is not None else -99))
     print(f"sentry: {len(rows)} objects")
     return rows, {r["des"] for r in rows}
