@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEO·EYE — Near-Earth Space Situational Awareness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#03060a; --panel:rgba(6,14,20,.78); --line:rgba(120,220,255,.18); --line2:rgba(120,220,255,.35);
+  --fg:#cfe8f2; --dim:#6f8a96; --acc:#5ef0ff; --warn:#ffb020; --crit:#ff4d4d; --ok:#39d98a;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace; --disp:'Rajdhani','JetBrains Mono',sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:12px/1.4 var(--mono);overflow:hidden}
+#gl{position:fixed;inset:0;display:block}
+#gl.nv{filter:grayscale(1) sepia(1) hue-rotate(65deg) saturate(4) brightness(1.15) contrast(1.1)}
+#gl.flir{filter:grayscale(1) invert(.08) sepia(1) hue-rotate(-30deg) saturate(5) contrast(1.4)}
+#scan{position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 3px);mix-blend-mode:overlay}
+#vign{position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.55) 100%)}
+.panel{position:fixed;background:var(--panel);border:1px solid var(--line);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.panel::before,.panel::after{content:"";position:absolute;width:10px;height:10px;border:1px solid var(--acc);opacity:.7}
+.panel::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.panel::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+h1{font:700 22px/1 var(--disp);letter-spacing:.18em;margin:0;color:#fff}
+h1 b{color:var(--acc)}
+h2{font:600 10px/1 var(--mono);letter-spacing:.2em;color:var(--dim);margin:12px 0 6px;text-transform:uppercase}
+.sub{color:var(--dim);font-size:10px;letter-spacing:.12em;margin-top:5px}
+#left{top:14px;left:14px;width:270px;padding:14px;max-height:calc(100vh - 28px);overflow:auto}
+#right{top:14px;right:14px;width:320px;padding:12px 12px 8px;max-height:calc(100vh - 28px);display:flex;flex-direction:column}
+#bottom{left:298px;right:348px;bottom:14px;padding:10px 12px}
+#bottom .row{flex-wrap:nowrap;white-space:nowrap}
+.row{display:flex;align-items:center;gap:8px}
+.sp{flex:1}
+label.tg{display:flex;align-items:center;gap:8px;padding:3px 0;cursor:pointer;user-select:none}
+label.tg input{appearance:none;width:11px;height:11px;border:1px solid var(--line2);margin:0;flex:none}
+label.tg input:checked{background:var(--acc);box-shadow:0 0 6px var(--acc)}
+.sw{width:8px;height:8px;border-radius:50%;flex:none}
+.n{color:var(--dim);font-size:10px;margin-left:auto}
+.btns{display:flex;gap:4px;flex-wrap:wrap}
+button{font:600 10px/1 var(--mono);letter-spacing:.12em;color:var(--fg);background:rgba(94,240,255,.04);border:1px solid var(--line2);padding:6px 8px;cursor:pointer;text-transform:uppercase}
+button:hover{border-color:var(--acc);color:#fff}
+button.on{background:rgba(94,240,255,.16);border-color:var(--acc);color:#fff;box-shadow:inset 0 0 8px rgba(94,240,255,.25)}
+button.live.on{background:rgba(255,77,77,.18);border-color:var(--crit)}
+#clock{font:600 13px var(--mono);color:#fff;letter-spacing:.05em}
+#simtime{font:600 13px var(--mono);color:var(--acc)}
+#tl{width:100%;height:46px;display:block;margin-top:8px;cursor:crosshair}
+#calist{overflow:auto;flex:1;margin-top:4px}
+.ca{display:grid;grid-template-columns:70px 1fr 64px;gap:6px;padding:5px 4px;border-bottom:1px solid rgba(120,220,255,.07);cursor:pointer}
+.ca:hover{background:rgba(94,240,255,.07)}
+.ca .d{color:var(--dim)}
+.ca .ld{text-align:right}
+.ca.hot .ld{color:var(--warn)} .ca.crit .ld{color:var(--crit)}
+.ca .tk{color:var(--acc)}
+#card{bottom:168px;left:298px;width:310px;padding:12px;display:none;max-height:calc(100vh - 200px);overflow:auto}
+#card .nm{font:700 16px var(--disp);letter-spacing:.06em;color:#fff}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:2px 8px;margin-top:8px}
+.kv div:nth-child(odd){color:var(--dim)}
+.tag{display:inline-block;padding:2px 5px;border:1px solid;font-size:9px;letter-spacing:.12em;margin:6px 4px 0 0}
+#labels{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.lb{position:absolute;transform:translate(8px,-50%);font-size:10px;letter-spacing:.08em;white-space:nowrap;color:var(--fg);text-shadow:0 0 4px #000}
+.lb.body{color:#fff;font-weight:600}
+.lb.trk{color:var(--warn)}
+.lb.sel{color:var(--acc)}
+.lb::before{content:"";position:absolute;left:-8px;top:50%;width:5px;height:1px;background:currentColor}
+table.cmp{width:100%;border-collapse:collapse;font-size:10px}
+table.cmp td{padding:2px 0;white-space:nowrap}
+.bar{height:5px;background:rgba(255,255,255,.07);position:relative}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--acc)}
+#search{width:100%;background:rgba(0,0,0,.35);border:1px solid var(--line2);color:#fff;font:12px var(--mono);padding:6px 8px;outline:none}
+#sres div{padding:3px 4px;cursor:pointer}#sres div:hover{background:rgba(94,240,255,.1)}
+#prov{font-size:10px;color:var(--dim);word-break:break-all}
+#prov .ok{color:var(--ok)} #prov .bad{color:var(--crit)}
+#boot{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;background:var(--bg);z-index:9;letter-spacing:.2em}
+#boot .t{font:700 34px var(--disp);letter-spacing:.3em}
+#boot .s{color:var(--dim);font-size:11px}
+a{color:var(--acc)}
+.note{font-size:10px;color:var(--dim);margin-top:6px}
+#help{position:fixed;left:14px;bottom:14px;font-size:10px;color:var(--dim);display:none}
+@media (max-width:1100px){#right{display:none}#bottom{right:14px}}
+@media (max-width:760px){#left{display:none}#bottom{left:14px}#card{left:14px}}
+</style>
+<script type="importmap">
+{"imports":{
+ "three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+ "three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/",
+ "satellite.js":"https://cdn.jsdelivr.net/npm/satellite.js@7.2.0/+esm",
+ "astronomy-engine":"https://cdn.jsdelivr.net/npm/astronomy-engine@2.1.19/+esm"
+}}
+</script>
+</head>
+<body>
+<canvas id="gl"></canvas>
+<div id="scan"></div><div id="vign"></div>
+<div id="labels"></div>
+
+<div id="boot"><div class="t">NEO<span style="color:var(--acc)">·</span>EYE</div><div class="s" id="bootmsg">LOADING DATA PACKET…</div></div>
+
+<div id="left" class="panel">
+  <h1>NEO<b>·</b>EYE</h1>
+  <div class="sub">NEAR-EARTH SPACE SITUATIONAL AWARENESS</div>
+  <div class="sub" id="pkt">PACKET —</div>
+
+  <h2>Frame</h2>
+  <div class="btns" id="frames">
+    <button data-frame="geo" class="on">Earth-centred</button>
+    <button data-frame="helio">Sun-centred</button>
+  </div>
+  <h2>View</h2>
+  <div class="btns" id="views">
+    <button data-view="leo">Orbit shell</button>
+    <button data-view="cis">Cislunar</button>
+    <button data-view="near">Near-Earth</button>
+    <button data-view="inner">Inner system</button>
+  </div>
+
+  <h2>Layers</h2>
+  <div id="layers"></div>
+
+  <h2>Known vs estimated</h2>
+  <table class="cmp" id="cmp"></table>
+  <div class="note">Known = JPL SBDB asteroids in this packet. Estimated = published debiased models. <a href="#" id="popinfo">Method</a></div>
+
+  <h2>Find object</h2>
+  <input id="search" placeholder="Name or designation… e.g. Apophis" autocomplete="off">
+  <div id="sres"></div>
+
+  <h2>Provenance</h2>
+  <div id="prov">—</div>
+</div>
+
+<div id="right" class="panel">
+  <div class="row"><h2 style="margin:0">Close-approach watch</h2><span class="sp"></span><span class="n" id="cacount"></span></div>
+  <div class="note" style="margin:4px 0 2px">JPL CNEOS CAD · ≤0.2 au · LD = lunar distance · <span class="tk">◆</span> Horizons track</div>
+  <div id="calist"></div>
+</div>
+
+<div id="card" class="panel"></div>
+
+<div id="bottom" class="panel">
+  <div class="row">
+    <span id="clock">—</span><span class="n" style="margin:0">UTC</span>
+    <span style="width:14px"></span>
+    <span class="n" style="margin:0">SIM</span><span id="simtime">—</span>
+    <span class="sp"></span>
+    <div class="btns" id="speeds">
+      <button data-s="-86400">◀◀ 1d/s</button>
+      <button data-s="0">❚❚</button>
+      <button data-s="1" class="on">1×</button>
+      <button data-s="3600">1h/s</button>
+      <button data-s="86400">1d/s</button>
+      <button data-s="2592000">30d/s</button>
+      <button class="live on" id="live">● Live</button>
+    </div>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <span class="n" style="margin:0">LENS</span>
+    <div class="btns" id="modes">
+      <button data-mode="0" class="on">Class</button>
+      <button data-mode="1">Threat</button>
+      <button data-mode="2">Integrity</button>
+      <button data-mode="3">Size</button>
+    </div>
+    <div class="btns" id="sensors" style="margin-left:6px">
+      <button data-sensor="" class="on">EO</button>
+      <button data-sensor="nv">NV</button>
+      <button data-sensor="flir">FLIR</button>
+    </div>
+    <span class="sp"></span>
+    <span class="n" style="margin:0" id="fps"></span>
+  </div>
+  <canvas id="tl"></canvas>
+  <div class="row note" id="legend" style="margin-top:4px"></div>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

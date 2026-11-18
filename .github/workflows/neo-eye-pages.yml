@@ -1,0 +1,48 @@
+name: NEO-EYE · refresh data & deploy Pages
+# Every 6 h (and on every push to neo-eye/): pull a fresh hash-sealed data packet from
+# NASA/JPL + CelesTrak, compile it, and publish the viewer to GitHub Pages.
+# Derived data is NOT committed (keeps the repo small); every raw packet is kept as a
+# 90-day Actions artifact so each deployment stays traceable to its exact source bytes.
+on:
+  schedule: [{ cron: "17 */6 * * *" }]
+  push:
+    branches: [main]
+    paths: ["neo-eye/**", ".github/workflows/neo-eye-pages.yml"]
+  workflow_dispatch: {}
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency: { group: neo-eye-pages, cancel-in-progress: false }
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: neo-eye } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Fetch data packet (JPL SBDB, CAD, Sentry, Horizons; CelesTrak)
+        run: python3 pipeline/fetch.py --out data/packets
+      - name: Compile web data
+        run: python3 pipeline/build.py
+      - name: Packet summary
+        run: |
+          P=$(cat data/packets/LATEST)
+          python3 -c "import json;m=json.load(open('data/packets/$P/manifest.json'));print('packet',m['packet'],'seal',m['packet_sha256'],'files',len(m['files']),'errors',len(m['errors']))" | tee -a $GITHUB_STEP_SUMMARY
+      - name: Keep raw packet (provenance)
+        uses: actions/upload-artifact@v4
+        with:
+          name: neo-eye-packet-${{ github.run_id }}
+          path: neo-eye/data/packets/
+          retention-days: 90
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: neo-eye/web }
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.d.outputs.page_url }}" }
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4

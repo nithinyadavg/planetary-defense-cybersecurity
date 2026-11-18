@@ -8,6 +8,13 @@ MSc Dissertation — Cybersecurity and Computer Networks
 
 ---
 
+> **NEO·EYE — live 3D viewer:** https://nithinyadavg.github.io/planetary-defense-cybersecurity/
+> Every catalogued near-Earth asteroid and comet, the satellite and debris catalogue, real flyby
+> trajectories and a modelled undiscovered population, in one Earth-centred view.
+> Source and method: [`neo-eye/`](neo-eye/).
+
+---
+
 ## 1. Overview
 
 This project investigates adversarial data-integrity attacks against the
